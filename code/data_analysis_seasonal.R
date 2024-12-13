@@ -113,6 +113,15 @@ add_boxplot_to_map_domain <- function(base_map, domain_name, data, lat_long_data
         )
 }
 
+# Create a dataframe with latitude and longitude for each domain
+site_lat_long <- processed_data %>%
+    group_by(domain) %>%
+    summarize(
+        latitude = mean(latitude, na.rm = TRUE),
+        longitude = mean(longitude, na.rm = TRUE),
+        .groups = "drop"
+    )
+
 # Add boxplots to the map with offsets
 final_map <- us_map_plot
 for (domain in unique(vwm_seasonal$domain)) {
@@ -121,7 +130,7 @@ for (domain in unique(vwm_seasonal$domain)) {
 }
 
 # Save the map
-ggsave(here("output/analysis_figs/us_map_plot.png"), plot = final_map, width = 12, height = 7, dpi = 300)
+ggsave(here("output/analysis_figs/us_map_plot2.png"), plot = final_map, width = 12, height = 7, dpi = 300)
 
 
 # Define a simple legend with adjusted title position and outlined points
@@ -147,7 +156,7 @@ ggsave(here("output/analysis_figs/season_legend.png"), legend_plot, width = 4, h
 
 
 # Load the legend
-season_legend <- png::readPNG("season_legend.png")
+season_legend <- png::readPNG(here("output/analysis_figs/season_legend.png"))
 legend_grob <- grid::rasterGrob(season_legend, interpolate = TRUE)
 
 # Combine map and legend

@@ -1,3 +1,15 @@
+---
+title: "Dissolved Organic Carbon Trends in Small U.S. Watersheds"
+author: "Jonathan Gilman"
+date: "December 12th, 2024"
+output:
+  pdf_document:
+    toc: true
+    number_sections: true
+  word_document:
+    toc: true
+---
+
 \newpage
 \tableofcontents 
 \newpage
@@ -7,52 +19,876 @@
 \newpage
 
 ```{r setup, include=FALSE}
-# Set your working directory
 
 # Load your packages
+library(knitr)
+library(kableExtra)
+library(here)
+library(dplyr)
+library(ggplot2)
+library(macrosheds)
+library(lubridate)
+library(tidyr)
+library(scales)
+library(maps)
+library(ggrepel)
+library(gridExtra)
+library(cowplot)
+
+# Set your working directory
+setwd(here())
+
 
 # Set your ggplot theme
 
-# Load your datasets
+custom_theme <- theme(
+    axis.ticks = element_line(color = "black", linewidth = 0.5),
+    panel.background = element_blank(),
+    panel.grid.major = element_line(color = "gray90", linewidth = 0.3),
+    panel.grid.minor = element_blank(),
+    panel.border = element_rect(color = "black", fill = NA, size = 0.5)
+)
 
+# Load your datasets
+processed_data <- readRDS(here("data/Processed/processed_macrosheds_data.rds"))
 ```
 
 
 # Rationale and Research Questions
+Dissolved organic carbon (DOC) plays a critical role in biogeochemical cycles, influencing water quality, carbon storage, and ecosystem dynamics. Seasonal DOC export reflects interactions between climate, hydrology, and vegetation, such as leaf litter inputs, snowmelt, and rainfall. Additionally, long-term trends in DOC concentrations can indicate environmental changes such as disturbances or climate impacts.
 
+The MacroSheds dataset provides a comprehensive view of DOC dynamics across US watersheds, capturing discharge and DOC measurements at high temporal resolution. This study leverages this dataset to explore:
+	1.	Seasonal Differences in DOC Export: Is there a seasonal difference in DOC export, and how does this vary across the US? What factors might contribute to these patterns, such as snowmelt or vegetation inputs?
+	2.	Long-term DOC Trends and Disturbance Effects: Are DOC exports significantly changing over time? How do experimental (disturbed) watersheds differ from non-experimental watersheds in terms of DOC export trends?
 
 
 \newpage
 
 # Dataset Information
 
+The MacroSheds project consolidates all U.S. federally funded watershed ecosystem studies into a unified, open-data platform. It enables researchers to identify differences in watershed functional traits, particularly in the context of a changing climate. Unlike other datasets, MacroSheds emphasizes smaller watersheds that align with the watershed ecosystem concept. This focus minimizes the influence of confounding factors such as complex hydrology and land use, which can obscure key biogeochemical trends and processes.
+
+For this analysis, we utilized MacroSheds data to investigate dissolved organic carbon (DOC) dynamics across the continental United States. The dataset provides high-resolution temporal measurements of stream chemistry and discharge across multiple domains, offering insights into DOC export patterns over time and space. Specifically, DOC concentrations (measured in mg/L) and stream discharge rates (measured in L/s) were analyzed to explore seasonal differences and long-term trends in DOC export.
+
+A critical component of this analysis is the calculation of Volume-Weighted Mean (VWM) DOC concentrations. VWM is calculated as the sum of the product of DOC concentrations and discharge rates divided by the total discharge over a given period. This method integrates DOC and discharge, providing a more representative measure of export than raw concentration values alone. VWM calculations are particularly valuable because they account for variations in flow, which strongly influence DOC transport. For instance, during high-flow events, DOC concentrations might remain steady or even dilute, but total export could increase significantly due to the large volume of water. By incorporating discharge, VWM provides a comprehensive metric for understanding DOC export dynamics and their underlying drivers.
+
+The dataset was carefully processed to ensure quality and relevance. Chemistry and discharge datasets were merged by site and date, and interpolated values were excluded to maintain data accuracy. Only domains located within the continental United States were retained, allowing for consistent spatial analysis. Additional variables, such as hydrological water year (October to September) and season (Fall, Winter, Spring, Summer), were derived to facilitate temporal analyses aligned with hydrological and ecological processes.
+
+By emphasizing smaller, relatively undisturbed watersheds and incorporating advanced calculations like VWM, MacroSheds provides a unique opportunity to study watershed functional traits in response to environmental changes. Its structured format ensures robust, scalable analyses that can inform our understanding of DOC dynamics and their broader implications for biogeochemical cycling in freshwater systems.
 
 
 \newpage
 
-# Exploratory Analysis 
+# Exploratory Analysis
+
+```{r exploratory_code, include=FALSE}
+# Load processed data
+processed_data <- readRDS(here("data/Processed/processed_macrosheds_data.rds"))
+colnames(processed_data)
+
+# Set custom theme
+custom_theme <- theme(
+    axis.ticks = element_line(color = "black", linewidth = 0.5),
+    panel.background = element_blank(),
+    panel.grid.major = element_line(color = "gray90", linewidth = 0.3),
+    panel.grid.minor = element_blank(),
+    panel.border = element_rect(color = "black", fill = NA, size = 0.5)
+)
+
+# Extract distinct domain metadata for mapping and summarization
+domain_data <- processed_data %>%
+    distinct(domain, latitude, longitude, domain_fullname, site_code)
+
+# Calculate total DOC observations per domain
+doc_obs <- processed_data %>%
+    count(domain, name = "count") %>%
+    arrange(desc(count))
+
+# Plot total DOC observations per domain
+doc_obs_plot <- ggplot(doc_obs, aes(x = reorder(domain, -count), y = count)) +
+    geom_bar(stat = "identity", fill = "skyblue") +
+    scale_y_continuous(labels = scales::comma) +
+    theme_minimal() +
+    labs(title = "DOC Measurements per Domain", x = "Domain", y = "Number of Measurements") +
+    custom_theme +
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1)
+    )
+
+ggsave(here("output/exploration_figs/doc_obs.png"), plot = doc_obs_plot, width = 6, height = 5, dpi = 300)
+
+# Calculate data collection duration per domain
+domain_duration <- processed_data %>%
+    group_by(domain) %>%
+    summarize(
+        first_date = min(date, na.rm = TRUE),
+        last_date = max(date, na.rm = TRUE),
+        duration_years = as.numeric(difftime(last_date, first_date, units = "days")) / 365
+    ) %>%
+    arrange(desc(duration_years))
+
+# Plot data collection duration per domain
+duration_plot <- ggplot(domain_duration, aes(x = reorder(domain, -duration_years), y = duration_years)) +
+    geom_bar(stat = "identity", fill = "lightgreen") +
+    theme_minimal() +
+    labs(title = "Data Collection Duration for DOC per Domain", x = "Domain", y = "Duration (Years)") +
+    custom_theme +
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1)
+    )
+
+ggsave(here("output/exploration_figs/duration_plot.png"), plot = duration_plot, width = 6, height = 5, dpi = 300)
+
+# Calculate mean observations per day per domain
+domain_stats <- doc_obs %>%
+    left_join(domain_duration, by = "domain") %>%
+    mutate(mean_obs_per_day = count / (duration_years * 365))
+
+# Plot mean observations per day per domain
+mean_obs_plot <- ggplot(domain_stats, aes(x = reorder(domain, -mean_obs_per_day), y = mean_obs_per_day)) +
+    geom_bar(stat = "identity", fill = "lightblue") +
+    theme_minimal() +
+    labs(title = "Mean Observations per Day", x = "Domain", y = "Mean Observations per Day") +
+    custom_theme +
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1)
+    )
+
+ggsave(here("output/exploration_figs/mean_obs.png"), plot = mean_obs_plot, width = 8, height = 5, dpi = 300)
+
+# Calculate summary stats for each domain
+summary_stats <- processed_data %>%
+    group_by(domain) %>%
+    summarize(
+        min_val = min(val.x, na.rm = TRUE),
+        max_val = max(val.x, na.rm = TRUE),
+        mean_val = mean(val.x, na.rm = TRUE),
+        median_val = median(val.x, na.rm = TRUE),
+        sd_val = sd(val.x, na.rm = TRUE),
+        count = n()
+    )
+
+# Calculate summary stats for each domain and order by count
+summary_stats <- processed_data %>%
+    group_by(domain) %>%
+    summarize(
+        count = n(),  # Move 'count' to the first calculation
+        min_val = min(val.x, na.rm = TRUE),
+        max_val = max(val.x, na.rm = TRUE),
+        mean_val = mean(val.x, na.rm = TRUE),
+        median_val = median(val.x, na.rm = TRUE),
+        sd_val = sd(val.x, na.rm = TRUE)
+    ) %>%
+    arrange(desc(count))  # Order by count in descending order
+
+# Create a nicely formatted table
+summary_table <- summary_stats %>%
+    kable(
+        format = "latex",  # Ensures LaTeX output
+        caption = "Summary Statistics for Each Domain (Ordered by Count)",
+        col.names = c("Domain", "Count", "Min Value", "Max Value", "Mean Value", "Median Value", "Standard Deviation"),
+        digits = 2
+    ) %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE)
+
+# Display the table in the RStudio Viewer or knit to an RMarkdown document
+summary_table
+
+# Map locations of domains in the continental US
+us_map <- map_data("state")
+
+# Ensure each domain has only one unique set of coordinates
+continental_us_domains <- processed_data %>%
+    group_by(domain) %>%
+    summarize(
+        latitude = mean(latitude, na.rm = TRUE),
+        longitude = mean(longitude, na.rm = TRUE)
+    )
+
+# Plot the map with updated domain coordinates
+map <- ggplot() +
+    geom_polygon(data = us_map, aes(x = long, y = lat, group = group), fill = "lightgray", color = "white") +
+    geom_point(data = continental_us_domains, aes(x = longitude, y = latitude), color = "red", size = 2) +
+    geom_text_repel(data = continental_us_domains, aes(x = longitude, y = latitude, label = domain), size = 3) +
+    labs(title = "Locations of Domains in Continental US", x = "Longitude", y = "Latitude") +
+    coord_fixed(1.3) +
+    theme_minimal()
+
+# Save the map
+ggsave(here("output/exploration_figs/map.png"), plot = map, width = 8, height = 6, dpi = 300)
 
 
+# Calculate the start and end dates, and duration for each site
+site_data <- processed_data %>%
+    group_by(site_code) %>%
+    summarize(
+        start_date = min(date, na.rm = TRUE),
+        end_date = max(date, na.rm = TRUE),
+        duration = as.numeric(difftime(end_date, start_date, units = "days"))
+    ) %>%
+    arrange(desc(duration))  # Sort by duration, longest on top
+
+# Reorder the site_code factor based on the sorted duration
+site_data <- site_data %>%
+    mutate(site_code = factor(site_code, levels = rev(site_code)))  # Reverse the order
+
+n_sites <- n_distinct(site_data$site_code)
+
+# Create the plot using ggplot with site names and site count annotation
+timeseries <- ggplot(site_data, aes(x = start_date, xend = end_date, y = site_code, yend = site_code)) +
+    geom_segment(linewidth = 0.4) +
+    labs(title = "MS Site Data: DOC", x = "Year", y = "Site Code") +
+    annotate("text", x = min(site_data$start_date), y = 0, label = paste0("n = ", n_sites, " sites"),
+             color = "blue", size = 5, hjust = 0, vjust = -1) +  # Add annotation in bottom-left
+    theme_minimal() +
+    theme(
+        axis.text.x = element_text(size = 10),
+        axis.text.y = element_text(size = 8, color = "black"),  # Display site names
+        panel.grid = element_blank(),  # Remove gridlines
+        panel.border = element_rect(color = "black", fill = NA, linewidth = 0.25),
+        axis.ticks.x = element_line(color = "black")
+    )
+timeseries
+
+# Save the plot
+ggsave(here("output/exploration_figs/ribbon_plot.png"), plot = timeseries, width = 8, height = 10, dpi = 300)
+
+
+```
+
+```{r doc_obs_plot, echo=FALSE, fig.cap="Total DOC observations across domains"}
+doc_obs_plot
+```
+
+Figure 1 summarizes the total number of dissolved organic carbon (DOC) measurements collected for each domain. HBEF has the highest count of measurements, exceeding 10,000, while domains like Trout Lake and Shale Hills have significantly fewer data points. This variation in data density reflects differences in monitoring effort and study focus across sites. Domains with more measurements provide robust temporal coverage, enabling more reliable trend and seasonal analyses, whereas domains with fewer observations may have limited statistical power.
+
+
+```{r duration_plot, echo=FALSE, fig.cap="Duration of data collection (in years) across domains."}
+duration_plot
+```
+
+Figure 2 illustrates the number of years of data collection for DOC measurements across different domains. Loch Vale has the longest duration of data collection, spanning nearly 40 years, followed by Panola and HBEF. In contrast, domains such as Neon and Shale Hills have much shorter durations. The length of data collection is critical for analyzing long-term trends, with longer time series offering greater insights into temporal patterns and environmental changes.
+
+
+
+```{r timeseries_plot, echo=FALSE, fig.cap="Duration of DOC data collection for each site.", fig.width=8, fig.height=10}
+timeseries
+```
+
+
+Figure 3 shows the temporal extent of data collection for individual sites within each domain. Each horizontal line represents a site, with its start and end points indicating the first and last years of data collection. The annotation at the bottom notes that there are 89 unique sites included in the dataset. The variability in temporal coverage among sites highlights differences in monitoring intensity and duration, which can influence the resolution and scope of trend analyses.
+
+
+
+```{r domains_map, echo=FALSE, fig.cap="Locations of MacroShed domains in the continental U.S."}
+map
+```
+
+Figure 4 displays the geographic locations of domains within the continental United States. Each red point represents a domain, with labels identifying their names. The spatial distribution of domains spans diverse climates and landscapes, from northern forested regions like HBEF to southern domains such as Santee and Walker Branch. This geographic diversity allows for comparisons of DOC dynamics across a range of environmental conditions, enhancing the generalizability of the findings.
 
 \newpage
 
 # Analysis
+```{r seasonal_code, include=FALSE}
+# Load processed data
+processed_data <- readRDS(here("data/Processed/processed_macrosheds_data.rds"))
+
+# Calculate daily VWM and clean data
+vwm_seasonal <- processed_data %>%
+    group_by(domain, date) %>%
+    summarize(
+        VWM = sum(val.x * val.y, na.rm = TRUE) / sum(val.y, na.rm = TRUE),
+        .groups = "drop"
+    ) %>%
+    mutate(
+        Month_Num = month(date),
+        season = case_when(
+            Month_Num %in% c(9, 10, 11) ~ "Fall",
+            Month_Num %in% c(12, 1, 2) ~ "Winter",
+            Month_Num %in% c(3, 4, 5) ~ "Spring",
+            Month_Num %in% c(6, 7, 8) ~ "Summer",
+            TRUE ~ NA_character_
+        ),
+        season = factor(season, levels = c("Fall", "Winter", "Spring", "Summer"))
+    ) %>%
+    filter(is.finite(VWM))  # Remove rows with non-finite VWM
+
+# Add placeholder rows for missing levels
+placeholder_data <- expand.grid(
+    domain = unique(vwm_seasonal$domain),
+    season = factor(c("Fall", "Winter", "Spring", "Summer"), levels = c("Fall", "Winter", "Spring", "Summer"))
+) %>%
+    mutate(
+        date = as.Date(NA),  # Placeholder date
+        VWM = NA             # Placeholder VWM
+    )
+
+vwm_seasonal <- bind_rows(vwm_seasonal, placeholder_data)
+
+# Define custom offsets for each domain
+offsets <- list(
+    "loch_vale" = c(-8, 12), "niwot" = c(-25, 0), "boulder" = c(-12, -13),
+    "east_river" = c(-20, -7), "bear" = c(-3, 7), "hbef" = c(13, 0),
+    "hjandrews" = c(-10, 5), "konza" = c(0, -15), "neon" = c(-6, -13),
+    "walker_branch" = c(17, -10), "panola" = c(-3, -10), "plum" = c(13, -7),
+    "santee" = c(3, -10), "shale_hills" = c(10, -6), "sleepers" = c(-10, 5),
+    "trout_lake" = c(-8, 7)
+)
+
+# Define boxplot function
+create_boxplot_domain <- function(domain_name, data) {
+    plot_data <- data %>%
+        filter(domain == domain_name) %>%
+        complete(season = factor(season, levels = c("Fall", "Winter", "Spring", "Summer")), fill = list(VWM = NA))
+
+    ggplot(plot_data, aes(x = season, y = VWM, fill = season)) +
+        geom_boxplot(
+            width = 0.8,  # Make boxplots narrower
+            outlier.size = 0.2,
+            na.rm = TRUE
+        ) +
+        scale_fill_manual(
+            values = c(
+                "Fall" = "orange",
+                "Winter" = "lightblue",
+                "Spring" = "lightgreen",
+                "Summer" = "gold"
+            )
+        ) +
+        coord_cartesian(ylim = c(0, quantile(plot_data$VWM, 0.95, na.rm = TRUE))) +
+        theme_minimal() +
+        theme(
+            axis.title.x = element_blank(),  # Remove x-axis title
+            axis.text.x = element_blank(),   # Remove x-axis labels
+            axis.ticks.x = element_blank(),  # Remove x-axis ticks
+            legend.position = "none",
+            panel.grid = element_blank(),    # Remove gridlines behind boxplots
+            plot.title = element_text(size = 6),  # Smaller title
+            axis.title.y = element_text(size = 6),  # Smaller y-axis title
+            axis.text.y = element_text(size = 5)  # Smaller y-axis text
+        ) +
+        labs(title = domain_name, y = "VWM")
+}
+
+# Create base map
+us_map_plot <- ggplot() +
+    geom_polygon(data = map_data("state"), aes(x = long, y = lat, group = group), fill = "lightgray", color = "white") +
+    coord_cartesian(xlim = c(-135, -50), ylim = c(18, 58)) +
+    theme_minimal() +
+    theme(panel.grid = element_blank())
+
+# Function to scale down the size of each boxplot
+add_boxplot_to_map_domain <- function(base_map, domain_name, data, lat_long_data, x_offset = 0, y_offset = 0) {
+    boxplot_grob <- ggplotGrob(create_boxplot_domain(domain_name, data))
+    if (is.null(boxplot_grob)) return(base_map)
+
+    domain_coords <- lat_long_data %>% filter(domain == domain_name)
+    long <- domain_coords$longitude + x_offset
+    lat <- domain_coords$latitude + y_offset
+
+    base_map +
+        geom_point(aes(x = domain_coords$longitude, y = domain_coords$latitude), color = "black", fill = "red", shape = 21, size = 3) +
+        geom_segment(aes(x = domain_coords$longitude, y = domain_coords$latitude, xend = long, yend = lat), color = "black", linetype = "dashed") +
+        annotation_custom(
+            grob = boxplot_grob,
+            xmin = long - 5, xmax = long + 5.5,  # Scale down grob size
+            ymin = lat - 5, ymax = lat + 5
+        )
+}
+
+# Create a dataframe with latitude and longitude for each domain
+site_lat_long <- processed_data %>%
+    group_by(domain) %>%
+    summarize(
+        latitude = mean(latitude, na.rm = TRUE),
+        longitude = mean(longitude, na.rm = TRUE),
+        .groups = "drop"
+    )
+
+# Add boxplots to the map with offsets
+final_map <- us_map_plot
+for (domain in unique(vwm_seasonal$domain)) {
+    offset <- offsets[[domain]] %||% c(0, 0)  # Use custom offsets; default to (0, 0) if not specified
+    final_map <- add_boxplot_to_map_domain(final_map, domain, vwm_seasonal, site_lat_long, x_offset = offset[1], y_offset = offset[2])
+}
+
+# Save the map
+ggsave(here("output/analysis_figs/us_map_plot.png"), plot = final_map, width = 12, height = 7, dpi = 300)
+
+
+# Define a simple legend with adjusted title position and outlined points
+legend_plot <- ggplot() +
+    geom_point(aes(x = 1, y = 4), color = "black", size = 5, shape = 21, stroke = 0.8, fill = "orange") +
+    geom_text(aes(x = 1.25, y = 4, label = "Fall"), hjust = 0, size = 5) +
+    geom_point(aes(x = 1, y = 3.5), color = "black", size = 5, shape = 21, stroke = 0.8, fill = "lightblue") +
+    geom_text(aes(x = 1.25, y = 3.5, label = "Winter"), hjust = 0, size = 5) +
+    geom_point(aes(x = 1, y = 3), color = "black", size = 5, shape = 21, stroke = 0.8, fill = "lightgreen") +
+    geom_text(aes(x = 1.25, y = 3, label = "Spring"), hjust = 0, size = 5) +
+    geom_point(aes(x = 1, y = 2.5), color = "black", size = 5, shape = 21, stroke = 0.8, fill = "gold") +
+    geom_text(aes(x = 1.25, y = 2.5, label = "Summer"), hjust = 0, size = 5) +
+    xlim(0.5, 3) + ylim(0.5, 4.5) +
+    theme_void() +
+    theme(
+        plot.title = element_text(size = 16, face = "bold", hjust = 0.5, margin = margin(b = 10)), # Lower title
+        plot.margin = margin(10, 10, 10, 10) # Add space around
+    ) +
+    ggtitle("Season")
+
+# Save the updated legend
+ggsave(here("output/analysis_figs/season_legend.png"), legend_plot, width = 4, height = 6, dpi = 300)
+
+
+# Load the legend
+season_legend <- png::readPNG(here("output/analysis_figs/season_legend.png"))
+legend_grob <- grid::rasterGrob(season_legend, interpolate = TRUE)
+
+# Combine map and legend
+combined_plot <- ggdraw() +
+    draw_plot(final_map) +
+    draw_grob(legend_grob, x = 0.85, y = -0.1, width = 0.2, height = 0.4) # Adjust position and size as needed
+
+# Save the combined plot
+ggsave(here("output/analysis_figs/us_map_withlegend.png"), combined_plot, width = 12, height = 8, dpi = 300)
 
 
 
-## Question 1: <insert specific question here and add additional subsections for additional questions below, if needed>
+##############################################################################################
+##############################################################################################
 
-## Question 2: 
+# Create a single plot of boxplots faceted by domain
+boxplot_faceted <- vwm_seasonal %>%
+    filter(!is.na(VWM)) %>%  # Remove rows with NA values for VWM
+    ggplot(aes(x = season, y = VWM, fill = season)) +
+    geom_boxplot(
+        width = 0.8,  # Adjust boxplot width
+        outlier.size = 0.2,
+        na.rm = TRUE
+    ) +
+    scale_fill_manual(
+        values = c(
+            "Fall" = "orange",
+            "Winter" = "lightblue",
+            "Spring" = "lightgreen",
+            "Summer" = "gold"
+        )
+    ) +
+    facet_wrap(~ domain, scales = "free_y") +  # Create one panel per domain
+    theme_minimal() +
+    theme(
+        axis.title.x = element_blank(),  # Remove x-axis title
+        axis.text.x = element_text(angle = 45, hjust = 1, size = 8),
+        axis.ticks.x = element_blank(),  # Remove x-axis ticks
+        legend.position = "bottom",      # Place the legend below
+        panel.grid = element_blank(),    # Remove gridlines
+        plot.title = element_text(size = 12, face = "bold"),  # Adjust title size
+        axis.title.y = element_text(size = 10),  # Adjust y-axis title size
+        axis.text.y = element_text(size = 8)     # Adjust y-axis text size
+    ) +
+    labs(
+        title = "Seasonal VWM DOC by Domain",
+        y = "VWM DOC (mg/L)",
+        fill = "Season"
+    )
+
+# Save the faceted plot
+ggsave(here("output/analysis_figs/boxplots_faceted.png"), boxplot_faceted, width = 6, height = 8, dpi = 300)
+
+##############################################################################################
+
+library(dplyr)
+library(ggplot2)
+library(FSA)  # For Dunn's test
+library(rstatix)  # For posthoc tests and compact letter display
+library(multcompView)
+
+# Step 1: Remove outliers from the dataset
+filtered_vwm_seasonal <- vwm_seasonal %>%
+    group_by(domain, season) %>%
+    filter(VWM <= quantile(VWM, 0.95, na.rm = TRUE))  # Retain only values below the 95th percentile
+
+# Step 2: Perform pairwise comparisons and create compact letter display
+significance_results <- filtered_vwm_seasonal %>%
+    filter(!is.na(VWM)) %>%
+    group_by(domain) %>%
+    rstatix::dunn_test(VWM ~ season, p.adjust.method = "bonferroni") %>%
+    mutate(
+        comparisons = paste(group1, group2, sep = "-"),  # Use hyphen as separator
+        significant = ifelse(p.adj < 0.05, "*", "ns")
+    )
+
+compact_letters <- significance_results %>%
+    group_by(domain) %>%
+    reframe(
+        season = unique(c(group1, group2)),  # Extract all unique seasons
+        .group = multcompView::multcompLetters(
+            setNames(p.adj, comparisons),  # Provide names for p-values
+            Letters = letters
+        )$Letters
+    )
+
+# Step 1: Calculate the letter positions directly above the bars
+letter_data <- compact_letters %>%
+    left_join(filtered_vwm_seasonal %>%
+                  group_by(domain, season) %>%
+                  summarize(max_season_y = max(VWM, na.rm = TRUE), .groups = "drop"),
+              by = c("domain", "season")
+    ) %>%
+    mutate(
+        y_position = max_season_y + 0.05 * max_season_y  # Add 5% above the bar
+    )
+
+# Step 2: Use dynamic y-axis limits without excessive padding
+expanded_y_limits <- filtered_vwm_seasonal %>%
+    group_by(domain) %>%
+    summarize(
+        y_limit = max(VWM, na.rm = TRUE) + 0.3 * max(VWM, na.rm = TRUE)  # Add proportional padding
+    )
+
+# Step 3: Create the boxplot with proper letter placement
+boxplot_adjusted <- ggplot(filtered_vwm_seasonal, aes(x = season, y = VWM, fill = season)) +
+    geom_boxplot(
+        width = 0.8,
+        outlier.size = 0.5,
+        na.rm = TRUE
+    ) +
+    scale_fill_manual(
+        values = c(
+            "Fall" = "orange",
+            "Winter" = "lightblue",
+            "Spring" = "lightgreen",
+            "Summer" = "gold"
+        )
+    ) +
+    facet_wrap(~ domain, scales = "free_y") +
+    geom_text(
+        data = letter_data,
+        aes(x = season, y = y_position, label = .group),
+        inherit.aes = FALSE,
+        size = 2,
+        vjust = 0  # Place letters just above the bars
+    ) +
+    theme_minimal() +
+    theme(
+        panel.border = element_rect(color = "black", fill = NA, size = 1),
+        axis.title.x = element_blank(),
+        axis.text.x = element_text(angle = 45, hjust = 1, size = 8),
+        axis.ticks.x = element_blank(),
+        legend.position = "bottom",
+        panel.grid = element_blank(),
+        plot.title = element_text(size = 12, face = "bold"),
+        axis.title.y = element_text(size = 10),
+        axis.text.y = element_text(size = 8)
+    ) +
+    labs(
+        title = "Seasonal VWM Boxplots by Domain with Statistical Comparisons",
+        y = "VWM DOC (mg/L)",
+        fill = "Season"
+    ) +
+    expand_limits(y = 0)  # Ensure y-axis starts at 0
+
+# Save the plot
+ggsave(here("output/analysis_figs/boxplot_with_letters.png"), boxplot_adjusted, width = 8, height = 10, dpi = 300)
+
+
+```
+
+```{r wateryear_code, include=FALSE}
+############################################
+# STEP 1: Load and Filter Data
+############################################
+
+# Load processed data
+processed_data <- readRDS(here("data/Processed/processed_macrosheds_data.rds"))
+
+# Step 1: Count the number of observations per site, year, and month
+data_with_counts <- processed_data %>%
+    mutate(year = year(date), month = month(date)) %>%
+    group_by(site_code, year, month) %>%
+    summarize(obs_per_month = n(), .groups = "drop")
+
+# Step 2: Apply the filtering criterion - Minimum 1 observation per month for at least 10 months in a year
+filtered_1_obs <- data_with_counts %>%
+    filter(obs_per_month >= 1) %>%
+    group_by(site_code, year) %>%
+    summarize(months_with_1_obs = n_distinct(month), .groups = "drop") %>%
+    filter(months_with_1_obs >= 10)
+
+# Step 3: Join the filtered years back to the main dataset
+filtered_data_1_obs <- processed_data %>%
+    mutate(year = year(date)) %>%
+    semi_join(filtered_1_obs, by = c("site_code", "year"))
+
+# Step 4: Ensure water_year column is correctly retained
+filtered_data_1_obs <- filtered_data_1_obs %>%
+    mutate(water_year = if_else(month(date) >= 10, year(date) + 1, year(date)))
+
+############################################
+# STEP 2: Calculate VWM DOC and Analyze Trends
+############################################
+
+# Calculate Volume Weighted Mean (VWM) DOC for each site and water year
+vwm_doc <- filtered_data_1_obs %>%
+    group_by(site_code, water_year) %>%
+    summarize(
+        VWM_DOC = sum(val.x * val.y, na.rm = TRUE) / sum(val.y, na.rm = TRUE),  # Calculate VWM DOC
+        Avg_Q = mean(val.y, na.rm = TRUE),  # Calculate average discharge
+        .groups = "drop"
+    )
+
+# Step 2: Determine significant trends for VWM DOC
+significant_trends <- vwm_doc %>%
+    group_by(site_code) %>%
+    summarize(
+        p_value = tryCatch(
+            summary(lm(VWM_DOC ~ water_year))$coefficients[2, 4],
+            error = function(e) NA  # Handle errors gracefully
+        ),
+        slope = tryCatch(
+            summary(lm(VWM_DOC ~ water_year))$coefficients[2, 1],
+            error = function(e) NA
+        ),
+        .groups = "drop"
+    ) %>%
+    mutate(significant = !is.na(p_value) & p_value < 0.05)  # Significance threshold of 0.05
+
+# Merge significance data back into the VWM DOC data
+vwm_doc <- vwm_doc %>%
+    left_join(significant_trends, by = "site_code")
+
+############################################
+# STEP 3: Add Site Metadata
+############################################
+
+# Join metadata (site_fullname, domain, ws_status) into the VWM DOC data
+vwm_doc <- vwm_doc %>%
+    left_join(
+        filtered_data_1_obs %>%
+            select(site_code, site_fullname, domain, ws_status) %>%
+            distinct(),
+        by = "site_code"
+    )
+
+############################################
+# STEP 4: Identify Significant Trends
+############################################
+
+# Extract the last points for significant trendlines
+last_points <- vwm_doc %>%
+    filter(significant == TRUE) %>%
+    group_by(site_code) %>%
+    slice_tail(n = 1) %>%
+    ungroup() %>%
+    select(site_code, site_fullname, domain, water_year, VWM_DOC)
+
+
+# Generate a list of significant sites with slopes and p-values
+significant_sites_list <- vwm_doc %>%
+    filter(significant == TRUE) %>%
+    group_by(site_code) %>%
+    summarize(
+        slope = first(slope),
+        p_value = first(p_value),
+        domain = first(domain),
+        .groups = "drop"
+    )
+
+# Create a clean table for the console
+significant_sites_list %>%
+    kable(
+        format = "latex",  # Ensures LaTeX output
+        col.names = c("Site Code", "Slope", "P-value", "Domain"),
+        caption = "Significant Trends by Site"
+    ) %>%
+    kable_styling(
+        bootstrap_options = c("striped", "hover", "condensed"),
+        full_width = FALSE
+    )
 
 
 
+############################################
+# STEP 5: Create Scatterplot with Trends
+############################################
+
+# Calculate the total number of unique sites
+n_total_sites <- vwm_doc %>%
+    distinct(site_code) %>%
+    nrow()
+
+# Calculate the number of sites with significant trends
+n_significant_sites <- vwm_doc %>%
+    filter(significant == TRUE) %>%
+    distinct(site_code) %>%
+    nrow()
+
+# Print the numbers for verification
+print(paste("Total sites:", n_total_sites))
+print(paste("Significant sites:", n_significant_sites))
+
+# Scatterplot for VWM DOC trends
+scatterplot_vwm_doc <- ggplot(vwm_doc, aes(x = water_year, y = VWM_DOC, group = site_code)) +
+    geom_point(aes(color = significant), alpha = 0.6, size = 2) +
+    scale_y_log10(labels = scales::label_number()) +
+    geom_smooth(
+        data = subset(vwm_doc, significant == TRUE),
+        method = "lm", se = FALSE, color = "blue", linewidth = 0.75
+    ) +
+    scale_color_manual(values = c("grey", "black")) +
+    labs(
+        x = "Water Year",
+        y = "Log VWM DOC (mg/L)",
+        title = "Scatterplot of VWM DOC Trends Over Time",
+        color = "Trend Significance"
+    ) +
+    theme_minimal() +
+    theme(
+        legend.position = "bottom",
+        panel.border = element_rect(color = "black", fill = NA, size = 1),
+        axis.ticks = element_line(color = "black"),
+        axis.ticks.length = unit(0.15, "cm"),
+        axis.title = element_text(size = 14),
+        strip.background = element_rect(fill = "grey80", color = "black"),
+        strip.text = element_text(color = "black")
+    ) +
+    annotate("text", x = min(vwm_doc$water_year), y = 0.1,
+             label = paste(n_total_sites, "sites,", n_significant_sites, "significant"),
+             hjust = 0, vjust = 0, size = 4, color = "blue")
+
+# Save scatterplot
+ggsave(here("output/analysis_figs/sig_trend.png"), plot = scatterplot_vwm_doc, width = 9, height = 7, dpi = 300)
+
+############################################
+# STEP 6: Scatterplot for Experimental vs Non-Experimental Sites
+############################################
+
+scatterplot_experimental <- ggplot(vwm_doc, aes(x = water_year, y = VWM_DOC, group = site_code)) +
+    geom_point(aes(color = ifelse(significant, "black", "grey")), alpha = 0.6, size = 2) +
+    scale_y_log10(labels = scales::label_number()) +
+    geom_smooth(
+        data = subset(vwm_doc, significant == TRUE),
+        method = "lm", se = FALSE,
+        aes(color = ifelse(ws_status == "experimental", "darkolivegreen3", "blue")),
+        linewidth = 1.0
+    ) +
+    scale_color_manual(values = c("black", "blue", "darkolivegreen3", "grey")) +
+    labs(
+        x = "Water Year",
+        y = "Log VWM DOC (mg/L)",
+        title = "VWM DOC Trends for Experimental vs Non-Experimental Sites"
+    ) +
+    theme_minimal() +
+    theme(
+        legend.position = "none",  # Remove the legend
+        panel.border = element_rect(color = "black", fill = NA, size = 1),
+        axis.ticks = element_line(color = "black"),
+        axis.ticks.length = unit(0.15, "cm"),
+        axis.title = element_text(size = 14)
+    ) +
+    facet_wrap(~ ws_status, scales = "free_y")
+
+# Save experimental plot
+ggsave(here("output/analysis_figs/sig_trend_exp.png"), plot = scatterplot_experimental, width = 9, height = 6, dpi = 300)
+
+# Generate a list of significant sites with slopes and p-values for experimental vs non-experimental
+significant_sites_exp_vs_nonexp <- vwm_doc %>%
+    filter(significant == TRUE) %>%
+    group_by(site_code) %>%
+    summarize(
+        slope = first(slope),
+        p_value = first(p_value),
+        domain = first(domain),
+        ws_status = first(ws_status),  # Include experimental vs non-experimental status
+        .groups = "drop"
+    )
+
+# Create a clean table for the console with experimental vs non-experimental grouping
+significant_sites_exp_vs_nonexp %>%
+    kable(
+        format = "latex",  # Ensures LaTeX output
+        col.names = c("Site Code", "Slope", "P-value", "Domain", "Watershed Status"),
+        caption = "Significant Trends by Site (Experimental vs Non-Experimental)"
+    ) %>%
+    kable_styling(
+        bootstrap_options = c("striped", "hover", "condensed"),
+        full_width = FALSE
+    )
+
+```
+
+
+## Question 1: Is there a seasonal difference in DOC export, and how does this vary across the US?
+
+```{r boxplot_map, echo=FALSE, fig.cap="Seasonal DOC export by domain.", fig.width=12, fig.height=8}
+combined_plot
+```
+
+
+Figure 5 showcases seasonal VWM DOC concentrations across U.S. watersheds, with boxplots summarizing variability for each season within domains. Each boxplot represents the interquartile range of VWM DOC values, with the median indicated by the horizontal line and dots capturing outliers. Northern domains like Loch Vale and HJ Andrews display spring peaks, likely influenced by snowmelt, while regions like HBEF exhibit fall peaks, potentially linked to leaf litter decomposition. In contrast, southern domains such as Walker Branch show relatively consistent DOC concentrations year-round, reflecting more stable hydrology. The variation in boxplot sizes and medians highlights regional and seasonal differences in DOC export. Northern forested regions tend to show greater seasonal variability, whereas grassland and southern domains have less pronounced seasonal shifts. These findings emphasize the influence of climate, hydrology, and vegetation on DOC dynamics across diverse U.S. watersheds.
+
+
+```{r boxplot_stats, echo=FALSE, fig.cap="Seasonal VWM DOC concentrations by domain with significant differences indicated by letters.", fig.width=9, fig.height=10}
+boxplot_adjusted
+```
+
+
+Figure 6 presents seasonal VWM DOC concentrations for each domain, with statistical comparisons highlighted. Boxplots summarize the distribution of VWM DOC values for each season, showing medians (horizontal lines), interquartile ranges (boxes), and variability through whiskers and outliers. Seasonal differences in DOC concentrations were assessed using Dunn’s test with Bonferroni correction to control for multiple comparisons.
+
+The letters above each boxplot represent the results of these tests. Matching letters across seasons (e.g., “a”) indicate no statistically significant difference between those seasons, while differing letters (e.g., “a” vs. “b”) denote significant differences at a threshold of p < 0.05. For example, in the HJ Andrews domain, winter and spring (“b” and “c”) show significantly higher VWM DOC concentrations than fall (“a”).
+
+Domains like HBEF and Niwot exhibit clear seasonal patterns with distinct statistical differences, potentially driven by factors like snowmelt or leaf litter. In contrast, domains such as Panola and Walker Branch show minimal seasonal variation, reflecting stable hydrological regimes. This analysis highlights the influence of seasonality on DOC export and underscores regional variability in watershed behavior.
+
+## Question 2: Are DOC exports significantly changing over time?
+
+Significant DOC Trends Over Time
+```{r all_data_trends, echo=FALSE, fig.cap="Long-term trends in DOC export by site."}
+scatterplot_vwm_doc
+```
+
+
+Figure 7 illustrates trends in Volume Weighted Mean (VWM) DOC concentrations over time across 60 sites, with 12 sites showing significant trends. To ensure data quality, we filtered the dataset to include only years with at least 10 months containing at least one observation per month. This criterion minimized potential biases due to incomplete temporal coverage, ensuring more robust trend analysis.
+
+Significance was determined by performing linear regressions of VWM DOC against water year for each site, with a threshold of  p < 0.05  used to identify significant trends. Sites with significant trends are highlighted with blue regression lines, while non-significant trends are shown as grey points.
+
+While 12 out of 60 sites (~20%) exhibit significant trends, this subset provides valuable insights into long-term DOC export patterns. These trends could reflect changes in watershed processes, land use, or environmental factors, and the notable role of disturbance (e.g., experimental or managed sites) in influencing DOC dynamics warrants further investigation. However, the modest proportion of significant trends also highlights the spatial and temporal variability of DOC exports across the U.S., underscoring the complexity of detecting universal patterns.
+
+
+Experimental vs. Non-Experimental Watersheds
+```{r split_data_trends, echo=FALSE, fig.cap="DOC trends in experimental vs. non-experimental watersheds."}
+scatterplot_experimental
+```
+
+
+Figure 8 separates the trends in VWM DOC export between experimental and non-experimental sites, providing valuable insights into how disturbances, particularly forest clear-cutting, influence DOC dynamics over time. The experimental sites (left panel) reveal a mix of increasing and decreasing trends, with many showing initial declines followed by steady increases in DOC export. This pattern could indicate the legacy of clear-cutting, where initial disruptions to organic matter cycling lead to reduced DOC export, followed by a gradual recovery as the watershed stabilizes and vegetation regrows, returning DOC levels to a more natural baseline.
+
+In contrast, non-experimental sites (right panel) show a predominance of subtle changes over time, reflecting less external interference and emphasizing natural variability in DOC dynamics. The stark contrast between the two panels underscores how clear-cutting and other experimental manipulations can create significant short- and long-term impacts on watershed biogeochemistry. The observed increases in experimental sites may also suggest a resilience in these systems, where DOC levels eventually rebound despite the initial disturbance. This split approach is particularly useful for teasing apart human-driven versus natural drivers of change in DOC export.
+
+
+
+```{r trend_table, results='asis', echo=FALSE}
+# Use the kable() function to regenerate the table with a caption
+significant_sites_exp_vs_nonexp %>%
+    kable(
+        format = "latex",  # Ensures compatibility with LaTeX
+        caption = "Table 2. Significant VWM DOC trends by site, categorized by watershed status and domain."
+    ) %>%
+    kable_styling(
+        bootstrap_options = c("striped", "hover", "condensed"),
+        full_width = FALSE
+    )
+```
 
 \newpage
 
 # Summary and Conclusions
 
+This analysis provides valuable insights into the seasonal and temporal dynamics of dissolved organic carbon (DOC) export across diverse watersheds in the continental United States. Seasonal patterns in DOC export reveal distinct peaks in fall and winter, likely driven by processes such as leaf litter decomposition, snowmelt, and enhanced hydrological connectivity. Regions like northeastern forests exhibit particularly high DOC concentrations in the fall, underscoring the role of terrestrial vegetation inputs in shaping seasonal fluxes. The variation across regions highlights the influence of local factors, such as precipitation regimes, land cover, and watershed morphology, in mediating seasonal DOC dynamics.
+
+Over time, DOC export trends illustrate both stability and variability. While most sites show no significant change, the 12 sites with statistically significant trends underscore the potential role of watershed disturbance and climatic factors in altering DOC dynamics. Interestingly, experimental sites, many of which were associated with forest clear-cutting, exhibit greater variability. The increasing trends observed in these sites may reflect DOC levels returning to equilibrium post-disturbance, as organic material stabilizes and hydrological flowpaths recover. Conversely, non-experimental sites with significant trends may point to broader-scale drivers, such as changes in precipitation patterns or rising temperatures due to climate change, influencing DOC mobilization and export.
+
+These findings emphasize the importance of context when interpreting DOC trends. Disturbance events, whether natural or anthropogenic, play a critical role in shaping short-term dynamics, while long-term trends may signal shifts in baseline watershed function. Understanding these dynamics is essential for predicting future DOC fluxes in response to environmental change, informing watershed management strategies, and safeguarding water quality. The nuanced interplay between local processes and large-scale drivers warrants continued investigation, particularly in the face of a changing climate.
+
+
+GitHub: https://github.com/jonathangilman/Gilman_ENV872_EDA_FinalProject.git
 
 \newpage
 
-# References
-<add references here if relevant, otherwise delete this section> 
