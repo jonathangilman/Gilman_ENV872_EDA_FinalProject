@@ -1,0 +1,953 @@
+
+This MacroSheds data product (stream_chemistry__ms002) was generated from the following munged MacroSheds product(s):
+
+stream_chemistry__213
+stream_chemistry__103
+stream_chemistry__107
+stream_chemistry__108
+stream_chemistry__109
+stream_chemistry__110
+stream_chemistry__112
+stream_chemistry__113
+stream_chemistry__9
+stream_chemistry__160
+stream_chemistry__162
+stream_chemistry__163
+stream_chemistry__278
+stream_chemistry__102
+stream_chemistry__111
+stream_chemistry__74
+stream_chemistry__105
+
+Source data were retrieved from the following web page(s), static file(s), or web-API endpoint(s)
+on the datetime in parentheses:
+
+stream_chemistry__213:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-nwt&identifier=213&revision=1 (retrieved 2024-01-16 18:08:21.070312)
+
+stream_chemistry__103:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-nwt&identifier=103&revision=14 (retrieved 2024-01-16 18:08:29.245449)
+
+stream_chemistry__107:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-nwt&identifier=107&revision=10 (retrieved 2024-01-16 18:08:37.500484)
+
+stream_chemistry__108:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-nwt&identifier=108&revision=12 (retrieved 2024-01-16 18:08:55.363573)
+
+stream_chemistry__109:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-nwt&identifier=9&revision=4 (retrieved 2024-01-16 18:09:17.907809)
+
+stream_chemistry__110:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-nwt&identifier=110&revision=7 (retrieved 2024-01-16 18:09:37.196291)
+
+stream_chemistry__112:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-nwt&identifier=112&revision=4 (retrieved 2024-01-16 18:09:54.898572)
+
+stream_chemistry__113:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-nwt&identifier=113&revision=10 (retrieved 2024-01-16 18:10:12.72787)
+
+stream_chemistry__9:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-nwt&identifier=9&revision=4 (retrieved 2024-01-16 18:10:29.940396)
+
+stream_chemistry__160:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-nwt&identifier=160&revision=3 (retrieved 2024-01-16 18:10:47.038019)
+
+stream_chemistry__162:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-nwt&identifier=162&revision=1 (retrieved 2024-01-16 18:11:04.318096)
+
+stream_chemistry__163:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-nwt&identifier=163&revision=3 (retrieved 2024-01-16 18:11:21.415269)
+
+stream_chemistry__278:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-nwt&identifier=278&revision=1 (retrieved 2024-01-16 18:11:38.965791)
+
+stream_chemistry__102:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-nwt&identifier=102&revision=18 (retrieved 2024-01-16 18:42:07.685712)
+
+stream_chemistry__111:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-nwt&identifier=111&revision=15 (retrieved 2024-01-16 18:42:24.070029)
+
+stream_chemistry__74:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-nwt&identifier=74&revision=8 (retrieved 2024-01-16 18:42:40.140283)
+
+stream_chemistry__105:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-nwt&identifier=105&revision=17 (retrieved 2024-01-16 18:42:56.523563)
+
+To rebuild all or part of the MacroSheds dataset yourself, use our code on GitHub (and these notes). If you want to
+rebuild only this product, or if you want to modify the code used to generate this product, you
+will almost certainly have an easier time using these notes. That said, automatic documentation like this may
+have some errors and missing details. Please contact us at mail@macrosheds.org if you're having trouble
+navigating our docs.
+
+Below you will find the "derive kernel" function(s) by which stream_chemistry__ms002 was generated.
+Note that MacroSheds products may have precursors that are themselves derived products. In some
+cases, these derived precursors are named above and have their own separate documentation. In other
+cases, derived precursors are generated from stand-alone derive kernels whose entire definition and
+history can be displayed here. A stand-alone kernel might, for example, pull supplemental data
+from a source other than its own network/domain. Here is the code for stream_chemistry__ms002's derive kernel function,
+and for any stand-alone precursor derive kernel function(s):
+
+process_2_ms002 <- function (network, domain, prodname_ms) 
+{
+    combine_products(network = network, domain = domain, prodname_ms = prodname_ms, 
+        input_prodname_ms = c("stream_chemistry__213", "stream_chemistry__103", 
+            "stream_chemistry__107", "stream_chemistry__108", 
+            "stream_chemistry__109", "stream_chemistry__110", 
+            "stream_chemistry__112", "stream_chemistry__113", 
+            "stream_chemistry__9", "stream_chemistry__160", "stream_chemistry__162", 
+            "stream_chemistry__163", "stream_chemistry__102", 
+            "stream_chemistry__111", "stream_chemistry__74", 
+            "stream_chemistry__105", "stream_chemistry__278"))
+    return()
+}
+
+These were the arguments to that/those function(s):
+
+network = 'lter'
+domain = 'niwot'
+prodname_ms = 'stream_chemistry__ms002'
+
+Zero or more function definitions follow, depending on the number of munged products that
+are precursors to stream_chemistry__ms002:
+
+This is the "munge kernel" function for stream_chemistry__213:
+
+process_1_213 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    data_cols <- c(pH = "pH", cond = "spCond", ANC = "ANC", H. = "H", 
+        NH4. = "NH4", Ca.. = "Ca", Mg.. = "Mg", Na. = "Na", K. = "K", 
+        Cl. = "Cl", NO3. = "NO3", SO4.. = "SO4", PO4... = "PO4", 
+        Si = "Si", cat_sum = "cationCharge", an_sum = "anionCharge", 
+        chg_bal = "ionBalance", TN = "TN", TDN = "TDN", PN = "TPN", 
+        IN = "TIN", TP = "TP", TDP = "TDP", PP = "TPP", DOP = "DOP", 
+        IP = "TIP", d18O = "d18O", TOC = "TOC", DOC = "DOC", 
+        POC = "POC")
+    d <- ms_read_raw_csv(filepath = rawfile, datetime_cols = c(date = "%Y-%m-%d", 
+        time = "%H%M"), datetime_tz = "Etc/GMT+7", site_code_col = "samp_loc", 
+        alt_site_code = list(SODDIE = "SODDIE STREAM"), data_cols = data_cols, 
+        data_col_pattern = "#V#", set_to_NA = c("NP", "DNS", 
+            "QNS"), convert_to_BDL_flag = c("u", "<#*#", "trace"), 
+        is_sensor = FALSE)
+    d <- ms_cast_and_reflag(d, variable_flags_bdl = "BDL")
+    d <- ms_conversions(d, convert_units_from = c(NH4 = "ueq/l", 
+        ANC = "ueq/l", Ca = "ueq/l", Na = "ueq/l", K = "ueq/l", 
+        Cl = "ueq/l", Mg = "ueq/l", NO3 = "ueq/l", SO4 = "ueq/l", 
+        PO4 = "ueq/l", Si = "umol/l", TN = "umol/l", TDN = "umol/l", 
+        TPN = "umol/l", DON = "umol/l", TP = "umol/l", TDP = "umol/l", 
+        TPP = "umol/l", DOP = "umol/l", TIP = "umol/l", TIN = "ueq/l", 
+        H = "ueq/l"), convert_units_to = c(NH4 = "mg/l", ANC = "eq/l", 
+        Ca = "mg/l", Na = "mg/l", K = "mg/l", Cl = "mg/l", Mg = "mg/l", 
+        NO3 = "mg/l", SO4 = "mg/l", PO4 = "mg/l", Si = "mg/l", 
+        TN = "mg/l", TDN = "mg/l", TPN = "mg/l", DON = "mg/l", 
+        TP = "mg/l", TDP = "mg/l", TPP = "mg/l", DOP = "mg/l", 
+        TIP = "mg/l", TIN = "mg/l", H = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'niwot'
+prodname_ms = 'stream_chemistry__213'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): soddsolu.mw.data.csv
+
+This is the "munge kernel" function for stream_chemistry__103:
+
+process_1_103 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- ms_read_raw_csv(filepath = rawfile, datetime_cols = c(date = "%Y-%m-%d", 
+        time = "%H%M"), datetime_tz = "Etc/GMT+7", site_code_col = "local_site", 
+        data_cols = c(pH = "pH", cond = "spCond", ANC = "ANC", 
+            H. = "H", NH4. = "NH4", Ca.. = "Ca", Mg.. = "Mg", 
+            Na. = "Na", K. = "K", Cl. = "Cl", NO3. = "NO3", SO4.. = "SO4", 
+            PO4... = "PO4", Si = "Si", cat_sum = "cationCharge", 
+            an_sum = "anionCharge", chg_bal = "ionBalance", TN = "TN", 
+            TDN = "TDN", PN = "TPN", IN = "TIN", TP = "TP", TDP = "TDP", 
+            PP = "TPP", DOP = "DOP", IP = "TIP", d18O = "d18O", 
+            TOC = "TOC", DOC = "DOC", POC = "POC"), data_col_pattern = "#V#", 
+        set_to_NA = c("NP", "DNS", "QNS", "EQCL"), convert_to_BDL_flag = c("u", 
+            "trace", "<#*#"), is_sensor = FALSE)
+    d <- ms_cast_and_reflag(d, variable_flags_bdl = "BDL")
+    d <- ms_conversions(d, convert_units_from = c(NH4 = "ueq/l", 
+        ANC = "ueq/l", Ca = "ueq/l", Na = "ueq/l", K = "ueq/l", 
+        Cl = "ueq/l", Mg = "ueq/l", NO3 = "ueq/l", SO4 = "ueq/l", 
+        PO4 = "ueq/l", Si = "umol/l", TN = "umol/l", TDN = "umol/l", 
+        TPN = "umol/l", DON = "umol/l", TP = "umol/l", TDP = "umol/l", 
+        TPP = "umol/l", DOP = "umol/l", TIP = "umol/l", TIN = "ueq/l", 
+        H = "ueq/l"), convert_units_to = c(NH4 = "mg/l", ANC = "eq/l", 
+        Ca = "mg/l", Na = "mg/l", K = "mg/l", Cl = "mg/l", Mg = "mg/l", 
+        NO3 = "mg/l", SO4 = "mg/l", PO4 = "mg/l", Si = "mg/l", 
+        TN = "mg/l", TDN = "mg/l", TPN = "mg/l", DON = "mg/l", 
+        TP = "mg/l", TDP = "mg/l", TPP = "mg/l", DOP = "mg/l", 
+        TIP = "mg/l", TIN = "mg/l", H = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'niwot'
+prodname_ms = 'stream_chemistry__103'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): albisolu.nc.data.csv
+
+This is the "munge kernel" function for stream_chemistry__107:
+
+process_1_107 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(time = ifelse(time == 
+        "DNS", NA, time)) %>% mutate(time = ifelse(nchar(time) == 
+        3, paste0(0, time), time))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(date = "%Y-%m-%d", 
+        time = "%H%M"), datetime_tz = "Etc/GMT+7", site_code_col = "local_site", 
+        alt_site_code = list(GREEN1 = "GREEN LAKE 1"), data_cols = c(pH = "pH", 
+            cond = "spCond", ANC = "ANC", H. = "H", NH4. = "NH4", 
+            Ca.. = "Ca", Mg.. = "Mg", Na. = "Na", K. = "K", Cl. = "Cl", 
+            NO3. = "NO3", SO4.. = "SO4", PO4... = "PO4", Si = "Si", 
+            cat_sum = "cationCharge", an_sum = "anionCharge", 
+            chg_bal = "ionBalance", TN = "TN", TDN = "TDN", PN = "TPN", 
+            IN = "TIN", TP = "TP", TDP = "TDP", PP = "TPP", DOP = "DOP", 
+            IP = "TIP", d18O = "d18O", TOC = "TOC", DOC = "DOC", 
+            POC = "POC"), data_col_pattern = "#V#", set_to_NA = c("NP", 
+            "DNS", "QNS"), convert_to_BDL_flag = c("u", "trace", 
+            "<#*#"), is_sensor = FALSE)
+    d <- ms_cast_and_reflag(d, variable_flags_bdl = "BDL")
+    d <- ms_conversions(d, convert_units_from = c(NH4 = "ueq/l", 
+        ANC = "ueq/l", Ca = "ueq/l", Na = "ueq/l", K = "ueq/l", 
+        Cl = "ueq/l", Mg = "ueq/l", NO3 = "ueq/l", SO4 = "ueq/l", 
+        PO4 = "ueq/l", Si = "umol/l", TN = "umol/l", TDN = "umol/l", 
+        TPN = "umol/l", DON = "umol/l", TP = "umol/l", TDP = "umol/l", 
+        TPP = "umol/l", DOP = "umol/l", TIP = "umol/l", TIN = "ueq/l", 
+        H = "ueq/l"), convert_units_to = c(NH4 = "mg/l", ANC = "eq/l", 
+        Ca = "mg/l", Na = "mg/l", K = "mg/l", Cl = "mg/l", Mg = "mg/l", 
+        NO3 = "mg/l", SO4 = "mg/l", PO4 = "mg/l", Si = "mg/l", 
+        TN = "mg/l", TDN = "mg/l", TPN = "mg/l", DON = "mg/l", 
+        TP = "mg/l", TDP = "mg/l", TPP = "mg/l", DOP = "mg/l", 
+        TIP = "mg/l", TIN = "mg/l", H = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'niwot'
+prodname_ms = 'stream_chemistry__107'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Stream water chemistry data for Green Lake 1
+
+This is the "munge kernel" function for stream_chemistry__108:
+
+process_1_108 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- ms_read_raw_csv(filepath = rawfile, datetime_cols = c(date = "%Y-%m-%d", 
+        time = "%H%M"), datetime_tz = "Etc/GMT+7", site_code_col = "local_site", 
+        alt_site_code = list(GREEN4 = c("GREEN LAKE 4", "GREEN LAKE 4 WATERFALL")), 
+        data_cols = c(pH = "pH", cond = "spCond", ANC = "ANC", 
+            H. = "H", NH4. = "NH4", Ca.. = "Ca", Mg.. = "Mg", 
+            Na. = "Na", K. = "K", Cl. = "Cl", NO3. = "NO3", SO4.. = "SO4", 
+            PO4... = "PO4", Si = "Si", cat_sum = "cationCharge", 
+            an_sum = "anionCharge", chg_bal = "ionBalance", TN = "TN", 
+            TDN = "TDN", PN = "TPN", IN = "TIN", TP = "TP", TDP = "TDP", 
+            PP = "TPP", DOP = "DOP", IP = "TIP", d18O = "d18O", 
+            TOC = "TOC", DOC = "DOC", POC = "POC"), data_col_pattern = "#V#", 
+        set_to_NA = c("NP", "DNS", "QNS", "NV", "EQCL", "NSS"), 
+        convert_to_BDL_flag = c("<#*#", "trace", "u"), is_sensor = FALSE)
+    d <- ms_cast_and_reflag(d, variable_flags_bdl = "BDL")
+    d <- ms_conversions(d, convert_units_from = c(NH4 = "ueq/l", 
+        ANC = "ueq/l", Ca = "ueq/l", Na = "ueq/l", K = "ueq/l", 
+        Cl = "ueq/l", Mg = "ueq/l", NO3 = "ueq/l", SO4 = "ueq/l", 
+        PO4 = "ueq/l", Si = "umol/l", TN = "umol/l", TDN = "umol/l", 
+        TPN = "umol/l", DON = "umol/l", TP = "umol/l", TDP = "umol/l", 
+        TPP = "umol/l", DOP = "umol/l", TIP = "umol/l", TIN = "ueq/l", 
+        H = "ueq/l"), convert_units_to = c(NH4 = "mg/l", ANC = "eq/l", 
+        Ca = "mg/l", Na = "mg/l", K = "mg/l", Cl = "mg/l", Mg = "mg/l", 
+        NO3 = "mg/l", SO4 = "mg/l", PO4 = "mg/l", Si = "mg/l", 
+        TN = "mg/l", TDN = "mg/l", TPN = "mg/l", DON = "mg/l", 
+        TP = "mg/l", TDP = "mg/l", TPP = "mg/l", DOP = "mg/l", 
+        TIP = "mg/l", TIN = "mg/l", H = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'niwot'
+prodname_ms = 'stream_chemistry__108'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): gre4solu.nc.data.csv
+
+This is the "munge kernel" function for stream_chemistry__109:
+
+process_1_109 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- ms_read_raw_csv(filepath = rawfile, datetime_cols = c(date = "%Y-%m-%d", 
+        time = "%H%M"), datetime_tz = "Etc/GMT+7", site_code_col = "local_site", 
+        alt_site_code = list(GREEN5 = c("GREEN LAKE 5")), data_cols = c(pH = "pH", 
+            cond = "spCond", ANC = "ANC", H. = "H", NH4. = "NH4", 
+            Ca.. = "Ca", Mg.. = "Mg", Na. = "Na", K. = "K", Cl. = "Cl", 
+            NO3. = "NO3", SO4.. = "SO4", PO4... = "PO4", Si = "Si", 
+            cat_sum = "cationCharge", an_sum = "anionCharge", 
+            chg_bal = "ionBalance", TN = "TN", TDN = "TDN", PN = "TPN", 
+            IN = "TIN", TP = "TP", TDP = "TDP", PP = "TPP", DOP = "DOP", 
+            IP = "TIP", d18O = "d18O", TOC = "TOC", DOC = "DOC", 
+            POC = "POC"), data_col_pattern = "#V#", set_to_NA = c("NP", 
+            "DNS", "QNS", "NV", "EQCL"), convert_to_BDL_flag = c("<#*#", 
+            "u", "trace"), is_sensor = FALSE)
+    d <- ms_cast_and_reflag(d, variable_flags_bdl = "BDL")
+    d <- ms_conversions(d, convert_units_from = c(NH4 = "ueq/l", 
+        ANC = "ueq/l", Ca = "ueq/l", Na = "ueq/l", K = "ueq/l", 
+        Cl = "ueq/l", Mg = "ueq/l", NO3 = "ueq/l", SO4 = "ueq/l", 
+        PO4 = "ueq/l", Si = "umol/l", TN = "umol/l", TDN = "umol/l", 
+        TPN = "umol/l", DON = "umol/l", TP = "umol/l", TDP = "umol/l", 
+        TPP = "umol/l", DOP = "umol/l", TIP = "umol/l", TIN = "ueq/l", 
+        H = "ueq/l"), convert_units_to = c(NH4 = "mg/l", ANC = "eq/l", 
+        Ca = "mg/l", Na = "mg/l", K = "mg/l", Cl = "mg/l", Mg = "mg/l", 
+        NO3 = "mg/l", SO4 = "mg/l", PO4 = "mg/l", Si = "mg/l", 
+        TN = "mg/l", TDN = "mg/l", TPN = "mg/l", DON = "mg/l", 
+        TP = "mg/l", TDP = "mg/l", TPP = "mg/l", DOP = "mg/l", 
+        TIP = "mg/l", TIN = "mg/l", H = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'niwot'
+prodname_ms = 'stream_chemistry__109'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): gre5solu.nc.data.csv
+
+This is the "munge kernel" function for stream_chemistry__110:
+
+process_1_110 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(time = ifelse(time == 
+        "DNS", NA, time)) %>% mutate(time = ifelse(nchar(time) == 
+        3, paste0(0, time), time))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(date = "%Y-%m-%d", 
+        time = "%H%M"), datetime_tz = "Etc/GMT+7", site_code_col = "local_site", 
+        alt_site_code = list(ALBION_INLET = c("ALBION INLET")), 
+        data_cols = c(pH = "pH", cond = "spCond", ANC = "ANC", 
+            H. = "H", NH4. = "NH4", Ca.. = "Ca", Mg.. = "Mg", 
+            Na. = "Na", K. = "K", Cl. = "Cl", NO3. = "NO3", SO4.. = "SO4", 
+            PO4... = "PO4", Si = "Si", cat_sum = "cationCharge", 
+            an_sum = "anionCharge", chg_bal = "ionBalance", TN = "TN", 
+            TDN = "TDN", PN = "TPN", IN = "TIN", TP = "TP", TDP = "TDP", 
+            PP = "TPP", DOP = "DOP", IP = "TIP", d18O = "d18O", 
+            TOC = "TOC", DOC = "DOC", POC = "POC"), data_col_pattern = "#V#", 
+        set_to_NA = c("NP", "DNS", "QNS"), convert_to_BDL_flag = c("<#*#", 
+            "u", "trace"), is_sensor = FALSE)
+    d <- ms_cast_and_reflag(d, variable_flags_bdl = "BDL")
+    d <- ms_conversions(d, convert_units_from = c(NH4 = "ueq/l", 
+        ANC = "ueq/l", Ca = "ueq/l", Na = "ueq/l", K = "ueq/l", 
+        Cl = "ueq/l", Mg = "ueq/l", NO3 = "ueq/l", SO4 = "ueq/l", 
+        PO4 = "ueq/l", Si = "umol/l", TN = "umol/l", TDN = "umol/l", 
+        TPN = "umol/l", DON = "umol/l", TP = "umol/l", TDP = "umol/l", 
+        TPP = "umol/l", DOP = "umol/l", TIP = "umol/l", TIN = "ueq/l", 
+        H = "ueq/l"), convert_units_to = c(NH4 = "mg/l", ANC = "eq/l", 
+        Ca = "mg/l", Na = "mg/l", K = "mg/l", Cl = "mg/l", Mg = "mg/l", 
+        NO3 = "mg/l", SO4 = "mg/l", PO4 = "mg/l", Si = "mg/l", 
+        TN = "mg/l", TDN = "mg/l", TPN = "mg/l", DON = "mg/l", 
+        TP = "mg/l", TDP = "mg/l", TPP = "mg/l", DOP = "mg/l", 
+        TIP = "mg/l", TIN = "mg/l", H = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'niwot'
+prodname_ms = 'stream_chemistry__110'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): inlesolu.nc.data.csv
+
+This is the "munge kernel" function for stream_chemistry__112:
+
+process_1_112 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- ms_read_raw_csv(filepath = rawfile, datetime_cols = c(date = "%Y-%m-%d", 
+        time = "%H%M"), datetime_tz = "Etc/GMT+7", site_code_col = "local_site", 
+        data_cols = c(pH = "pH", cond = "spCond", ANC = "ANC", 
+            H. = "H", NH4. = "NH4", Ca.. = "Ca", Mg.. = "Mg", 
+            Na. = "Na", K. = "K", Cl. = "Cl", NO3. = "NO3", SO4.. = "SO4", 
+            PO4... = "PO4", Si = "Si", cat_sum = "cationCharge", 
+            an_sum = "anionCharge", chg_bal = "ionBalance", TN = "TN", 
+            TDN = "TDN", PN = "TPN", IN = "TIN", TP = "TP", TDP = "TDP", 
+            PP = "TPP", DOP = "DOP", IP = "TIP", d18O = "d18O", 
+            TOC = "TOC", DOC = "DOC", POC = "POC"), data_col_pattern = "#V#", 
+        set_to_NA = c("NP", "DNS", "QNS", "EQCL"), convert_to_BDL_flag = c("<#*#", 
+            "trace", "u"), is_sensor = FALSE)
+    d <- ms_cast_and_reflag(d, variable_flags_bdl = "BDL")
+    d <- ms_conversions(d, convert_units_from = c(NH4 = "ueq/l", 
+        ANC = "ueq/l", Ca = "ueq/l", Na = "ueq/l", K = "ueq/l", 
+        Cl = "ueq/l", Mg = "ueq/l", NO3 = "ueq/l", SO4 = "ueq/l", 
+        PO4 = "ueq/l", Si = "umol/l", TN = "umol/l", TDN = "umol/l", 
+        TPN = "umol/l", DON = "umol/l", TP = "umol/l", TDP = "umol/l", 
+        TPP = "umol/l", DOP = "umol/l", TIP = "umol/l", TIN = "ueq/l", 
+        H = "ueq/l"), convert_units_to = c(NH4 = "mg/l", ANC = "eq/l", 
+        Ca = "mg/l", Na = "mg/l", K = "mg/l", Cl = "mg/l", Mg = "mg/l", 
+        NO3 = "mg/l", SO4 = "mg/l", PO4 = "mg/l", Si = "mg/l", 
+        TN = "mg/l", TDN = "mg/l", TPN = "mg/l", DON = "mg/l", 
+        TP = "mg/l", TDP = "mg/l", TPP = "mg/l", DOP = "mg/l", 
+        TIP = "mg/l", TIN = "mg/l", H = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'niwot'
+prodname_ms = 'stream_chemistry__112'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): martsolu.nc.data.csv
+
+This is the "munge kernel" function for stream_chemistry__113:
+
+process_1_113 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- ms_read_raw_csv(filepath = rawfile, datetime_cols = c(date = "%Y-%m-%d", 
+        time = "%H%M"), datetime_tz = "Etc/GMT+7", site_code_col = "local_site", 
+        data_cols = c(pH = "pH", cond = "spCond", ANC = "ANC", 
+            H. = "H", NH4. = "NH4", Ca.. = "Ca", Mg.. = "Mg", 
+            Na. = "Na", K. = "K", Cl. = "Cl", NO3. = "NO3", SO4.. = "SO4", 
+            PO4... = "PO4", Si = "Si", cat_sum = "cationCharge", 
+            an_sum = "anionCharge", chg_bal = "ionBalance", TN = "TN", 
+            TDN = "TDN", PN = "TPN", IN = "TIN", TP = "TP", TDP = "TDP", 
+            PP = "TPP", DOP = "DOP", IP = "TIP", d18O = "d18O", 
+            TOC = "TOC", DOC = "DOC", POC = "POC"), data_col_pattern = "#V#", 
+        set_to_NA = c("NP", "DNS", "QNS", "EQCL", "NSS"), convert_to_BDL_flag = c("<#*#", 
+            "u", "trace"), is_sensor = FALSE)
+    d <- ms_cast_and_reflag(d, variable_flags_bdl = "BDL")
+    d <- ms_conversions(d, convert_units_from = c(NH4 = "ueq/l", 
+        ANC = "ueq/l", Ca = "ueq/l", Na = "ueq/l", K = "ueq/l", 
+        Cl = "ueq/l", Mg = "ueq/l", NO3 = "ueq/l", SO4 = "ueq/l", 
+        PO4 = "ueq/l", Si = "umol/l", TN = "umol/l", TDN = "umol/l", 
+        TPN = "umol/l", DON = "umol/l", TP = "umol/l", TDP = "umol/l", 
+        TPP = "umol/l", DOP = "umol/l", TIP = "umol/l", TIN = "ueq/l", 
+        H = "ueq/l"), convert_units_to = c(NH4 = "mg/l", ANC = "eq/l", 
+        Ca = "mg/l", Na = "mg/l", K = "mg/l", Cl = "mg/l", Mg = "mg/l", 
+        NO3 = "mg/l", SO4 = "mg/l", PO4 = "mg/l", Si = "mg/l", 
+        TN = "mg/l", TDN = "mg/l", TPN = "mg/l", DON = "mg/l", 
+        TP = "mg/l", TDP = "mg/l", TPP = "mg/l", DOP = "mg/l", 
+        TIP = "mg/l", TIN = "mg/l", H = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'niwot'
+prodname_ms = 'stream_chemistry__113'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): navasolu.nc.data.csv
+
+This is the "munge kernel" function for stream_chemistry__9:
+
+process_1_9 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- ms_read_raw_csv(filepath = rawfile, datetime_cols = c(date = "%Y-%m-%d", 
+        time = "%H%M"), datetime_tz = "Etc/GMT+7", alt_site_code = list(SADDLE_007 = "SADDLE STREAM 007"), 
+        site_code_col = "local_site", data_cols = c(pH = "pH", 
+            cond = "spCond", ANC = "ANC", H. = "H", NH4. = "NH4", 
+            Ca.. = "Ca", Mg.. = "Mg", Na. = "Na", K. = "K", Cl. = "Cl", 
+            NO3. = "NO3", SO4.. = "SO4", PO4... = "PO4", Si = "Si", 
+            cat_sum = "cationCharge", an_sum = "anionCharge", 
+            chg_bal = "ionBalance", TN = "TN", TDN = "TDN", PN = "TPN", 
+            IN = "TIN", TP = "TP", TDP = "TDP", PP = "TPP", DOP = "DOP", 
+            IP = "TIP", d18O = "d18O", TOC = "TOC", DOC = "DOC", 
+            POC = "POC"), data_col_pattern = "#V#", set_to_NA = c("NP", 
+            "DNS", "QNS"), convert_to_BDL_flag = c("<#*#", "u", 
+            "trace"), is_sensor = FALSE)
+    d <- ms_cast_and_reflag(d, variable_flags_bdl = "BDL")
+    d <- ms_conversions(d, convert_units_from = c(NH4 = "ueq/l", 
+        ANC = "ueq/l", Ca = "ueq/l", Na = "ueq/l", K = "ueq/l", 
+        Cl = "ueq/l", Mg = "ueq/l", NO3 = "ueq/l", SO4 = "ueq/l", 
+        PO4 = "ueq/l", Si = "umol/l", TN = "umol/l", TDN = "umol/l", 
+        TPN = "umol/l", DON = "umol/l", TP = "umol/l", TDP = "umol/l", 
+        TPP = "umol/l", DOP = "umol/l", TIP = "umol/l", TIN = "ueq/l", 
+        H = "ueq/l"), convert_units_to = c(NH4 = "mg/l", ANC = "eq/l", 
+        Ca = "mg/l", Na = "mg/l", K = "mg/l", Cl = "mg/l", Mg = "mg/l", 
+        NO3 = "mg/l", SO4 = "mg/l", PO4 = "mg/l", Si = "mg/l", 
+        TN = "mg/l", TDN = "mg/l", TPN = "mg/l", DON = "mg/l", 
+        TP = "mg/l", TDP = "mg/l", TPP = "mg/l", DOP = "mg/l", 
+        TIP = "mg/l", TIN = "mg/l", H = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'niwot'
+prodname_ms = 'stream_chemistry__9'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): sad007solu.mw.data.csv
+
+This is the "munge kernel" function for stream_chemistry__160:
+
+process_1_160 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- ms_read_raw_csv(filepath = rawfile, datetime_cols = c(date = "%Y-%m-%d", 
+        time = "%H%M"), datetime_tz = "Etc/GMT+7", alt_site_code = list(SADDLE = "SADDLE STREAM"), 
+        site_code_col = "local_site", data_cols = c(pH = "pH", 
+            cond = "spCond", ANC = "ANC", H. = "H", NH4. = "NH4", 
+            Ca.. = "Ca", Mg.. = "Mg", Na. = "Na", K. = "K", Cl. = "Cl", 
+            NO3. = "NO3", SO4.. = "SO4", PO4... = "PO4", Si = "Si", 
+            cat_sum = "cationCharge", an_sum = "anionCharge", 
+            chg_bal = "ionBalance", TN = "TN", TDN = "TDN", PN = "TPN", 
+            IN = "TIN", TP = "TP", TDP = "TDP", PP = "TPP", DOP = "DOP", 
+            IP = "TIP", d18O = "d18O", TOC = "TOC", DOC = "DOC", 
+            POC = "POC"), data_col_pattern = "#V#", set_to_NA = c("NP", 
+            "DNS", "QNS", "EQCL", "NV"), convert_to_BDL_flag = c("<#*#", 
+            "trace", "u"), is_sensor = FALSE)
+    d <- ms_cast_and_reflag(d, variable_flags_bdl = "BDL")
+    d <- ms_conversions(d, convert_units_from = c(NH4 = "ueq/l", 
+        ANC = "ueq/l", Ca = "ueq/l", Na = "ueq/l", K = "ueq/l", 
+        Cl = "ueq/l", Mg = "ueq/l", NO3 = "ueq/l", SO4 = "ueq/l", 
+        PO4 = "ueq/l", Si = "umol/l", TN = "umol/l", TDN = "umol/l", 
+        TPN = "umol/l", DON = "umol/l", TP = "umol/l", TDP = "umol/l", 
+        TPP = "umol/l", DOP = "umol/l", TIP = "umol/l", TIN = "ueq/l", 
+        H = "ueq/l"), convert_units_to = c(NH4 = "mg/l", ANC = "eq/l", 
+        Ca = "mg/l", Na = "mg/l", K = "mg/l", Cl = "mg/l", Mg = "mg/l", 
+        NO3 = "mg/l", SO4 = "mg/l", PO4 = "mg/l", Si = "mg/l", 
+        TN = "mg/l", TDN = "mg/l", TPN = "mg/l", DON = "mg/l", 
+        TP = "mg/l", TDP = "mg/l", TPP = "mg/l", DOP = "mg/l", 
+        TIP = "mg/l", TIN = "mg/l", H = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'niwot'
+prodname_ms = 'stream_chemistry__160'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): saddsolu.nc.data.csv
+
+This is the "munge kernel" function for stream_chemistry__162:
+
+process_1_162 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- ms_read_raw_csv(filepath = rawfile, datetime_cols = c(date = "%Y-%m-%d", 
+        time = "%H%M"), datetime_tz = "Etc/GMT+7", site_code_col = "local_site", 
+        data_cols = c(pH = "pH", cond = "spCond", ANC = "ANC", 
+            H. = "H", NH4. = "NH4", Ca.. = "Ca", Mg.. = "Mg", 
+            Na. = "Na", K. = "K", Cl. = "Cl", NO3. = "NO3", SO4.. = "SO4", 
+            PO4... = "PO4", Si = "Si", cat_sum = "cationCharge", 
+            an_sum = "anionCharge", chg_bal = "ionBalance", TN = "TN", 
+            TDN = "TDN", PN = "TPN", IN = "TIN", TP = "TP", TDP = "TDP", 
+            PP = "TPP", DOP = "DOP", IP = "TIP", d18O = "d18O", 
+            TOC = "TOC", DOC = "DOC", POC = "POC"), data_col_pattern = "#V#", 
+        set_to_NA = c("NP", "DNS", "QNS", "EQCL"), convert_to_BDL_flag = c("<#*#", 
+            "trace", "u"), is_sensor = FALSE)
+    d <- ms_cast_and_reflag(d, variable_flags_bdl = "BDL")
+    d <- ms_conversions(d, convert_units_from = c(NH4 = "ueq/l", 
+        ANC = "ueq/l", Ca = "ueq/l", Na = "ueq/l", K = "ueq/l", 
+        Cl = "ueq/l", Mg = "ueq/l", NO3 = "ueq/l", SO4 = "ueq/l", 
+        PO4 = "ueq/l", Si = "umol/l", TN = "umol/l", TDN = "umol/l", 
+        TPN = "umol/l", DON = "umol/l", TP = "umol/l", TDP = "umol/l", 
+        TPP = "umol/l", DOP = "umol/l", TIP = "umol/l", TIN = "ueq/l", 
+        H = "ueq/l"), convert_units_to = c(NH4 = "mg/l", ANC = "eq/l", 
+        Ca = "mg/l", Na = "mg/l", K = "mg/l", Cl = "mg/l", Mg = "mg/l", 
+        NO3 = "mg/l", SO4 = "mg/l", PO4 = "mg/l", Si = "mg/l", 
+        TN = "mg/l", TDN = "mg/l", TPN = "mg/l", DON = "mg/l", 
+        TP = "mg/l", TDP = "mg/l", TPP = "mg/l", DOP = "mg/l", 
+        TIP = "mg/l", TIN = "mg/l", H = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'niwot'
+prodname_ms = 'stream_chemistry__162'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): flumesolu.nc.data.csv
+
+This is the "munge kernel" function for stream_chemistry__163:
+
+process_1_163 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- ms_read_raw_csv(filepath = rawfile, datetime_cols = c(date = "%Y-%m-%d", 
+        time = "%H%M"), datetime_tz = "Etc/GMT+7", site_code_col = "local_site", 
+        alt_site_code = c(ROCK_GLACIER = "GREEN LAKE 5 ROCK GLACIER"), 
+        data_cols = c(pH = "pH", cond = "spCond", ANC = "ANC", 
+            H. = "H", NH4. = "NH4", Ca.. = "Ca", Mg.. = "Mg", 
+            Na. = "Na", K. = "K", Cl. = "Cl", NO3. = "NO3", SO4.. = "SO4", 
+            PO4... = "PO4", Si = "Si", cat_sum = "cationCharge", 
+            an_sum = "anionCharge", chg_bal = "ionBalance", TN = "TN", 
+            TDN = "TDN", PN = "TPN", IN = "TIN", TP = "TP", TDP = "TDP", 
+            PP = "TPP", DOP = "DOP", IP = "TIP", d18O = "d18O", 
+            TOC = "TOC", DOC = "DOC", POC = "POC"), data_col_pattern = "#V#", 
+        set_to_NA = c("NP", "DNS", "QNS", "EQCL", "NV"), convert_to_BDL_flag = c("<#*#", 
+            "trace", "u"), is_sensor = FALSE)
+    d <- ms_cast_and_reflag(d, variable_flags_bdl = "BDL")
+    d <- ms_conversions(d, convert_units_from = c(NH4 = "ueq/l", 
+        ANC = "ueq/l", Ca = "ueq/l", Na = "ueq/l", K = "ueq/l", 
+        Cl = "ueq/l", Mg = "ueq/l", NO3 = "ueq/l", SO4 = "ueq/l", 
+        PO4 = "ueq/l", Si = "umol/l", TN = "umol/l", TDN = "umol/l", 
+        TPN = "umol/l", DON = "umol/l", TP = "umol/l", TDP = "umol/l", 
+        TPP = "umol/l", DOP = "umol/l", TIP = "umol/l", TIN = "ueq/l", 
+        H = "ueq/l"), convert_units_to = c(NH4 = "mg/l", ANC = "eq/l", 
+        Ca = "mg/l", Na = "mg/l", K = "mg/l", Cl = "mg/l", Mg = "mg/l", 
+        NO3 = "mg/l", SO4 = "mg/l", PO4 = "mg/l", Si = "mg/l", 
+        TN = "mg/l", TDN = "mg/l", TPN = "mg/l", DON = "mg/l", 
+        TP = "mg/l", TDP = "mg/l", TPP = "mg/l", DOP = "mg/l", 
+        TIP = "mg/l", TIN = "mg/l", H = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'niwot'
+prodname_ms = 'stream_chemistry__163'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): grrgsolu.nc.data.csv
+
+This is the "munge kernel" function for stream_chemistry__278:
+
+process_1_278 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- ms_read_raw_csv(filepath = rawfile, datetime_cols = c(date = "%Y-%m-%d", 
+        time = "%H%M"), datetime_tz = "Etc/GMT+7", site_code_col = "local_site", 
+        alt_site_code = list(como = c("BRIDGE", "BROOKS WEIR", 
+            "HOLE IN ICE", "MRS WEIR", "MRS_WEIR", "POOL", "S-CURVE", 
+            "SOD.ST", "TRICKLE", "WEIR", "FLUME", "C1")), data_cols = c(pH = "pH", 
+            cond = "spCond", ANC = "ANC", H. = "H", NH4. = "NH4", 
+            Ca.. = "Ca", Mg.. = "Mg", Na. = "Na", K. = "K", Cl. = "Cl", 
+            NO3. = "NO3", SO4.. = "SO4", PO4... = "PO4", Si = "Si", 
+            cat_sum = "cationCharge", an_sum = "anionCharge", 
+            chg_bal = "ionBalance", TN = "TN", TDN = "TDN", PN = "TPN", 
+            IN = "TIN", TP = "TP", TDP = "TDP", PP = "TPP", DOP = "DOP", 
+            IP = "TIP", d18O = "d18O", TOC = "TOC", DOC = "DOC", 
+            POC = "POC"), data_col_pattern = "#V#", set_to_NA = c("NP", 
+            "DNS", "QNS", "EQCL"), convert_to_BDL_flag = c("<#*#", 
+            "trace", "u"), is_sensor = FALSE)
+    d <- ms_cast_and_reflag(d, variable_flags_bdl = "BDL")
+    d <- ms_conversions(d, convert_units_from = c(NH4 = "ueq/l", 
+        ANC = "ueq/l", Ca = "ueq/l", Na = "ueq/l", K = "ueq/l", 
+        Cl = "ueq/l", Mg = "ueq/l", NO3 = "ueq/l", SO4 = "ueq/l", 
+        PO4 = "ueq/l", Si = "umol/l", TN = "umol/l", TDN = "umol/l", 
+        TPN = "umol/l", DON = "umol/l", TP = "umol/l", TDP = "umol/l", 
+        TPP = "umol/l", DOP = "umol/l", TIP = "umol/l", TIN = "ueq/l", 
+        H = "ueq/l"), convert_units_to = c(NH4 = "mg/l", ANC = "eq/l", 
+        Ca = "mg/l", Na = "mg/l", K = "mg/l", Cl = "mg/l", Mg = "mg/l", 
+        NO3 = "mg/l", SO4 = "mg/l", PO4 = "mg/l", Si = "mg/l", 
+        TN = "mg/l", TDN = "mg/l", TPN = "mg/l", DON = "mg/l", 
+        TP = "mg/l", TDP = "mg/l", TPP = "mg/l", DOP = "mg/l", 
+        TIP = "mg/l", TIN = "mg/l", H = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'niwot'
+prodname_ms = 'stream_chemistry__278'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Water Chem
+
+This is the "munge kernel" function for stream_chemistry__102:
+
+process_1_102 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- read.csv(rawfile, colClasses = "character") %>% 
+            filter(discharge != 0) %>% filter(temperature != 
+            "NaN")
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(date = "%Y-%m-%d"), 
+            datetime_tz = "Etc/GMT+7", site_code_col = "local_site", 
+            alt_site_code = list(ALBION = "alb"), data_cols = c(temperature = "temp"), 
+            data_col_pattern = "#V#", summary_flagcols = "notes", 
+            set_to_NA = "NaN", is_sensor = TRUE)
+        flag_vals <- unique(d$notes)
+        flag_vals <- flag_vals[!is.na(flag_vals)]
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, 
+            summary_flags_to_drop = list(notes = "DROP"), summary_flags_dirty = list(notes = flag_vals))
+    }
+    else {
+        d <- ms_read_raw_csv(filepath = rawfile, datetime_cols = c(date = "%Y-%m-%d"), 
+            datetime_tz = "Etc/GMT+7", site_code_col = "local_site", 
+            alt_site_code = list(ALBION = "alb"), data_cols = "discharge", 
+            data_col_pattern = "#V#", summary_flagcols = "notes", 
+            set_to_NA = "NaN", is_sensor = TRUE)
+        flag_vals <- unique(d$notes)
+        flag_vals <- flag_vals[!is.na(flag_vals)]
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, 
+            summary_flags_to_drop = list(notes = "DROP"), summary_flags_dirty = list(notes = flag_vals))
+        d <- d %>% mutate(val = (val * 1000)/86400)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'niwot'
+prodname_ms = 'stream_chemistry__102'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): albdisch.nc.data.csv
+
+This is the "munge kernel" function for stream_chemistry__111:
+
+process_1_111 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- read.csv(rawfile, colClasses = "character") %>% 
+            filter(discharge != 0) %>% filter(temperature != 
+            "NaN")
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(date = "%Y-%m-%d"), 
+            datetime_tz = "Etc/GMT+7", site_code_col = "local_site", 
+            alt_site_code = list(MARTINELLI = "mar"), data_cols = c(temperature = "temp"), 
+            data_col_pattern = "#V#", summary_flagcols = "notes", 
+            set_to_NA = "NaN", is_sensor = TRUE)
+        flag_vals <- unique(d$notes)
+        flag_vals <- flag_vals[!is.na(flag_vals)]
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, 
+            summary_flags_to_drop = list(notes = "DROP"), summary_flags_dirty = list(notes = flag_vals))
+    }
+    else {
+        d <- ms_read_raw_csv(filepath = rawfile, datetime_cols = c(date = "%Y-%m-%d"), 
+            datetime_tz = "Etc/GMT+7", site_code_col = "local_site", 
+            alt_site_code = list(MARTINELLI = "mar"), data_cols = "discharge", 
+            summary_flagcols = "notes", data_col_pattern = "#V#", 
+            set_to_NA = "NaN", is_sensor = TRUE)
+        flag_vals <- unique(d$notes)
+        flag_vals <- flag_vals[!is.na(flag_vals)]
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, 
+            summary_flags_to_drop = list(notes = "DROP"), summary_flags_dirty = list(notes = flag_vals))
+        d <- d %>% mutate(val = (val * 1000)/86400)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'niwot'
+prodname_ms = 'stream_chemistry__111'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): mardisch.nc.data.csv
+
+This is the "munge kernel" function for stream_chemistry__74:
+
+process_1_74 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- read.csv(rawfile, colClasses = "character") %>% 
+            filter(discharge != 0) %>% filter(temperature != 
+            "NaN")
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(date = "%Y-%m-%d"), 
+            datetime_tz = "Etc/GMT+7", site_code_col = "local_site", 
+            alt_site_code = list(SADDLE = "sdl"), data_cols = c(temperature = "temp"), 
+            data_col_pattern = "#V#", summary_flagcols = "notes", 
+            set_to_NA = "NaN", is_sensor = TRUE)
+        flag_vals <- unique(d$notes)
+        flag_vals <- flag_vals[!is.na(flag_vals)]
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, 
+            summary_flags_to_drop = list(notes = "DROP"), summary_flags_dirty = list(notes = flag_vals))
+    }
+    else {
+        d <- ms_read_raw_csv(filepath = rawfile, datetime_cols = c(date = "%Y-%m-%d"), 
+            datetime_tz = "Etc/GMT+7", site_code_col = "local_site", 
+            alt_site_code = list(SADDLE = "sdl"), data_cols = "discharge", 
+            summary_flagcols = "notes", data_col_pattern = "#V#", 
+            set_to_NA = "NaN", is_sensor = TRUE)
+        flag_vals <- unique(d$notes)
+        flag_vals <- flag_vals[!is.na(flag_vals)]
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, 
+            summary_flags_to_drop = list(notes = "DROP"), summary_flags_dirty = list(notes = flag_vals))
+        d <- d %>% mutate(val = (val * 1000)/86400)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'niwot'
+prodname_ms = 'stream_chemistry__74'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): saddisch.nc.data.csv
+
+This is the "munge kernel" function for stream_chemistry__105:
+
+process_1_105 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- read.csv(rawfile, colClasses = "character") %>% 
+            filter(discharge != 0) %>% filter(temperature != 
+            "NaN")
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(date = "%Y-%m-%d"), 
+            datetime_tz = "Etc/GMT+7", site_code_col = "local_site", 
+            alt_site_code = list(GREEN4 = c("gl4")), data_cols = c(temperature = "temp"), 
+            data_col_pattern = "#V#", set_to_NA = "NaN", summary_flagcols = "notes", 
+            is_sensor = TRUE)
+        flag_vals <- unique(d$notes)
+        flag_vals <- flag_vals[!is.na(flag_vals)]
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, 
+            summary_flags_to_drop = list(notes = "DROP"), summary_flags_dirty = list(notes = flag_vals))
+    }
+    else {
+        d <- ms_read_raw_csv(filepath = rawfile, datetime_cols = c(date = "%Y-%m-%d"), 
+            datetime_tz = "Etc/GMT+7", site_code_col = "local_site", 
+            alt_site_code = list(GREEN4 = c("gl4")), data_cols = "discharge", 
+            data_col_pattern = "#V#", set_to_NA = "NaN", summary_flagcols = "notes", 
+            is_sensor = TRUE)
+        flag_vals <- c("flow data interpolated and not based on stage records", 
+            "flow data preliminary and subject to change", "flow data estimated indirectly and not based on continuous level record", 
+            "record affected by failed interface board - use with care", 
+            "flow data estimated from interpolation or recession", 
+            "flow data estimated from interpolation or recession", 
+            "flow data estimated because water level was below channel sensors", 
+            "flow data estimated from interpolation", "flow data based upon intermittent estimates", 
+            "flow data estimated from field observations", "flow data estimated from recession and weekly observations", 
+            "flow data estimated from observations", "flow data estimated/interpolated by recession analysis", 
+            "flow data interpolated", "flow data estimated", 
+            "flow data estimated from intermittent observation", 
+            "flow data estimated by recession observation of 2 October", 
+            "flow data interpolated because there was no record due to a jammed float")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, 
+            summary_flags_to_drop = list(notes = "DROP"), summary_flags_dirty = list(notes = flag_vals))
+        d <- d %>% mutate(val = (val * 1000)/86400)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'niwot'
+prodname_ms = 'stream_chemistry__105'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): gl4disch.nc.data.csv
+
+---
+
+Functions from external packages called inside the kernel function are either
+referenced with `<package name>::<function>`, or are called from their aliases, defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/function_aliases.R
+
+For definitions of most MacroSheds functions called, see:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/global_helpers.R
+
+Definitions not found there will be found in src/<network>/network_helpers.R or
+src/<network>/<domain>/domain_helpers.R, where network is e.g. lter and domain
+is e.g. hbef (Hubbard Brook Experimental Forest). For a catalogue of networks
+and domains, download our site data table from the Data tab at macrosheds.org.
+
+After all the kernels have completed their jobs, there is a whole suite of
+post-processing steps, some of which further modify derived data. See
+postprocess_entire_dataset() in global_helpers.R for a list of these.
+
+Note that most MacroSheds functions are wrapped in a decorator function (handle_errors,
+defined in global_helpers.R; see tinsel package for details). This decorator is not needed
+to run the functions it wraps. To circumvent it, just make sure you don't load
+function definitions using tinsel::source_decoratees. This would only happen if you
+were to execute MacroSheds code line-by-line, starting from:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/acquisition_master.R
+
+Also note that the return value of a munge kernel function may be additionally modified by
+a munge engine function. Inside the body of the engine function, you can see where the
+munge kernel is retrieved with get() and called via do.call(). Usually, the only additional munging
+done by the munge engine (versus the munge kernel) would be to separate
+a data file that contains many sites into individual data files of only one site each.
+Munge engines are defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/munge_engines.R
+
+Finally, consider that you may clone our entire project from Github and get it running
+on your own machine. Getting every component to run will require a file called config.json
+at the top level of each project repository (data_processing/ and portal/) with your own
+values instead of <...> for each of the following fields:
+
+}
+    "gmail_pw": "< >",
+    "report_emails": ["<email1>", "<email2 etc>"],
+    "variables_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "site_data_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "delineation_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "univ_prods_gsheet:": "https://docs.google.com/spreadsheets/< >",
+    "name_variant_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "gee_login_<yourname>": "< >",
+    "orcid_login_<yourname>": "< >",
+    "orcid_pass_<yourname>": "< >",
+}
+
+Of course, you won't need connections to the ORCID database or google sheets in order to make headway.
+For example, just set config_storage_location = 'local' in your call to ms_init in data_processing/src/acquisition_master.R
+and gsheets becomes irrelevant. Our system is not fully set up to bypass the errors that would result from omitting
+some of this config information, but workarounds (like commenting lines or inserting tryCatch blocks) should be
+possible. This is something we'll be working on in later phases of the project.

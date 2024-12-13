@@ -1,0 +1,1523 @@
+
+This MacroSheds data product (stream_chemistry__ms002) was generated from the following munged MacroSheds product(s):
+
+stream_chemistry__9030
+stream_chemistry__9002
+stream_chemistry__9003
+stream_chemistry__9007
+stream_chemistry__9009
+stream_chemistry__9010
+stream_chemistry__9011
+stream_chemistry__9013
+stream_chemistry__9014
+stream_chemistry__9015
+stream_chemistry__9018
+stream_chemistry__9022
+stream_chemistry__9021
+stream_chemistry__9027
+stream_chemistry__9016
+stream_chemistry__9029
+stream_chemistry__9024
+stream_chemistry__9023
+stream_chemistry__9017
+stream_chemistry__24
+stream_chemistry__20
+stream_chemistry__21
+stream_chemistry__78
+
+Source data were retrieved from the following web page(s), static file(s), or web-API endpoint(s)
+on the datetime in parentheses:
+
+stream_chemistry__9030:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9030&revision=5 (retrieved 2024-04-22 23:03:07.638851)
+
+stream_chemistry__9002:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9002&revision=11 (retrieved 2024-01-16 19:15:11.091435)
+
+stream_chemistry__9003:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9003&revision=11 (retrieved 2024-01-16 18:52:54.243056)
+
+stream_chemistry__9007:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9007&revision=12 (retrieved 2024-01-16 18:53:18.434381)
+
+stream_chemistry__9009:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9009&revision=9 (retrieved 2024-01-16 18:53:41.992477)
+
+stream_chemistry__9010:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9010&revision=12 (retrieved 2024-01-16 18:54:07.081418)
+
+stream_chemistry__9011:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9011&revision=13 (retrieved 2024-01-16 18:54:32.026313)
+
+stream_chemistry__9013:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9013&revision=15 (retrieved 2024-01-16 18:54:56.544119)
+
+stream_chemistry__9014:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9014&revision=6 (retrieved 2024-01-16 18:55:04.233366)
+
+stream_chemistry__9015:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9015&revision=8 (retrieved 2024-01-16 18:55:37.202398)
+
+stream_chemistry__9018:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9018&revision=8 (retrieved 2024-01-16 18:56:02.019811)
+
+stream_chemistry__9022:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9022&revision=11 (retrieved 2024-01-16 18:56:26.900193)
+
+stream_chemistry__9021:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9021&revision=23 (retrieved 2024-01-16 18:56:50.939211)
+
+stream_chemistry__9027:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9027&revision=19 (retrieved 2024-01-16 18:57:15.117816)
+
+stream_chemistry__9016:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9016&revision=7 (retrieved 2024-01-16 18:57:57.611986)
+
+stream_chemistry__9029:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9029&revision=7 (retrieved 2024-01-16 18:58:21.879429)
+
+stream_chemistry__9024:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9024&revision=8 (retrieved 2024-01-16 18:58:57.213583)
+
+stream_chemistry__9023:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9023&revision=8 (retrieved 2024-01-16 18:59:45.858952)
+
+stream_chemistry__9017:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=9017&revision=35 (retrieved 2024-01-16 19:00:49.553961)
+
+stream_chemistry__24:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=24&revision=7 (retrieved 2024-01-16 19:00:57.450537)
+
+stream_chemistry__20:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=20&revision=13 (retrieved 2024-01-16 19:01:17.539842)
+
+stream_chemistry__21:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=21&revision=8 (retrieved 2024-01-16 19:01:34.102082)
+
+stream_chemistry__78:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-mcm&identifier=78&revision=6 (retrieved 2024-01-16 19:15:34.327161)
+
+To rebuild all or part of the MacroSheds dataset yourself, use our code on GitHub (and these notes). If you want to
+rebuild only this product, or if you want to modify the code used to generate this product, you
+will almost certainly have an easier time using these notes. That said, automatic documentation like this may
+have some errors and missing details. Please contact us at mail@macrosheds.org if you're having trouble
+navigating our docs.
+
+Below you will find the "derive kernel" function(s) by which stream_chemistry__ms002 was generated.
+Note that MacroSheds products may have precursors that are themselves derived products. In some
+cases, these derived precursors are named above and have their own separate documentation. In other
+cases, derived precursors are generated from stand-alone derive kernels whose entire definition and
+history can be displayed here. A stand-alone kernel might, for example, pull supplemental data
+from a source other than its own network/domain. Here is the code for stream_chemistry__ms002's derive kernel function,
+and for any stand-alone precursor derive kernel function(s):
+
+process_2_ms002 <- function (network, domain, prodname_ms) 
+{
+    combine_products(network = network, domain = domain, prodname_ms = prodname_ms, 
+        input_prodname_ms = c("stream_chemistry__24", "stream_chemistry__20", 
+            "stream_chemistry__21", "stream_chemistry__78", "stream_chemistry__9002", 
+            "stream_chemistry__9003", "stream_chemistry__9007", 
+            "stream_chemistry__9009", "stream_chemistry__9010", 
+            "stream_chemistry__9011", "stream_chemistry__9013", 
+            "stream_chemistry__9014", "stream_chemistry__9015", 
+            "stream_chemistry__9016", "stream_chemistry__9017", 
+            "stream_chemistry__9018", "stream_chemistry__9021", 
+            "stream_chemistry__9022", "stream_chemistry__9023", 
+            "stream_chemistry__9024", "stream_chemistry__9027", 
+            "stream_chemistry__9029", "stream_chemistry__9030"))
+    return()
+}
+
+These were the arguments to that/those function(s):
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__ms002'
+
+Zero or more function definitions follow, depending on the number of munged products that
+are precursors to stream_chemistry__ms002:
+
+This is the "munge kernel" function for stream_chemistry__9030:
+
+process_1_9030 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9030'
+site_code = <separately, each of: 'BOHNER', with corresponding component>
+component(s) = 
+	for site: BOHNER
+		comp(s): BOHNER_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__9002:
+
+process_1_9002 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9002'
+site_code = <separately, each of: 'AIKEN', with corresponding component>
+component(s) = 
+	for site: AIKEN
+		comp(s): AIKEN_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__9003:
+
+process_1_9003 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9003'
+site_code = <separately, each of: 'ANDRSN', with corresponding component>
+component(s) = 
+	for site: ANDRSN
+		comp(s): ANDRSN_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__9007:
+
+process_1_9007 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9007'
+site_code = <separately, each of: 'CANADA', with corresponding component>
+component(s) = 
+	for site: CANADA
+		comp(s): CANADA_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__9009:
+
+process_1_9009 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9009'
+site_code = <separately, each of: 'COMMON', with corresponding component>
+component(s) = 
+	for site: COMMON
+		comp(s): COMMON_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__9010:
+
+process_1_9010 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9010'
+site_code = <separately, each of: 'CRESCENT', with corresponding component>
+component(s) = 
+	for site: CRESCENT
+		comp(s): CRESCENT_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__9011:
+
+process_1_9011 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9011'
+site_code = <separately, each of: 'DELTA', with corresponding component>
+component(s) = 
+	for site: DELTA
+		comp(s): DELTA_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__9013:
+
+process_1_9013 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9013'
+site_code = <separately, each of: 'GREEN', with corresponding component>
+component(s) = 
+	for site: GREEN
+		comp(s): GREEN_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__9014:
+
+process_1_9014 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9014'
+site_code = <separately, each of: 'HARNISH', with corresponding component>
+component(s) = 
+	for site: HARNISH
+		comp(s): HARNISH_F11_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__9015:
+
+process_1_9015 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9015'
+site_code = <separately, each of: 'HARNISH', with corresponding component>
+component(s) = 
+	for site: HARNISH
+		comp(s): HARNISH_F7_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__9018:
+
+process_1_9018 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9018'
+site_code = <separately, each of: 'LOSTSEAL', with corresponding component>
+component(s) = 
+	for site: LOSTSEAL
+		comp(s): LOSTSEAL_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__9022:
+
+process_1_9022 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9022'
+site_code = <separately, each of: 'ONYX', with corresponding component>
+component(s) = 
+	for site: ONYX
+		comp(s): ONYX_VNDA_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__9021:
+
+process_1_9021 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9021'
+site_code = <separately, each of: 'ONYX', with corresponding component>
+component(s) = 
+	for site: ONYX
+		comp(s): ONYX_LWRIGHT_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__9027:
+
+process_1_9027 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9027'
+site_code = <separately, each of: 'VGUERARD', with corresponding component>
+component(s) = 
+	for site: VGUERARD
+		comp(s): VGUERARD_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__9016:
+
+process_1_9016 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9016'
+site_code = <separately, each of: 'HOUSE', with corresponding component>
+component(s) = 
+	for site: HOUSE
+		comp(s): HOUSE_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__9029:
+
+process_1_9029 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9029'
+site_code = <separately, each of: 'HUEY', with corresponding component>
+component(s) = 
+	for site: HUEY
+		comp(s): HUEY_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__9024:
+
+process_1_9024 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9024'
+site_code = <separately, each of: 'SANTAFE', with corresponding component>
+component(s) = 
+	for site: SANTAFE
+		comp(s): SANTAFE_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__9023:
+
+process_1_9023 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9023'
+site_code = <separately, each of: 'PRISCU', with corresponding component>
+component(s) = 
+	for site: PRISCU
+		comp(s): PRISCU_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__9017:
+
+process_1_9017 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    prodcode <- prodcode_from_prodname_ms(prodname_ms)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename_with(tolower) %>% 
+        rename_with(~gsub("\\.", "_", .)) %>% rename_with(~gsub("__", 
+        "_", .)) %>% tidyr::extract(date_time, into = c("month", 
+        "day", "year", "time"), "([0-9]{1,2})/([0-9]{1,2})/([0-9]{2,4}) (.*)") %>% 
+        mutate(year = case_when(nchar(year) == 4 ~ year, year > 
+            50 ~ paste0(19, year), TRUE ~ paste0(20, year)), 
+            datetime = ymd_hm(glue("{year}-{month}-{day} {time}")))
+    if (grepl("discharge", prodname_ms)) {
+        flagcol <- intersect(c("dischg_com", "dis_comments", 
+            "discharge_qlty", "dschrge_qlty"), colnames(d))
+        datcol <- intersect(c("dschrge_rate", "discharge_rate"), 
+            colnames(d))
+        d <- d %>% mutate(across(all_of(flagcol), ~str_trim(tolower(.))), 
+            across(all_of(flagcol), ~case_when(grepl("good", 
+                .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames("discharge", datcol), summary_flagcols = flagcol, 
+            data_col_pattern = "#V#", is_sensor = TRUE, set_to_NA = "", 
+            sampling_type = "I")
+        d <- ms_cast_and_reflag(d, summary_flags_clean = list(discharge_qlty = c("good", 
+            "fair", "")), summary_flags_to_drop = list(discharge_qlty = "unusable"), 
+            varflag_col_pattern = NA)
+    }
+    else {
+        cond_name <- intersect(c("conductivity", "conductance"), 
+            colnames(d))
+        d <- d %>% rename_with(~sub("_quality$", "_qlty", .)) %>% 
+            mutate(across(ends_with("qlty"), ~str_trim(tolower(.))), 
+                across(ends_with("qlty"), ~case_when(grepl("good", 
+                  .) ~ "good", grepl("fair", .) ~ "fair", grepl("poor", 
+                  .) ~ "poor", TRUE ~ .)))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(datetime = "%Y-%m-%d %H:%M"), 
+            datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+            data_cols = setNames(c("temp", "spCond"), c("water_temp", 
+                cond_name)), data_col_pattern = "#V#", var_flagcol_pattern = "#V#_qlty", 
+            is_sensor = TRUE, set_to_NA = "", sampling_type = "I")
+        d <- ms_cast_and_reflag(d, variable_flags_to_drop = "unusable", 
+            variable_flags_clean = c("fair", "good", ""))
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__9017'
+site_code = <separately, each of: 'LAWSON', with corresponding component>
+component(s) = 
+	for site: LAWSON
+		comp(s): LAWSON_HYDRO
+
+This is the "munge kernel" function for stream_chemistry__24:
+
+process_1_24 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- ms_read_raw_csv(filepath = rawfile, datetime_cols = c(date_time = "%m/%e/%y %H:%M"), 
+        datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+        alt_site_code = list(anderson_h1 = "andrsn_h1", lawson_b3 = "lawson", 
+            huey_f2 = "huey", crescent_f8 = "crescent", garwood_flats = "garwood", 
+            vguerard_f6 = "vguerard"), data_cols = c(doc_mgl = "DOC"), 
+        data_col_pattern = "#V#", summary_flagcols = "doc_comments", 
+        set_to_NA = "", is_sensor = FALSE)
+    smry_flg_grep <- grep("detection|Detection|DL|no detect|ND|<0.1 mg/L C|Not detected|Not detected|<0.1 mg/L", 
+        unique(d$doc_comments), value = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, summary_flags_bdl = list(doc_comments = smry_flg_grep))
+    d <- filter_single_samp_sites(d)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__24'
+site_code = <separately, each of: 'STREAM', with corresponding component>
+component(s) = 
+	for site: STREAM
+		comp(s): STREAM_DOC
+
+This is the "munge kernel" function for stream_chemistry__20:
+
+process_1_20 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- read.csv(rawfile, colClasses = "character") %>% filter(strmgageid != 
+        "", strmgageid != "garwood", strmgageid != "miers", strmgageid != 
+        "delta_upper", strmgageid != "lizotte_mouth", strmgageid != 
+        "vguerard_lower") %>% rename(li = li_mgl, na = na_mgl, 
+        k = k_mgl, mg = mg_mgl, ca = ca_mgl, f = f_mgl, cl = cl_mgl, 
+        br = br_mgl, so4 = so4_mgl, si = si_mgl)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(date_time = "%m/%e/%y %H:%M"), 
+        datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+        alt_site_code = list(anderson_h1 = "andrsn_h1", lawson_b3 = "lawson", 
+            huey_f2 = "huey", crescent_f8 = "crescent", garwood_flats = "garwood", 
+            vguerard_f6 = "vguerard"), data_cols = c(li = "Li", 
+            na = "Na", k = "K", mg = "Mg", ca = "Ca", f = "F", 
+            cl = "Cl", br = "Br", so4 = "SO4", si = "Si"), data_col_pattern = "#V#", 
+        set_to_NA = "", var_flagcol_pattern = "#V#_comments", 
+        summary_flagcols = "sample_comments", is_sensor = FALSE)
+    var_dirty_string <- c("Not Enough water for the sample to be run fully", 
+        "Not Quantified", "value outside calibration limit and not diluted to be within calibration limit", 
+        "Br not quantified", "not quantified", "Not Quantified", 
+        "Ca not quantified", "K not quantified", "Li not quantified")
+    BDL_flags <- unique(c(" Li not quantified <0.001mg/L", "Li level below detection limit", 
+        "not detected", "ND", "ND <0.001", "no detect", " F not quantified <0.02mg/L", 
+        "F level below detection limit", "< 0.1 mg/L", "Br not quantified <0.04mg/L", 
+        "ND < 0.04 mg/L", "Br level below detection limit", "ND < 0.04", 
+        "ND < 0.04 mg/L", "Br < 0.1", "Br not quantified <0.04mg/L", 
+        "ND < 0.1 mg/L", "ND < 0.02 mg/L", "< 0.1 mg/L", "F level below detection limit", 
+        " F not quantified <0.02mg/L", "ND < 0.0005 mg/L", "Li level below detection limit", 
+        "Li ND < 0.001 mg/L", "ND < 0.0007 mg/L", "Li < 0.001", 
+        "Li not quantified <0.001mg/L", "ND < 0.0007 mg/L", "Li < 0.001", 
+        "Li not quantified <0.001mg/L"))
+    summary_dirty_string <- c("suspect Cl contamination because of high Cl concentrations and high Cl to Na ratios and excess anion equivalents", 
+        "questionable location ID- no name on sample- time does not match COC form")
+    d <- ms_cast_and_reflag(d, variable_flags_dirty = var_dirty_string, 
+        variable_flags_bdl = BDL_flags, variable_flags_to_drop = "REMOVE", 
+        summary_flags_dirty = list(sample_comments = summary_dirty_string), 
+        summary_flags_to_drop = list(sample_comments = "DROP"))
+    d <- filter_single_samp_sites(d)
+    d <- ms_conversions(d, convert_units_from = c(SO4 = "mg/l"), 
+        convert_units_to = c(SO4 = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__20'
+site_code = <separately, each of: 'STREAM', with corresponding component>
+component(s) = 
+	for site: STREAM
+		comp(s): STREAM_IONS
+
+This is the "munge kernel" function for stream_chemistry__21:
+
+process_1_21 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- read.csv(rawfile, colClasses = "character") %>% rename(n_no3 = n_no3_ugl, 
+        n_no2 = n_no2_ugl, n_nh4 = n_nh4_ugl, srp = srp_ugl)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(date_time = "%m/%e/%y %H:%M"), 
+        datetime_tz = "Antarctica/McMurdo", site_code_col = "strmgageid", 
+        alt_site_code = list(anderson_h1 = "andrsn_h1", lawson_b3 = "lawson", 
+            huey_f2 = "huey", crescent_f8 = "crescent", garwood_flats = "garwood", 
+            vguerard_f6 = "vguerard"), data_cols = c(n_no3 = "NO3_N", 
+            n_no2 = "NO2_N", n_nh4 = "NH4_N", srp = "orthophosphate_P"), 
+        data_col_pattern = "#V#", set_to_NA = "", var_flagcol_pattern = "#V#_comments", 
+        is_sensor = FALSE)
+    all_comments <- c(unique(d$`GN_NO3_N__|flg`), unique(d$`GN_NO2_N__|flg`), 
+        unique(d$`GN_NH4_N__|flg`), unique(d$`GN_orthophosphate_P__|flg`))
+    BDL_flags <- grep("ND|below detection limit|non-detect|Not detected|no detect|Not Detected|detection limit =", 
+        all_comments, value = T)
+    d <- ms_cast_and_reflag(d, variable_flags_bdl = BDL_flags, 
+        variable_flags_dirty = "dirty", variable_flags_to_drop = "REMOVE")
+    d <- filter_single_samp_sites(d)
+    d <- ms_conversions(d, convert_units_from = c(NO3_N = "ug/l", 
+        NO2_N = "ug/l", NH4_N = "ug/l", orthophosphate_P = "ug/l"), 
+        convert_units_to = c(NO3_N = "mg/l", NO2_N = "mg/l", 
+            NH4_N = "mg/l", orthophosphate_P = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__21'
+site_code = <separately, each of: 'STREAM', with corresponding component>
+component(s) = 
+	for site: STREAM
+		comp(s): STREAM_NUTRIENTS
+
+This is the "munge kernel" function for stream_chemistry__78:
+
+process_1_78 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- read.csv(rawfile, colClasses = "character", skip = 26) %>% 
+        filter(STRMGAGEID != "", STRMGAGEID != "garwood", STRMGAGEID != 
+            "miers", STRMGAGEID != "delta_upper", STRMGAGEID != 
+            "lizotte_mouth", STRMGAGEID != "vguerard_lower", 
+            STRMGAGEID != "uvg_f21")
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(DATE_TIME = "%m/%d/%Y %H:%M"), 
+        datetime_tz = "Antarctica/McMurdo", site_code_col = "STRMGAGEID", 
+        data_cols = c(TN..mg.L. = "TN"), data_col_pattern = "#V#", 
+        set_to_NA = "", summary_flagcols = "TN.COMMENTS", is_sensor = FALSE)
+    all_comments <- c(unique(d$TN.COMMENTS))
+    BDL_flags <- grep("ND|below detection limit|non-detect|Not detected|no detect|Not Detected|detection limit =", 
+        all_comments, value = T)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, summary_flags_bdl = list(TN.COMMENTS = BDL_flags), 
+        summary_flags_dirty = list(TN.COMMENTS = "dirty"), summary_flags_to_drop = list(TN.COMMENTS = "REMOVE"))
+    d <- filter_single_samp_sites(d)
+    d <- ms_conversions(d, convert_units_from = c(NO3_N = "ug/l", 
+        NO2_N = "ug/l", NH4_N = "ug/l", orthophosphate_P = "ug/l"), 
+        convert_units_to = c(NO3_N = "mg/l", NO2_N = "mg/l", 
+            NH4_N = "mg/l", orthophosphate_P = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'mcmurdo'
+prodname_ms = 'stream_chemistry__78'
+site_code = <separately, each of: 'STREAM', with corresponding component>
+component(s) = 
+	for site: STREAM
+		comp(s): STREAM_TN
+
+---
+
+Functions from external packages called inside the kernel function are either
+referenced with `<package name>::<function>`, or are called from their aliases, defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/function_aliases.R
+
+For definitions of most MacroSheds functions called, see:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/global_helpers.R
+
+Definitions not found there will be found in src/<network>/network_helpers.R or
+src/<network>/<domain>/domain_helpers.R, where network is e.g. lter and domain
+is e.g. hbef (Hubbard Brook Experimental Forest). For a catalogue of networks
+and domains, download our site data table from the Data tab at macrosheds.org.
+
+After all the kernels have completed their jobs, there is a whole suite of
+post-processing steps, some of which further modify derived data. See
+postprocess_entire_dataset() in global_helpers.R for a list of these.
+
+Note that most MacroSheds functions are wrapped in a decorator function (handle_errors,
+defined in global_helpers.R; see tinsel package for details). This decorator is not needed
+to run the functions it wraps. To circumvent it, just make sure you don't load
+function definitions using tinsel::source_decoratees. This would only happen if you
+were to execute MacroSheds code line-by-line, starting from:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/acquisition_master.R
+
+Also note that the return value of a munge kernel function may be additionally modified by
+a munge engine function. Inside the body of the engine function, you can see where the
+munge kernel is retrieved with get() and called via do.call(). Usually, the only additional munging
+done by the munge engine (versus the munge kernel) would be to separate
+a data file that contains many sites into individual data files of only one site each.
+Munge engines are defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/munge_engines.R
+
+Finally, consider that you may clone our entire project from Github and get it running
+on your own machine. Getting every component to run will require a file called config.json
+at the top level of each project repository (data_processing/ and portal/) with your own
+values instead of <...> for each of the following fields:
+
+}
+    "gmail_pw": "< >",
+    "report_emails": ["<email1>", "<email2 etc>"],
+    "variables_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "site_data_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "delineation_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "univ_prods_gsheet:": "https://docs.google.com/spreadsheets/< >",
+    "name_variant_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "gee_login_<yourname>": "< >",
+    "orcid_login_<yourname>": "< >",
+    "orcid_pass_<yourname>": "< >",
+}
+
+Of course, you won't need connections to the ORCID database or google sheets in order to make headway.
+For example, just set config_storage_location = 'local' in your call to ms_init in data_processing/src/acquisition_master.R
+and gsheets becomes irrelevant. Our system is not fully set up to bypass the errors that would result from omitting
+some of this config information, but workarounds (like commenting lines or inserting tryCatch blocks) should be
+possible. This is something we'll be working on in later phases of the project.

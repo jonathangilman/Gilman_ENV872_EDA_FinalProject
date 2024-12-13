@@ -1,0 +1,3435 @@
+
+This MacroSheds data product (stream_chemistry__ms002) was generated from the following munged MacroSheds product(s):
+
+stream_chemistry__109
+stream_chemistry__110
+stream_chemistry__111
+stream_chemistry__112
+stream_chemistry__113
+stream_chemistry__148
+stream_chemistry__149
+stream_chemistry__150
+stream_chemistry__151
+stream_chemistry__171
+stream_chemistry__172
+stream_chemistry__225
+stream_chemistry__226
+stream_chemistry__433
+stream_chemistry__437
+stream_chemistry__434
+stream_chemistry__435
+stream_chemistry__438
+stream_chemistry__436
+stream_chemistry__439
+stream_chemistry__509
+stream_chemistry__525
+stream_chemistry__526
+stream_chemistry__510
+stream_chemistry__527
+stream_chemistry__117
+stream_chemistry__118
+stream_chemistry__152
+stream_chemistry__153
+stream_chemistry__154
+stream_chemistry__155
+stream_chemistry__176
+stream_chemistry__177
+stream_chemistry__178
+stream_chemistry__227
+stream_chemistry__228
+stream_chemistry__449
+stream_chemistry__450
+stream_chemistry__485
+stream_chemistry__486
+stream_chemistry__515
+stream_chemistry__516
+stream_chemistry__156
+stream_chemistry__157
+stream_chemistry__158
+stream_chemistry__173
+stream_chemistry__174
+stream_chemistry__229
+stream_chemistry__230
+stream_chemistry__392
+stream_chemistry__393
+stream_chemistry__394
+stream_chemistry__395
+stream_chemistry__114
+stream_chemistry__115
+stream_chemistry__116
+stream_chemistry__487
+stream_chemistry__488
+stream_chemistry__489
+stream_chemistry__490
+stream_chemistry__506
+stream_chemistry__507
+stream_chemistry__508
+stream_chemistry__444
+stream_chemistry__445
+stream_chemistry__446
+stream_chemistry__447
+stream_chemistry__513
+stream_chemistry__514
+stream_chemistry__448
+stream_chemistry__532
+stream_chemistry__533
+stream_chemistry__534
+stream_chemistry__104
+stream_chemistry__108
+stream_chemistry__106
+
+Source data were retrieved from the following web page(s), static file(s), or web-API endpoint(s)
+on the datetime in parentheses:
+
+stream_chemistry__109:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=109&revision=5 (retrieved 2024-01-12 02:19:08.012655)
+
+stream_chemistry__110:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=110&revision=5 (retrieved 2024-01-12 02:19:15.793262)
+
+stream_chemistry__111:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=111&revision=5 (retrieved 2024-01-12 02:19:42.191521)
+
+stream_chemistry__112:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=112&revision=5 (retrieved 2024-01-12 02:20:06.562133)
+
+stream_chemistry__113:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=113&revision=5 (retrieved 2024-01-12 02:20:31.137119)
+
+stream_chemistry__148:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=148&revision=3 (retrieved 2024-01-12 02:20:56.327782)
+
+stream_chemistry__149:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=149&revision=3 (retrieved 2024-01-12 02:21:20.397036)
+
+stream_chemistry__150:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=150&revision=3 (retrieved 2024-01-12 02:21:44.878539)
+
+stream_chemistry__151:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=151&revision=5 (retrieved 2024-01-12 02:22:09.549205)
+
+stream_chemistry__171:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=171&revision=4 (retrieved 2024-01-12 02:22:33.577183)
+
+stream_chemistry__172:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=172&revision=4 (retrieved 2024-01-12 02:22:57.670119)
+
+stream_chemistry__225:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=225&revision=2 (retrieved 2024-01-12 02:23:21.73575)
+
+stream_chemistry__226:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=226&revision=2 (retrieved 2024-01-12 02:23:45.903604)
+
+stream_chemistry__433:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=433&revision=1 (retrieved 2024-01-12 02:24:10.488298)
+
+stream_chemistry__437:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=437&revision=1 (retrieved 2024-01-12 02:24:27.174431)
+
+stream_chemistry__434:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=434&revision=1 (retrieved 2024-01-12 02:25:01.274879)
+
+stream_chemistry__435:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=435&revision=1 (retrieved 2024-01-12 02:25:34.764428)
+
+stream_chemistry__438:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=438&revision=1 (retrieved 2024-01-12 02:25:51.621788)
+
+stream_chemistry__436:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=436&revision=1 (retrieved 2024-01-12 02:26:08.459139)
+
+stream_chemistry__439:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=439&revision=1 (retrieved 2024-01-12 02:26:41.424183)
+
+stream_chemistry__509:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=509&revision=1 (retrieved 2024-01-12 02:26:58.833161)
+
+stream_chemistry__525:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=525&revision=1 (retrieved 2024-01-12 02:27:15.547737)
+
+stream_chemistry__526:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=526&revision=1 (retrieved 2024-01-12 02:27:32.33239)
+
+stream_chemistry__510:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=510&revision=1 (retrieved 2024-01-12 02:27:49.225093)
+
+stream_chemistry__527:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=527&revision=1 (retrieved 2024-01-12 02:28:05.812992)
+
+stream_chemistry__117:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=117&revision=6 (retrieved 2024-01-12 02:28:38.377765)
+
+stream_chemistry__118:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=118&revision=6 (retrieved 2024-01-12 02:29:02.142852)
+
+stream_chemistry__152:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=152&revision=4 (retrieved 2024-01-12 02:29:26.801694)
+
+stream_chemistry__153:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=153&revision=4 (retrieved 2024-01-12 02:29:51.289586)
+
+stream_chemistry__154:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=154&revision=4 (retrieved 2024-01-12 02:30:15.089148)
+
+stream_chemistry__155:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=155&revision=4 (retrieved 2024-01-12 02:31:22.548943)
+
+stream_chemistry__176:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=176&revision=2 (retrieved 2024-01-12 02:31:46.604394)
+
+stream_chemistry__177:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=177&revision=2 (retrieved 2024-01-12 02:32:10.462282)
+
+stream_chemistry__178:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=178&revision=2 (retrieved 2024-01-12 02:32:34.931698)
+
+stream_chemistry__227:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=227&revision=2 (retrieved 2024-01-12 02:32:58.920869)
+
+stream_chemistry__228:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=228&revision=2 (retrieved 2024-01-12 02:33:22.856254)
+
+stream_chemistry__449:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=449&revision=1 (retrieved 2024-01-12 02:33:47.134553)
+
+stream_chemistry__450:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=450&revision=1 (retrieved 2024-01-12 02:34:20.829194)
+
+stream_chemistry__485:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=485&revision=1 (retrieved 2024-01-12 02:34:54.310568)
+
+stream_chemistry__486:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=486&revision=1 (retrieved 2024-01-12 02:35:28.309105)
+
+stream_chemistry__515:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=515&revision=2 (retrieved 2024-01-12 02:35:44.906662)
+
+stream_chemistry__516:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=516&revision=1 (retrieved 2024-01-12 02:36:01.903901)
+
+stream_chemistry__156:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=156&revision=3 (retrieved 2024-01-12 02:36:34.564121)
+
+stream_chemistry__157:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=157&revision=3 (retrieved 2024-01-12 02:36:58.429767)
+
+stream_chemistry__158:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=158&revision=4 (retrieved 2024-01-12 02:37:22.793544)
+
+stream_chemistry__173:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=173&revision=3 (retrieved 2024-01-12 02:37:46.76294)
+
+stream_chemistry__174:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=174&revision=3 (retrieved 2024-01-12 02:38:11.241239)
+
+stream_chemistry__229:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=229&revision=2 (retrieved 2024-01-12 02:38:18.814587)
+
+stream_chemistry__230:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=230&revision=2 (retrieved 2024-01-12 02:38:36.015241)
+
+stream_chemistry__392:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=392&revision=1 (retrieved 2024-01-12 02:38:52.524427)
+
+stream_chemistry__393:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=393&revision=1 (retrieved 2024-01-12 02:39:09.08846)
+
+stream_chemistry__394:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=394&revision=1 (retrieved 2024-01-12 02:39:25.169051)
+
+stream_chemistry__395:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=395&revision=1 (retrieved 2024-01-12 02:39:41.497123)
+
+stream_chemistry__114:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=114&revision=5 (retrieved 2024-01-12 02:39:57.93651)
+
+stream_chemistry__115:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=115&revision=5 (retrieved 2024-01-12 02:40:22.102196)
+
+stream_chemistry__116:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=116&revision=5 (retrieved 2024-01-12 02:40:38.697164)
+
+stream_chemistry__487:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=487&revision=1 (retrieved 2024-01-12 02:40:55.290174)
+
+stream_chemistry__488:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=488&revision=1 (retrieved 2024-01-12 02:41:12.080939)
+
+stream_chemistry__489:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=489&revision=1 (retrieved 2024-01-12 02:41:29.282012)
+
+stream_chemistry__490:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=490&revision=1 (retrieved 2024-01-12 02:41:46.079325)
+
+stream_chemistry__506:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=506&revision=1 (retrieved 2024-01-12 02:42:03.074476)
+
+stream_chemistry__507:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=507&revision=1 (retrieved 2024-01-12 02:42:20.195856)
+
+stream_chemistry__508:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=508&revision=1 (retrieved 2024-01-12 02:42:37.077336)
+
+stream_chemistry__444:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=444&revision=1 (retrieved 2024-01-12 02:42:53.964844)
+
+stream_chemistry__445:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=445&revision=1 (retrieved 2024-01-12 02:43:10.663553)
+
+stream_chemistry__446:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=446&revision=1 (retrieved 2024-01-12 02:43:27.392024)
+
+stream_chemistry__447:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=447&revision=1 (retrieved 2024-01-12 02:43:44.351887)
+
+stream_chemistry__513:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=513&revision=1 (retrieved 2024-01-12 02:44:01.248632)
+
+stream_chemistry__514:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=514&revision=2 (retrieved 2024-01-12 02:44:18.046961)
+
+stream_chemistry__448:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=448&revision=1 (retrieved 2024-01-12 02:44:34.662921)
+
+stream_chemistry__532:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=532&revision=1 (retrieved 2024-01-12 02:44:51.440812)
+
+stream_chemistry__533:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=533&revision=1 (retrieved 2024-01-15 21:49:15.663397)
+
+stream_chemistry__534:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=534&revision=1 (retrieved 2024-01-15 21:49:24.244876)
+
+stream_chemistry__104:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=104&revision=12 (retrieved 2024-01-15 21:49:32.643939)
+
+stream_chemistry__108:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=108&revision=9 (retrieved 2024-01-15 21:49:49.647377)
+
+stream_chemistry__106:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=106&revision=9 (retrieved 2024-01-15 21:50:06.739545)
+
+To rebuild all or part of the MacroSheds dataset yourself, use our code on GitHub (and these notes). If you want to
+rebuild only this product, or if you want to modify the code used to generate this product, you
+will almost certainly have an easier time using these notes. That said, automatic documentation like this may
+have some errors and missing details. Please contact us at mail@macrosheds.org if you're having trouble
+navigating our docs.
+
+Below you will find the "derive kernel" function(s) by which stream_chemistry__ms002 was generated.
+Note that MacroSheds products may have precursors that are themselves derived products. In some
+cases, these derived precursors are named above and have their own separate documentation. In other
+cases, derived precursors are generated from stand-alone derive kernels whose entire definition and
+history can be displayed here. A stand-alone kernel might, for example, pull supplemental data
+from a source other than its own network/domain. Here is the code for stream_chemistry__ms002's derive kernel function,
+and for any stand-alone precursor derive kernel function(s):
+
+process_2_ms002 <- function (network, domain, prodname_ms) 
+{
+    files <- ms_list_files(network = network, domain = domain, 
+        prodname_ms = c("stream_chemistry__109", "stream_chemistry__110", 
+            "stream_chemistry__111", "stream_chemistry__112", 
+            "stream_chemistry__113", "stream_chemistry__148", 
+            "stream_chemistry__149", "stream_chemistry__150", 
+            "stream_chemistry__151", "stream_chemistry__171", 
+            "stream_chemistry__172", "stream_chemistry__225", 
+            "stream_chemistry__226", "stream_chemistry__433", 
+            "stream_chemistry__437", "stream_chemistry__434", 
+            "stream_chemistry__435", "stream_chemistry__438", 
+            "stream_chemistry__436", "stream_chemistry__439", 
+            "stream_chemistry__509", "stream_chemistry__525", 
+            "stream_chemistry__526", "stream_chemistry__510", 
+            "stream_chemistry__527", "stream_chemistry__117", 
+            "stream_chemistry__118", "stream_chemistry__152", 
+            "stream_chemistry__153", "stream_chemistry__154", 
+            "stream_chemistry__155", "stream_chemistry__176", 
+            "stream_chemistry__177", "stream_chemistry__178", 
+            "stream_chemistry__227", "stream_chemistry__228", 
+            "stream_chemistry__449", "stream_chemistry__450", 
+            "stream_chemistry__485", "stream_chemistry__486", 
+            "stream_chemistry__515", "stream_chemistry__516", 
+            "stream_chemistry__156", "stream_chemistry__157", 
+            "stream_chemistry__158", "stream_chemistry__173", 
+            "stream_chemistry__174", "stream_chemistry__229", 
+            "stream_chemistry__230", "stream_chemistry__392", 
+            "stream_chemistry__393", "stream_chemistry__394", 
+            "stream_chemistry__395", "stream_chemistry__114", 
+            "stream_chemistry__115", "stream_chemistry__116", 
+            "stream_chemistry__487", "stream_chemistry__488", 
+            "stream_chemistry__489", "stream_chemistry__490", 
+            "stream_chemistry__506", "stream_chemistry__507", 
+            "stream_chemistry__508", "stream_chemistry__444", 
+            "stream_chemistry__445", "stream_chemistry__446", 
+            "stream_chemistry__447", "stream_chemistry__513", 
+            "stream_chemistry__514", "stream_chemistry__448", 
+            "stream_chemistry__532", "stream_chemistry__533", 
+            "stream_chemistry__534", "stream_chemistry__104", 
+            "stream_chemistry__108", "stream_chemistry__106"))
+    site_feather <- str_split_fixed(files, "/", n = Inf)[, 6]
+    sites <- unique(str_split_fixed(site_feather, "[.]", n = Inf)[, 
+        1])
+    d <- tibble()
+    for (i in 1:length(sites)) {
+        site_files <- grep(paste0("/", sites[i], ".feather"), 
+            files, value = TRUE)
+        site_full <- map_dfr(site_files, read_feather)
+        d <- rbind(d, site_full)
+    }
+    d <- qc_hdetlim_and_uncert(d, prodname_ms = prodname_ms)
+    d <- synchronize_timestep(d)
+    dir <- glue("data/{n}/{d}/derived/{p}", n = network, d = domain, 
+        p = prodname_ms)
+    dir.create(dir, showWarnings = FALSE)
+    for (i in 1:length(sites)) {
+        site_full <- filter(d, site_code == !!sites[i])
+        write_ms_file(d = site_full, network = network, domain = domain, 
+            prodname_ms = prodname_ms, site_code = sites[i], 
+            level = "derived", shapefile = FALSE)
+    }
+    return()
+}
+
+These were the arguments to that/those function(s):
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__ms002'
+
+Zero or more function definitions follow, depending on the number of munged products that
+are precursors to stream_chemistry__ms002:
+
+This is the "munge kernel" function for stream_chemistry__109:
+
+process_1_109 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond", DOConc = "DO", 
+                pH = "pH", DO. = "DO_sat"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__109'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-FishBr-2001.csv
+
+This is the "munge kernel" function for stream_chemistry__110:
+
+process_1_110 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond", DOConc = "DO", 
+                pH = "pH", DO. = "DO_sat"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__110'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-FishBr-2002.csv
+
+This is the "munge kernel" function for stream_chemistry__111:
+
+process_1_111 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond", DOConc = "DO", 
+                pH = "pH", DO. = "DO_sat"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__111'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Forest-2001.csv
+
+This is the "munge kernel" function for stream_chemistry__112:
+
+process_1_112 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond", DOConc = "DO", 
+                pH = "pH", DO. = "DO_sat"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__112'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Forest-2002.csv
+
+This is the "munge kernel" function for stream_chemistry__113:
+
+process_1_113 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond", DOConc = "DO", 
+                pH = "pH", DO. = "DO_sat"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__113'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Forest-2003.csv
+
+This is the "munge kernel" function for stream_chemistry__148:
+
+process_1_148 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond", DOConc = "DO", 
+                pH = "pH", DO. = "DO_sat"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__148'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Forest-2004.csv
+
+This is the "munge kernel" function for stream_chemistry__149:
+
+process_1_149 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond", DOConc = "DO", 
+                pH = "pH", DO. = "DO_sat"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__149'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Forest-2005.csv
+
+This is the "munge kernel" function for stream_chemistry__150:
+
+process_1_150 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond", DOConc = "DO", 
+                pH = "pH", DO. = "DO_sat"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__150'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Forest-2006.csv
+
+This is the "munge kernel" function for stream_chemistry__151:
+
+process_1_151 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    else {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    if (code == "173") {
+        d <- filter(d, year(datetime) != 2007)
+    }
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__151'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Forest-2007.csv
+
+This is the "munge kernel" function for stream_chemistry__171:
+
+process_1_171 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    else {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    if (code == "173") {
+        d <- filter(d, year(datetime) != 2007)
+    }
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__171'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Forest-2008.csv
+
+This is the "munge kernel" function for stream_chemistry__172:
+
+process_1_172 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    else {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    if (code == "173") {
+        d <- filter(d, year(datetime) != 2007)
+    }
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__172'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Forest-2009.csv
+
+This is the "munge kernel" function for stream_chemistry__225:
+
+process_1_225 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    else {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    if (code == "173") {
+        d <- filter(d, year(datetime) != 2007)
+    }
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__225'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Forest-2010.csv
+
+This is the "munge kernel" function for stream_chemistry__226:
+
+process_1_226 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    else {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    if (code == "173") {
+        d <- filter(d, year(datetime) != 2007)
+    }
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__226'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Forest-2011.csv
+
+This is the "munge kernel" function for stream_chemistry__433:
+
+process_1_433 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__433'
+site_code = <separately, each of: 'WAT-Forest-CartCreek-Cond-2012', with corresponding component>
+component(s) = 
+	for site: WAT-Forest-CartCreek-Cond-2012
+		comp(s): WAT-Forest-CartCreek-Cond-2012_csv
+
+This is the "munge kernel" function for stream_chemistry__437:
+
+process_1_437 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", DO_Concentration = "DO", 
+            DO_Percent_Sat = "DO_sat"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__437'
+site_code = <separately, each of: 'WAT-Forest-CartCreek-DO-2013', with corresponding component>
+component(s) = 
+	for site: WAT-Forest-CartCreek-DO-2013
+		comp(s): WAT-Forest-CartCreek-DO-2013_csv
+
+This is the "munge kernel" function for stream_chemistry__434:
+
+process_1_434 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__434'
+site_code = <separately, each of: 'WAT-Forest-CartCreek-Cond-2013', with corresponding component>
+component(s) = 
+	for site: WAT-Forest-CartCreek-Cond-2013
+		comp(s): WAT-Forest-CartCreek-Cond-2013_csv
+
+This is the "munge kernel" function for stream_chemistry__435:
+
+process_1_435 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__435'
+site_code = <separately, each of: 'WAT-Forest-CartCreek-Cond-2014', with corresponding component>
+component(s) = 
+	for site: WAT-Forest-CartCreek-Cond-2014
+		comp(s): WAT-Forest-CartCreek-Cond-2014_csv
+
+This is the "munge kernel" function for stream_chemistry__438:
+
+process_1_438 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", DO_Concentration = "DO", 
+            DO_Percent_Sat = "DO_sat"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__438'
+site_code = <separately, each of: 'WAT-Forest-CartCreek-DO-2014', with corresponding component>
+component(s) = 
+	for site: WAT-Forest-CartCreek-DO-2014
+		comp(s): WAT-Forest-CartCreek-DO-2014_csv
+
+This is the "munge kernel" function for stream_chemistry__436:
+
+process_1_436 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__436'
+site_code = <separately, each of: 'WAT-Forest-CartCreek-Cond-2015', with corresponding component>
+component(s) = 
+	for site: WAT-Forest-CartCreek-Cond-2015
+		comp(s): WAT-Forest-CartCreek-Cond-2015_csv
+
+This is the "munge kernel" function for stream_chemistry__439:
+
+process_1_439 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", DO_Concentration = "DO", 
+            DO_Percent_Sat = "DO_sat"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__439'
+site_code = <separately, each of: 'WAT-Forest-CartCreek-DO-2015', with corresponding component>
+component(s) = 
+	for site: WAT-Forest-CartCreek-DO-2015
+		comp(s): WAT-Forest-CartCreek-DO-2015_csv
+
+This is the "munge kernel" function for stream_chemistry__509:
+
+process_1_509 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__509'
+site_code = <separately, each of: 'WAT-Forest-CartCreek-Cond-2016', with corresponding component>
+component(s) = 
+	for site: WAT-Forest-CartCreek-Cond-2016
+		comp(s): WAT-Forest-CartCreek-Cond-2016_csv
+
+This is the "munge kernel" function for stream_chemistry__525:
+
+process_1_525 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", DO_Concentration = "DO", 
+            DO_Percent_Sat = "DO_sat"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__525'
+site_code = <separately, each of: 'WAT-Forest-CartCreek-DO-2016', with corresponding component>
+component(s) = 
+	for site: WAT-Forest-CartCreek-DO-2016
+		comp(s): WAT-Forest-CartCreek-DO-2016_csv
+
+This is the "munge kernel" function for stream_chemistry__526:
+
+process_1_526 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", DO_Concentration = "DO", 
+            DO_Percent_Sat = "DO_sat"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__526'
+site_code = <separately, each of: 'WAT-Forest-CartCreek-DO-2017', with corresponding component>
+component(s) = 
+	for site: WAT-Forest-CartCreek-DO-2017
+		comp(s): WAT-Forest-CartCreek-DO-2017_csv
+
+This is the "munge kernel" function for stream_chemistry__510:
+
+process_1_510 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__510'
+site_code = <separately, each of: 'WAT-Forest-CartCreek-Cond-2017', with corresponding component>
+component(s) = 
+	for site: WAT-Forest-CartCreek-Cond-2017
+		comp(s): WAT-Forest-CartCreek-Cond-2017_csv
+
+This is the "munge kernel" function for stream_chemistry__527:
+
+process_1_527 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", DO_Concentration = "DO", 
+            DO_Percent_Sat = "DO_sat"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__527'
+site_code = <separately, each of: 'WAT-Forest-CartCreek-DO-2018', with corresponding component>
+component(s) = 
+	for site: WAT-Forest-CartCreek-DO-2018
+		comp(s): WAT-Forest-CartCreek-DO-2018_csv
+
+This is the "munge kernel" function for stream_chemistry__117:
+
+process_1_117 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond", DOConc = "DO", 
+                pH = "pH", DO. = "DO_sat"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__117'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Urban-2001.csv
+
+This is the "munge kernel" function for stream_chemistry__118:
+
+process_1_118 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond", DOConc = "DO", 
+                pH = "pH", DO. = "DO_sat"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__118'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Urban-2002.csv
+
+This is the "munge kernel" function for stream_chemistry__152:
+
+process_1_152 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond", DOConc = "DO", 
+                pH = "pH", DO. = "DO_sat"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__152'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Urban-2003.csv
+
+This is the "munge kernel" function for stream_chemistry__153:
+
+process_1_153 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond", DOConc = "DO", 
+                pH = "pH", DO. = "DO_sat"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__153'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Urban-2004.csv
+
+This is the "munge kernel" function for stream_chemistry__154:
+
+process_1_154 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond", DOConc = "DO", 
+                pH = "pH", DO. = "DO_sat"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__154'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Urban-2005.csv
+
+This is the "munge kernel" function for stream_chemistry__155:
+
+process_1_155 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond"), 
+            data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__155'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Urban-2006.csv
+
+This is the "munge kernel" function for stream_chemistry__176:
+
+process_1_176 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    else {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    if (code == "173") {
+        d <- filter(d, year(datetime) != 2007)
+    }
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__176'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Urban-2007.csv
+
+This is the "munge kernel" function for stream_chemistry__177:
+
+process_1_177 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    else {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    if (code == "173") {
+        d <- filter(d, year(datetime) != 2007)
+    }
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__177'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Urban-2008.csv
+
+This is the "munge kernel" function for stream_chemistry__178:
+
+process_1_178 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    else {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    if (code == "173") {
+        d <- filter(d, year(datetime) != 2007)
+    }
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__178'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Urban-2009.csv
+
+This is the "munge kernel" function for stream_chemistry__227:
+
+process_1_227 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    else {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    if (code == "173") {
+        d <- filter(d, year(datetime) != 2007)
+    }
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__227'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Urban-2010.csv
+
+This is the "munge kernel" function for stream_chemistry__228:
+
+process_1_228 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    else {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    if (code == "173") {
+        d <- filter(d, year(datetime) != 2007)
+    }
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__228'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Urban-2011.csv
+
+This is the "munge kernel" function for stream_chemistry__449:
+
+process_1_449 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__449'
+site_code = <separately, each of: 'WAT-Urban-SawMillBrk-Cond-2012', with corresponding component>
+component(s) = 
+	for site: WAT-Urban-SawMillBrk-Cond-2012
+		comp(s): WAT-Urban-SawMillBrk-Cond-2012_csv
+
+This is the "munge kernel" function for stream_chemistry__450:
+
+process_1_450 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__450'
+site_code = <separately, each of: 'WAT-Urban-SawMillBrk-Cond-2013', with corresponding component>
+component(s) = 
+	for site: WAT-Urban-SawMillBrk-Cond-2013
+		comp(s): WAT-Urban-SawMillBrk-Cond-2013_csv
+
+This is the "munge kernel" function for stream_chemistry__485:
+
+process_1_485 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__485'
+site_code = <separately, each of: 'WAT-Urban-SawMillBrk-Cond-2014', with corresponding component>
+component(s) = 
+	for site: WAT-Urban-SawMillBrk-Cond-2014
+		comp(s): WAT-Urban-SawMillBrk-Cond-2014_csv
+
+This is the "munge kernel" function for stream_chemistry__486:
+
+process_1_486 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__486'
+site_code = <separately, each of: 'WAT-Urban-SawMillBrk-Cond-2015', with corresponding component>
+component(s) = 
+	for site: WAT-Urban-SawMillBrk-Cond-2015
+		comp(s): WAT-Urban-SawMillBrk-Cond-2015_csv
+
+This is the "munge kernel" function for stream_chemistry__515:
+
+process_1_515 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__515'
+site_code = <separately, each of: 'WAT-Urban-SawMillBrk-Cond-2016', with corresponding component>
+component(s) = 
+	for site: WAT-Urban-SawMillBrk-Cond-2016
+		comp(s): WAT-Urban-SawMillBrk-Cond-2016_csv
+
+This is the "munge kernel" function for stream_chemistry__516:
+
+process_1_516 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__516'
+site_code = <separately, each of: 'WAT-Urban-SawMillBrk-Cond-2017', with corresponding component>
+component(s) = 
+	for site: WAT-Urban-SawMillBrk-Cond-2017
+		comp(s): WAT-Urban-SawMillBrk-Cond-2017_csv
+
+This is the "munge kernel" function for stream_chemistry__156:
+
+process_1_156 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond", DOConc = "DO", 
+                pH = "pH", DO. = "DO_sat"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__156'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Swamp-2005.csv
+
+This is the "munge kernel" function for stream_chemistry__157:
+
+process_1_157 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond", DOConc = "DO", 
+                pH = "pH", DO. = "DO_sat"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__157'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Swamp-2006.csv
+
+This is the "munge kernel" function for stream_chemistry__158:
+
+process_1_158 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    else {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    if (code == "173") {
+        d <- filter(d, year(datetime) != 2007)
+    }
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__158'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Swamp-2007.csv
+
+This is the "munge kernel" function for stream_chemistry__173:
+
+process_1_173 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    else {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    if (code == "173") {
+        d <- filter(d, year(datetime) != 2007)
+    }
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__173'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Swamp-2008.csv
+
+This is the "munge kernel" function for stream_chemistry__174:
+
+process_1_174 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    else {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    if (code == "173") {
+        d <- filter(d, year(datetime) != 2007)
+    }
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__174'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Swamp-2009.csv
+
+This is the "munge kernel" function for stream_chemistry__229:
+
+process_1_229 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    else {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    if (code == "173") {
+        d <- filter(d, year(datetime) != 2007)
+    }
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__229'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Swamp-2010.csv
+
+This is the "munge kernel" function for stream_chemistry__230:
+
+process_1_230 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    else {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    if (code == "173") {
+        d <- filter(d, year(datetime) != 2007)
+    }
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__230'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Swamp-2011.csv
+
+This is the "munge kernel" function for stream_chemistry__392:
+
+process_1_392 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    else {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    if (code == "173") {
+        d <- filter(d, year(datetime) != 2007)
+    }
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__392'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Swamp-2012.csv
+
+This is the "munge kernel" function for stream_chemistry__393:
+
+process_1_393 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%m/%e/%Y", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__393'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Swamp-2013.csv
+
+This is the "munge kernel" function for stream_chemistry__394:
+
+process_1_394 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    else {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    if (code == "173") {
+        d <- filter(d, year(datetime) != 2007)
+    }
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__394'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Swamp-2014.csv
+
+This is the "munge kernel" function for stream_chemistry__395:
+
+process_1_395 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    else {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+    }
+    if (code == "173") {
+        d <- filter(d, year(datetime) != 2007)
+    }
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__395'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-Swamp-2015.csv
+
+This is the "munge kernel" function for stream_chemistry__114:
+
+process_1_114 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond", DOConc = "DO", 
+                pH = "pH", DO. = "DO_sat"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__114'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-UpperIps-2001.csv
+
+This is the "munge kernel" function for stream_chemistry__115:
+
+process_1_115 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond", DOConc = "DO", 
+                pH = "pH", DO. = "DO_sat"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__115'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-UpperIps-2002.csv
+
+This is the "munge kernel" function for stream_chemistry__116:
+
+process_1_116 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    if (grepl("stream_chemistry", prodname_ms)) {
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Temp = "temp", SpCond = "spCond", DOConc = "DO", 
+                pH = "pH", DO. = "DO_sat"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+        d <- ms_conversions(d, convert_units_from = c(spCond = "mS/cm"), 
+            convert_units_to = c(spCond = "uS/cm"))
+    }
+    else {
+        if ("Flow" %in% names(d)) {
+            d <- d %>% rename(Discharge = Flow)
+        }
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+            Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+            data_cols = c(Discharge = "discharge"), data_col_pattern = "#V#", 
+            is_sensor = TRUE, sampling_type = "I")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    }
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__116'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): WAT-YSI-UpperIps-2003.csv
+
+This is the "munge kernel" function for stream_chemistry__487:
+
+process_1_487 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__487'
+site_code = <separately, each of: 'WAT-CentralStDamParkerCond-2012', with corresponding component>
+component(s) = 
+	for site: WAT-CentralStDamParkerCond-2012
+		comp(s): WAT-CentralStDamParkerCond-2012_csv
+
+This is the "munge kernel" function for stream_chemistry__488:
+
+process_1_488 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__488'
+site_code = <separately, each of: 'WAT-CentralStDamParkerCond-2013', with corresponding component>
+component(s) = 
+	for site: WAT-CentralStDamParkerCond-2013
+		comp(s): WAT-CentralStDamParkerCond-2013_csv
+
+This is the "munge kernel" function for stream_chemistry__489:
+
+process_1_489 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__489'
+site_code = <separately, each of: 'WAT-CentralStDamParkerCond-2014', with corresponding component>
+component(s) = 
+	for site: WAT-CentralStDamParkerCond-2014
+		comp(s): WAT-CentralStDamParkerCond-2014_csv
+
+This is the "munge kernel" function for stream_chemistry__490:
+
+process_1_490 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__490'
+site_code = <separately, each of: 'WAT-CentralStDamParkerCond-2015', with corresponding component>
+component(s) = 
+	for site: WAT-CentralStDamParkerCond-2015
+		comp(s): WAT-CentralStDamParkerCond-2015_csv
+
+This is the "munge kernel" function for stream_chemistry__506:
+
+process_1_506 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__506'
+site_code = <separately, each of: 'WAT-CentralStDamParkerCond-2016', with corresponding component>
+component(s) = 
+	for site: WAT-CentralStDamParkerCond-2016
+		comp(s): WAT-CentralStDamParkerCond-2016_csv
+
+This is the "munge kernel" function for stream_chemistry__507:
+
+process_1_507 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__507'
+site_code = <separately, each of: 'WAT-CentralStDamParkerCond-2017', with corresponding component>
+component(s) = 
+	for site: WAT-CentralStDamParkerCond-2017
+		comp(s): WAT-CentralStDamParkerCond-2017_csv
+
+This is the "munge kernel" function for stream_chemistry__508:
+
+process_1_508 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__508'
+site_code = <separately, each of: 'WAT-CentralStDamParkerCond-2018', with corresponding component>
+component(s) = 
+	for site: WAT-CentralStDamParkerCond-2018
+		comp(s): WAT-CentralStDamParkerCond-2018_csv
+
+This is the "munge kernel" function for stream_chemistry__444:
+
+process_1_444 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__444'
+site_code = <separately, each of: 'WAT-SylvaniaDamIpswichCond-2012', with corresponding component>
+component(s) = 
+	for site: WAT-SylvaniaDamIpswichCond-2012
+		comp(s): WAT-SylvaniaDamIpswichCond-2012_csv
+
+This is the "munge kernel" function for stream_chemistry__445:
+
+process_1_445 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__445'
+site_code = <separately, each of: 'WAT-SylvaniaDamIpswichCond-2013', with corresponding component>
+component(s) = 
+	for site: WAT-SylvaniaDamIpswichCond-2013
+		comp(s): WAT-SylvaniaDamIpswichCond-2013_csv
+
+This is the "munge kernel" function for stream_chemistry__446:
+
+process_1_446 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__446'
+site_code = <separately, each of: 'WAT-SylvaniaDamIpswichCond-2014', with corresponding component>
+component(s) = 
+	for site: WAT-SylvaniaDamIpswichCond-2014
+		comp(s): WAT-SylvaniaDamIpswichCond-2014_csv
+
+This is the "munge kernel" function for stream_chemistry__447:
+
+process_1_447 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__447'
+site_code = <separately, each of: 'WAT-SylvaniaDamIpswichCond-2015', with corresponding component>
+component(s) = 
+	for site: WAT-SylvaniaDamIpswichCond-2015
+		comp(s): WAT-SylvaniaDamIpswichCond-2015_csv
+
+This is the "munge kernel" function for stream_chemistry__513:
+
+process_1_513 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__513'
+site_code = <separately, each of: 'WAT-SylvaniaDamIpswichCond-2016', with corresponding component>
+component(s) = 
+	for site: WAT-SylvaniaDamIpswichCond-2016
+		comp(s): WAT-SylvaniaDamIpswichCond-2016_csv
+
+This is the "munge kernel" function for stream_chemistry__514:
+
+process_1_514 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", Sp_Cond = "spCond"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__514'
+site_code = <separately, each of: 'WAT-SylvaniaDamIpswichCond-2017', with corresponding component>
+component(s) = 
+	for site: WAT-SylvaniaDamIpswichCond-2017
+		comp(s): WAT-SylvaniaDamIpswichCond-2017_csv
+
+This is the "munge kernel" function for stream_chemistry__448:
+
+process_1_448 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", DO_Concentration = "DO", 
+            DO_Percent_Sat = "DO_sat"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__448'
+site_code = <separately, each of: 'WAT-SylvaniaDamIpswich-DO-2015', with corresponding component>
+component(s) = 
+	for site: WAT-SylvaniaDamIpswich-DO-2015
+		comp(s): WAT-SylvaniaDamIpswich-DO-2015_csv
+
+This is the "munge kernel" function for stream_chemistry__532:
+
+process_1_532 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", DO_Concentration = "DO", 
+            DO_Percent_Sat = "DO_sat"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__532'
+site_code = <separately, each of: 'WAT-SylvaniaDamIpswich-DO-2016', with corresponding component>
+component(s) = 
+	for site: WAT-SylvaniaDamIpswich-DO-2016
+		comp(s): WAT-SylvaniaDamIpswich-DO-2016_csv
+
+This is the "munge kernel" function for stream_chemistry__533:
+
+process_1_533 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", DO_Concentration = "DO", 
+            DO_Percent_Sat = "DO_sat"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__533'
+site_code = <separately, each of: 'WAT-SylvaniaDamIpswich-DO-2017', with corresponding component>
+component(s) = 
+	for site: WAT-SylvaniaDamIpswich-DO-2017
+		comp(s): WAT-SylvaniaDamIpswich-DO-2017_csv
+
+This is the "munge kernel" function for stream_chemistry__534:
+
+process_1_534 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% fish_brook ~ "fish_brook", code %in% 
+        cart_creek ~ "cart_creek", code %in% saw_mill_brook ~ 
+        "saw_mill_brook", code %in% bear_meadow ~ "bear_meadow", 
+        code %in% upper_ipswich ~ "upper_ipswich", code %in% 
+            parker_dam ~ "parker_dam", code %in% ipswich_dam ~ 
+            "ipswich_dam")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Temp = "temp", DO_Concentration = "DO", 
+            DO_Percent_Sat = "DO_sat"), summary_flagcols = "Flag", 
+        data_col_pattern = "#V#", is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Flag = 2), 
+        summary_flags_to_drop = list(Flag = "DROP"), varflag_col_pattern = NA)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__534'
+site_code = <separately, each of: 'WAT-SylvaniaDamIpswich-DO-2018', with corresponding component>
+component(s) = 
+	for site: WAT-SylvaniaDamIpswich-DO-2018
+		comp(s): WAT-SylvaniaDamIpswich-DO-2018_csv
+
+This is the "munge kernel" function for stream_chemistry__104:
+
+process_1_104 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- ms_read_raw_csv(filepath = rawfile, datetime_cols = c(DATE = "%Y-%m-%d", 
+        TIME = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "STATION", 
+        alt_site_code = list(muddy_run = "WAT-RO-MuddyRun", little_river = "WAT-PR-LittleRiver", 
+            mill_river = "WAT-MI-MillRiver", ipswich_dam = c("WAT-IP-IpswichDam", 
+                "WAT-IP-Ipswich Dam"), parker_dam = c("WAT-PR-ParkerDam", 
+                "WAT-PR-Parker Dam"), egypt_river = c("WAT-RO-EgyptRiver", 
+                "WAT-RO-Egypt River")), data_cols = c(SAL = "salinity", 
+            NH4 = "NH4_N", NO3 = "NO3_N", PO4 = "PO4_P", "TDN", 
+            "DON", "TDP", "DOP", "DOC", SS = "TSS", PP = "TPP", 
+            TEMP = "temp", "POC", "PON", CHLA = "CHL"), data_col_pattern = "#V#", 
+        set_to_NA = c("NA ", " "), summary_flagcols = "COMMENTS", 
+        is_sensor = FALSE)
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(COMMENTS = "1"), 
+        summary_flags_to_drop = list(COMMENTS = "DROP"), varflag_col_pattern = NA)
+    d <- ms_conversions(d, convert_units_from = c(NH4_N = "umol/l", 
+        NO3_N = "umol/l", PO4_P = "umol/l", TDN = "umol/l", DON = "umol/l", 
+        TDP = "umol/l", DOP = "umol/l", DOC = "umol/l", TPP = "umol/l", 
+        POC = "umol/l", PON = "umol/l"), convert_units_to = c(NH4_N = "mg/l", 
+        NO3_N = "mg/l", PO4_P = "mg/l", TDN = "mg/l", DON = "mg/l", 
+        TDP = "mg/l", DOP = "mg/l", DOC = "mg/l", TPP = "mg/l", 
+        POC = "mg/l", PON = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__104'
+site_code = <separately, each of: 'WAT-VA-Inputs', with corresponding component>
+component(s) = 
+	for site: WAT-VA-Inputs
+		comp(s): WAT-VA-Inputs_csv
+
+This is the "munge kernel" function for stream_chemistry__108:
+
+process_1_108 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- ms_read_raw_csv(filepath = rawfile, datetime_cols = c(Date = "%Y-%m-%d"), 
+        datetime_tz = "Etc/GMT+5", site_code_col = "Permanent_ID", 
+        alt_site_code = list(cart_creek = "YSI-CC", bear_meadow = "YSI-CS", 
+            saw_mill_brook = "YSI-SB", ipswich_dam = "IP24", 
+            parker_dam = "10", fish_brook = "YSI-FB", upper_ipswich = "YSI-IR"), 
+        data_cols = c(NH4 = "NH4_N", PO4 = "PO4_P", NO3 = "NO3_NO2_N", 
+            NO2 = "NO2_N", "Si", "Cl", "SO4", "Br", "TDN", "DON", 
+            "DOC", "PON", "POC", "TSS", "TDP"), data_col_pattern = "#V#", 
+        is_sensor = FALSE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    d <- ms_conversions(d, convert_units_from = c(NH4_N = "umol/l", 
+        PO4_P = "umol/l", NO3_NO2_N = "umol/l", NO2_N = "umol/l", 
+        Si = "umol/l", Cl = "umol/l", SO4 = "umol/l", Br = "umol/l", 
+        TDN = "umol/l", DON = "umol/l", DOC = "umol/l", PON = "umol/l", 
+        POC = "umol/l", TDP = "umol/l"), convert_units_to = c(NH4_N = "mg/l", 
+        PO4_P = "mg/l", NO3_NO2_N = "mg/l", NO2_N = "mg/l", Si = "mg/l", 
+        Cl = "mg/l", SO4 = "mg/l", Br = "mg/l", TDN = "mg/l", 
+        DON = "mg/l", DOC = "mg/l", PON = "mg/l", POC = "mg/l", 
+        TDP = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__108'
+site_code = <separately, each of: 'WAT-YSI-SIGMA-timeseries', with corresponding component>
+component(s) = 
+	for site: WAT-YSI-SIGMA-timeseries
+		comp(s): WAT-YSI-SIGMA-timeseries_csv
+
+This is the "munge kernel" function for stream_chemistry__106:
+
+process_1_106 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- read.csv(rawfile, colClasses = "character") %>% filter(SampleType %in% 
+        c("Daily", "TwoDayComposite", "Volunteer", "Composite-timeweighted_6hours"))
+    d <- d %>% mutate(NO3_flag = ifelse(grepl("9", Notes), 1, 
+        0))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date.1 = "%Y-%m-%d"), 
+        datetime_tz = "Etc/GMT+5", site_code_col = "Site", alt_site_code = list(cart_creek = "CC", 
+            bear_meadow = c("CS", "CS "), saw_mill_brook = "SB", 
+            ipswich_dam = c("ID", "ID "), parker_dam = "PD"), 
+        data_cols = c("TP", "TN", NO3 = "NO3_NO2_N", "TOC"), 
+        summary_flagcols = "Notes", var_flagcol_pattern = "#V#_flag", 
+        data_col_pattern = "#V#", is_sensor = FALSE)
+    dirty_summary_flags <- c("Rinse Error ", "ants (no good?) ", 
+        "replaced distributor-found rain gauge clogged ", "5", 
+        "6 9", "6", "Samples contaminated ", "Rinse Error 9", 
+        "2 samples/bottle? 9", "LARGE BEETLE ", "TP and TN are high but consistent with the MBL working file - CTW 2/15/21 ")
+    d <- ms_cast_and_reflag(d, summary_flags_dirty = list(Notes = dirty_summary_flags), 
+        summary_flags_to_drop = list(Notes = "DROP"), variable_flags_to_drop = "DROP", 
+        variable_flags_dirty = "1")
+    d <- ms_conversions(d, convert_units_from = c(TP = "umol/l", 
+        TN = "umol/l", NO3_NO2_N = "umol/l", TOC = "umol/l"), 
+        convert_units_to = c(TP = "mg/l", TN = "mg/l", NO3_NO2_N = "mg/l", 
+            TOC = "mg/l"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'stream_chemistry__106'
+site_code = <separately, each of: 'WAT-VA-SigmaNutrients', with corresponding component>
+component(s) = 
+	for site: WAT-VA-SigmaNutrients
+		comp(s): WAT-VA-SigmaNutrients_csv
+
+---
+
+Functions from external packages called inside the kernel function are either
+referenced with `<package name>::<function>`, or are called from their aliases, defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/function_aliases.R
+
+For definitions of most MacroSheds functions called, see:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/global_helpers.R
+
+Definitions not found there will be found in src/<network>/network_helpers.R or
+src/<network>/<domain>/domain_helpers.R, where network is e.g. lter and domain
+is e.g. hbef (Hubbard Brook Experimental Forest). For a catalogue of networks
+and domains, download our site data table from the Data tab at macrosheds.org.
+
+After all the kernels have completed their jobs, there is a whole suite of
+post-processing steps, some of which further modify derived data. See
+postprocess_entire_dataset() in global_helpers.R for a list of these.
+
+Note that most MacroSheds functions are wrapped in a decorator function (handle_errors,
+defined in global_helpers.R; see tinsel package for details). This decorator is not needed
+to run the functions it wraps. To circumvent it, just make sure you don't load
+function definitions using tinsel::source_decoratees. This would only happen if you
+were to execute MacroSheds code line-by-line, starting from:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/acquisition_master.R
+
+Also note that the return value of a munge kernel function may be additionally modified by
+a munge engine function. Inside the body of the engine function, you can see where the
+munge kernel is retrieved with get() and called via do.call(). Usually, the only additional munging
+done by the munge engine (versus the munge kernel) would be to separate
+a data file that contains many sites into individual data files of only one site each.
+Munge engines are defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/munge_engines.R
+
+Finally, consider that you may clone our entire project from Github and get it running
+on your own machine. Getting every component to run will require a file called config.json
+at the top level of each project repository (data_processing/ and portal/) with your own
+values instead of <...> for each of the following fields:
+
+}
+    "gmail_pw": "< >",
+    "report_emails": ["<email1>", "<email2 etc>"],
+    "variables_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "site_data_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "delineation_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "univ_prods_gsheet:": "https://docs.google.com/spreadsheets/< >",
+    "name_variant_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "gee_login_<yourname>": "< >",
+    "orcid_login_<yourname>": "< >",
+    "orcid_pass_<yourname>": "< >",
+}
+
+Of course, you won't need connections to the ORCID database or google sheets in order to make headway.
+For example, just set config_storage_location = 'local' in your call to ms_init in data_processing/src/acquisition_master.R
+and gsheets becomes irrelevant. Our system is not fully set up to bypass the errors that would result from omitting
+some of this config information, but workarounds (like commenting lines or inserting tryCatch blocks) should be
+possible. This is something we'll be working on in later phases of the project.

@@ -1,0 +1,206 @@
+
+This MacroSheds data product (precip_chemistry__ms003) was generated from the following munged MacroSheds product(s):
+
+precip_chemistry__DP1.00013.001
+
+Source data were retrieved from the following web page(s), static file(s), or web-API endpoint(s)
+on the datetime in parentheses:
+
+precip_chemistry__DP1.00013.001:
+data.neonscience.org (downloaded via neonUtilities) (retrieved 2024-03-22 23:56:49.282949)
+
+To rebuild all or part of the MacroSheds dataset yourself, use our code on GitHub (and these notes). If you want to
+rebuild only this product, or if you want to modify the code used to generate this product, you
+will almost certainly have an easier time using these notes. That said, automatic documentation like this may
+have some errors and missing details. Please contact us at mail@macrosheds.org if you're having trouble
+navigating our docs.
+
+Below you will find the "derive kernel" function(s) by which precip_chemistry__ms003 was generated.
+Note that MacroSheds products may have precursors that are themselves derived products. In some
+cases, these derived precursors are named above and have their own separate documentation. In other
+cases, derived precursors are generated from stand-alone derive kernels whose entire definition and
+history can be displayed here. A stand-alone kernel might, for example, pull supplemental data
+from a source other than its own network/domain. Here is the code for precip_chemistry__ms003's derive kernel function,
+and for any stand-alone precursor derive kernel function(s):
+
+process_2_ms003 <- function (network, domain, prodname_ms) 
+{
+    combine_products(network = network, domain = domain, prodname_ms = prodname_ms, 
+        input_prodname_ms = c("precip_chemistry__DP1.00013.001", 
+            "precip_isotopes__DP1.00038.001"))
+}
+
+These were the arguments to that/those function(s):
+
+network = 'neon'
+domain = 'neon'
+prodname_ms = 'precip_chemistry__ms003'
+
+Zero or more function definitions follow, depending on the number of munged products that
+are precursors to precip_chemistry__ms003:
+
+This is the "munge kernel" function for precip_chemistry__DP1.00013.001:
+
+process_1_DP1.00013.001 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawdir <- glue("data/{n}/{d}/raw/{p}/{s}", n = network, d = domain, 
+        p = prodname_ms, s = site_code)
+    neonprodcode <- prodcode_from_prodname_ms(prodname_ms) %>% 
+        str_split_i("\\.", i = 2)
+    rawd <- try({
+        stackByTable_keep_zips(glue("{rawdir}/filesToStack{neonprodcode}"))
+    })
+    if (inherits(rawd, "try-error")) 
+        return(generate_ms_exception("No data for site"))
+    relevant_tbl <- "wdp_chemLab"
+    if (!relevant_tbl %in% names(rawd)) {
+        return(generate_ms_exception("Relevant file missing"))
+    }
+    d <- tibble(rawd[[relevant_tbl]])
+    if (!all(c("precipNitrate", "pH", "precipMagnesiumFlag", 
+        "precipConductivity") %in% colnames(d))) {
+        stop("Known column names missing. There has been a change")
+    }
+    d$actual_quality_flag <- as.numeric(!is.na(d$labConditionRemarks) & 
+        grepl("pollen|small|spec|bug|matter|dirt|leak|only", 
+            d$labConditionRemarks, ignore.case = TRUE))
+    d <- d %>% select(siteID, setDate, collectDate, starts_with("precip"), 
+        pH, actual_quality_flag, sampleCondition) %>% mutate(setDate = as.Date(setDate), 
+        collectDate = as.Date(collectDate))
+    d$date <- Map(seq, from = d$setDate, to = d$collectDate, 
+        by = "day")
+    d <- d %>% unnest(date) %>% relocate(date) %>% arrange(date) %>% 
+        tidyr::complete(date = seq(min(.$date), max(.$date), 
+            by = "day")) %>% arrange(date)
+    d <- d %>% group_by(date) %>% filter(n() == 1 | date == collectDate) %>% 
+        ungroup() %>% select(-setDate, -collectDate)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(date = "%Y-%m-%d"), 
+        datetime_tz = "UTC", site_code_col = "siteID", data_cols = c(Calcium = "Ca", 
+            Magnesium = "Mg", Potassium = "K", Sodium = "Na", 
+            Ammonium = "NH4", Nitrate = "NO3", Sulfate = "SO4", 
+            Phosphate = "PO4", Chloride = "Cl", Bromide = "Br", 
+            pH = "pH", Conductivity = "spCond"), data_col_pattern = "precip#V#", 
+        alt_datacol_pattern = "#V#", var_flagcol_pattern = "precip#V#Flag", 
+        summary_flagcols = c("actual_quality_flag", "sampleCondition"), 
+        is_sensor = FALSE, sampling_type = "G", ignore_missing_col_warning = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, variable_flags_clean = c(NA, "Analytical dilution"), 
+        variable_flags_to_drop = "totally unmatchable sentinel jic", 
+        summary_flags_clean = list(actual_quality_flag = "0", 
+            sampleCondition = NA), summary_flags_to_drop = list(actual_quality_flag = "sentinel", 
+            sampleCondition = "sentinel"), keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'neon'
+domain = 'neon'
+prodname_ms = 'precip_chemistry__DP1.00013.001'
+site_code = <separately, each of: 'ARIK', 'BLUE', 'CUPE', 'GUIL', 'PRIN', 'REDB', 'SYCA', 'BLAN', 'BONA', 'DELA', 'GRSM', 'HARV', 'JERC', 'KONZ', 'LENO', 'NIWO', 'ORNL', 'SCBI', 'TALL', 'TOOL', 'WREF', 'YELL', with corresponding component>
+component(s) = 
+	for site: ARIK
+		comp(s): placeholder
+	for site: BLUE
+		comp(s): placeholder
+	for site: CUPE
+		comp(s): placeholder
+	for site: GUIL
+		comp(s): placeholder
+	for site: PRIN
+		comp(s): placeholder
+	for site: REDB
+		comp(s): placeholder
+	for site: SYCA
+		comp(s): placeholder
+	for site: BLAN
+		comp(s): placeholder
+	for site: BONA
+		comp(s): placeholder
+	for site: DELA
+		comp(s): placeholder
+	for site: GRSM
+		comp(s): placeholder
+	for site: HARV
+		comp(s): placeholder
+	for site: JERC
+		comp(s): placeholder
+	for site: KONZ
+		comp(s): placeholder
+	for site: LENO
+		comp(s): placeholder
+	for site: NIWO
+		comp(s): placeholder
+	for site: ORNL
+		comp(s): placeholder
+	for site: SCBI
+		comp(s): placeholder
+	for site: TALL
+		comp(s): placeholder
+	for site: TOOL
+		comp(s): placeholder
+	for site: WREF
+		comp(s): placeholder
+	for site: YELL
+		comp(s): placeholder
+
+---
+
+Functions from external packages called inside the kernel function are either
+referenced with `<package name>::<function>`, or are called from their aliases, defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/function_aliases.R
+
+For definitions of most MacroSheds functions called, see:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/global_helpers.R
+
+Definitions not found there will be found in src/<network>/network_helpers.R or
+src/<network>/<domain>/domain_helpers.R, where network is e.g. lter and domain
+is e.g. hbef (Hubbard Brook Experimental Forest). For a catalogue of networks
+and domains, download our site data table from the Data tab at macrosheds.org.
+
+After all the kernels have completed their jobs, there is a whole suite of
+post-processing steps, some of which further modify derived data. See
+postprocess_entire_dataset() in global_helpers.R for a list of these.
+
+Note that most MacroSheds functions are wrapped in a decorator function (handle_errors,
+defined in global_helpers.R; see tinsel package for details). This decorator is not needed
+to run the functions it wraps. To circumvent it, just make sure you don't load
+function definitions using tinsel::source_decoratees. This would only happen if you
+were to execute MacroSheds code line-by-line, starting from:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/acquisition_master.R
+
+Also note that the return value of a munge kernel function may be additionally modified by
+a munge engine function. Inside the body of the engine function, you can see where the
+munge kernel is retrieved with get() and called via do.call(). Usually, the only additional munging
+done by the munge engine (versus the munge kernel) would be to separate
+a data file that contains many sites into individual data files of only one site each.
+Munge engines are defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/munge_engines.R
+
+Finally, consider that you may clone our entire project from Github and get it running
+on your own machine. Getting every component to run will require a file called config.json
+at the top level of each project repository (data_processing/ and portal/) with your own
+values instead of <...> for each of the following fields:
+
+}
+    "gmail_pw": "< >",
+    "report_emails": ["<email1>", "<email2 etc>"],
+    "variables_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "site_data_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "delineation_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "univ_prods_gsheet:": "https://docs.google.com/spreadsheets/< >",
+    "name_variant_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "gee_login_<yourname>": "< >",
+    "orcid_login_<yourname>": "< >",
+    "orcid_pass_<yourname>": "< >",
+}
+
+Of course, you won't need connections to the ORCID database or google sheets in order to make headway.
+For example, just set config_storage_location = 'local' in your call to ms_init in data_processing/src/acquisition_master.R
+and gsheets becomes irrelevant. Our system is not fully set up to bypass the errors that would result from omitting
+some of this config information, but workarounds (like commenting lines or inserting tryCatch blocks) should be
+possible. This is something we'll be working on in later phases of the project.

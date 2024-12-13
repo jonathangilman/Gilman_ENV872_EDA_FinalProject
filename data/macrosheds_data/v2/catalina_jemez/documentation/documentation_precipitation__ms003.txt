@@ -1,0 +1,426 @@
+
+This MacroSheds data product (precipitation__ms003) was generated from the following munged MacroSheds product(s):
+
+precipitation__2532
+precipitation__2491
+precipitation__2494
+precipitation__2531
+precipitation__2475
+precipitation__2543
+precipitation__2415
+precipitation__2425
+
+Source data were retrieved from the following web page(s), static file(s), or web-API endpoint(s)
+on the datetime in parentheses:
+
+precipitation__2532:
+https://www.hydroshare.org/resource/f5ae15fbdcc9425e847060f89da61557 (retrieved 2024-01-10 20:16:38.610938)
+
+precipitation__2491:
+https://www.hydroshare.org/resource/346cf577d01e4b2b90ff1cef86e789bb (retrieved 2024-01-10 20:16:44.908885)
+
+precipitation__2494:
+https://www.hydroshare.org/resource/1dc7b0975ae2469a96e3458075d3b75c (retrieved 2024-01-10 20:16:51.351854)
+
+precipitation__2531:
+https://www.hydroshare.org/resource/172de7fe091f48d98b1d380da5851932 (retrieved 2024-01-10 20:16:57.807386)
+
+precipitation__2475:
+https://www.hydroshare.org/resource/0ba983afc62647dc8cfbd91058cfc56d (retrieved 2024-01-10 20:17:04.207093)
+
+precipitation__2543:
+https://www.hydroshare.org/resource/f7df7b07ea19477ab7ea701c34bc356b (retrieved 2024-01-10 20:17:10.816881)
+
+precipitation__2415:
+https://www.hydroshare.org/resource/5ca1378090884e72a8dcb796d882bb07 (retrieved 2024-01-10 20:17:30.472667)
+
+precipitation__2425:
+https://www.hydroshare.org/resource/1db7abcf0eb64ef49000c46a6133949d (retrieved 2024-01-10 20:17:37.894693)
+
+To rebuild all or part of the MacroSheds dataset yourself, use our code on GitHub (and these notes). If you want to
+rebuild only this product, or if you want to modify the code used to generate this product, you
+will almost certainly have an easier time using these notes. That said, automatic documentation like this may
+have some errors and missing details. Please contact us at mail@macrosheds.org if you're having trouble
+navigating our docs.
+
+Below you will find the "derive kernel" function(s) by which precipitation__ms003 was generated.
+Note that MacroSheds products may have precursors that are themselves derived products. In some
+cases, these derived precursors are named above and have their own separate documentation. In other
+cases, derived precursors are generated from stand-alone derive kernels whose entire definition and
+history can be displayed here. A stand-alone kernel might, for example, pull supplemental data
+from a source other than its own network/domain. Here is the code for precipitation__ms003's derive kernel function,
+and for any stand-alone precursor derive kernel function(s):
+
+process_2_ms003 <- function (network, domain, prodname_ms) 
+{
+    precip_prodname_ms <- get_derive_ingredient(network = network, 
+        domain = domain, prodname = "precipitation", ignore_derprod = TRUE, 
+        accept_multiple = TRUE)
+    files <- ms_list_files(network = network, domain = domain, 
+        prodname_ms = precip_prodname_ms)
+    site_feather <- str_split_fixed(files, "/", n = Inf)[, 6]
+    sites <- unique(str_split_fixed(site_feather, "[.]", n = Inf)[, 
+        1])
+    d <- tibble()
+    for (i in 1:length(sites)) {
+        site_files <- grep(paste0("/", sites[i], ".feather"), 
+            files, value = TRUE)
+        site_full <- map_dfr(site_files, read_feather)
+        d <- rbind(d, site_full)
+    }
+    d <- qc_hdetlim_and_uncert(d, prodname_ms = prodname_ms)
+    d <- synchronize_timestep(d, admit_NAs = TRUE, paired_p_and_pchem = FALSE, 
+        allow_pre_interp = TRUE)
+    dir <- glue("data/{n}/{d}/derived/{p}", n = network, d = domain, 
+        p = prodname_ms)
+    dir.create(dir, showWarnings = FALSE)
+    for (i in 1:length(sites)) {
+        site_full <- filter(d, site_code == !!sites[i])
+        write_ms_file(d = site_full, network = network, domain = domain, 
+            prodname_ms = prodname_ms, site_code = sites[i], 
+            level = "derived", shapefile = FALSE)
+    }
+    return()
+}
+
+These were the arguments to that/those function(s):
+
+network = 'czo'
+domain = 'catalina_jemez'
+prodname_ms = 'precipitation__ms003'
+
+Zero or more function definitions follow, depending on the number of munged products that
+are precursors to precipitation__ms003:
+
+This is the "munge kernel" function for precipitation__2532:
+
+process_1_2532 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    if (component %in% c("Catalina_Methods.csv", "Catalina_Sites.csv")) {
+        return(NULL)
+    }
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- read.csv(rawfile, colClasses = "character") %>% pivot_longer(cols = c("B2_Rain1", 
+        "B2_Rain2"), names_to = "sites", values_to = "precip") %>% 
+        mutate(time = str_split_fixed(DateTime, " ", n = Inf)[, 
+            2]) %>% mutate(time = ifelse(nchar(time) == 4, paste0("0", 
+        time), time)) %>% mutate(date = str_split_fixed(DateTime, 
+        " ", n = Inf)[, 1]) %>% filter(DateTime != "MST")
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(date = "%m/%e/%Y", 
+        time = "%H:%M"), datetime_tz = "Etc/GMT+7", site_code_col = "sites", 
+        data_cols = c(precip = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-9999.000", "-9999", "-999.9", "-999"), 
+        is_sensor = TRUE, sampling_type = "I", keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    d <- qc_hdetlim_and_uncert(d, prodname_ms = prodname_ms)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'czo'
+domain = 'catalina_jemez'
+prodname_ms = 'precipitation__2532'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): B2_rain_2009.csv, B2_rain_2010.csv, B2_rain_2011.csv, B2_rain_2012.csv, B2_rain_2013.csv, B2_rain_2014.csv, B2_rain_2015.csv, B2_rain_2016.csv, B2_rain_2017.csv, B2_rain_2018.csv, B2_rain_2019.csv, B2_rain_2020.csv, Catalina_Methods.csv, Catalina_Sites.csv
+
+This is the "munge kernel" function for precipitation__2491:
+
+process_1_2491 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site = "Burn_Met_Low")
+    if (all(unique(d$Precipitation) == c("[mm]", "-9999"))) {
+        return(NULL)
+    }
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(DateTime = "%m/%e/%Y %H:%M"), 
+        datetime_tz = "Etc/GMT+7", site_code_col = "site", data_cols = c(Precipitation = "precipitation"), 
+        data_col_pattern = "#V#", set_to_NA = c("-9999.000", 
+            "-9999", "-999.9", "-999", "[mm]"), is_sensor = TRUE, 
+        sampling_type = "I", keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    d <- qc_hdetlim_and_uncert(d, prodname_ms = prodname_ms)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'czo'
+domain = 'catalina_jemez'
+prodname_ms = 'precipitation__2491'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Jemez_Methods.csv, Jemez_Sites.csv, JemezBurnZOBLower_met_2011.csv, JemezBurnZOBLower_met_2012.csv, JemezBurnZOBLower_met_2013.csv, JemezBurnZOBLower_met_2014.csv, JemezBurnZOBLower_met_2015.csv, JemezBurnZOBLower_met_2016.csv, JemezBurnZOBLower_met_2017.csv, JemezBurnZOBLower_met_2018.csv, JemezBurnZOBLower_met_2019.csv, JemezBurnZOBLower_met_2020.csv, JemezBurnZOBLower_met_2021.csv
+
+This is the "munge kernel" function for precipitation__2494:
+
+process_1_2494 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    if (component %in% c("Jemez_Sites.csv", "Jemez_Methods.csv")) {
+        return(NULL)
+    }
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site = "Burn_Met_Up")
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(DateTime = "%m/%e/%Y %H:%M"), 
+        datetime_tz = "Etc/GMT+7", site_code_col = "site", data_cols = c(Precipitation = "precipitation"), 
+        data_col_pattern = "#V#", set_to_NA = c("-9999.000", 
+            "-9999", "-999.9", "-999", "[mm]"), is_sensor = TRUE, 
+        sampling_type = "I", keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    d <- qc_hdetlim_and_uncert(d, prodname_ms = prodname_ms)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'czo'
+domain = 'catalina_jemez'
+prodname_ms = 'precipitation__2494'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Jemez_Methods.csv, Jemez_Sites.csv, JemezBurnUpper_met_2011.csv, JemezBurnUpper_met_2012.csv, JemezBurnUpper_met_2013.csv, JemezBurnUpper_met_2014.csv, JemezBurnUpper_met_2015.csv, JemezBurnUpper_met_2016.csv, JemezBurnUpper_met_2017.csv, JemezBurnUpper_met_2018.csv, JemezBurnUpper_met_2019.csv, JemezBurnUpper_met_2020.csv, JemezBurnUpper_met_2021.csv
+
+This is the "munge kernel" function for precipitation__2531:
+
+process_1_2531 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    if (component %in% c("Catalina_Methods.csv", "Catalina_Sites.csv")) {
+        return(NULL)
+    }
+    d <- read.csv(rawfile, colClasses = "character") %>% pivot_longer(cols = c("OR_Rain1", 
+        "OR_Rain2", "OR_Rain3"), names_to = "sites", values_to = "precip") %>% 
+        filter(DateTime != "[MST]") %>% mutate(sites = case_when(sites == 
+        "OR_Rain1" ~ "OR_PC1", sites == "OR_Rain2" ~ "OR_PC2", 
+        sites == "OR_Rain3" ~ "OR_PC3"))
+    data_col <- names(d)[!grepl("DateTime|sites", names(d))]
+    if (all(unique(d[[data_col]]) == c("[mm]", "-9999"))) {
+        return(NULL)
+    }
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(DateTime = "%m/%e/%Y %H:%M"), 
+        datetime_tz = "Etc/GMT+7", site_code_col = "sites", data_cols = c(precip = "precipitation"), 
+        data_col_pattern = "#V#", set_to_NA = c("-9999.000", 
+            "-9999", "-999.9", "-999"), is_sensor = TRUE, sampling_type = "I", 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    d <- qc_hdetlim_and_uncert(d, prodname_ms = prodname_ms)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'czo'
+domain = 'catalina_jemez'
+prodname_ms = 'precipitation__2531'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Catalina_Methods.csv, Catalina_Sites.csv, OR_Rain_2010.csv, OR_Rain_2011.csv, OR_Rain_2012.csv, OR_Rain_2013.csv, OR_Rain_2014.csv, OR_Rain_2015.csv, OR_Rain_2016.csv, OR_Rain_2017.csv, OR_Rain_2018.csv, OR_Rain_2019.csv, OR_Rain_2020.csv
+
+This is the "munge kernel" function for precipitation__2475:
+
+process_1_2475 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    if (component %in% c("Jemez_Sites.csv", "Jemez_Methods.csv")) {
+        return(NULL)
+    }
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site = "MCZOB_met") %>% 
+        filter(DateTime != "[MST]")
+    if (all(unique(d$Precipitation) == c("-9999"))) {
+        return(NULL)
+    }
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(DateTime = "%m/%e/%Y %H:%M"), 
+        datetime_tz = "Etc/GMT+7", site_code_col = "site", data_cols = c(Precipitation = "precipitation"), 
+        data_col_pattern = "#V#", set_to_NA = c("-9999.000", 
+            "-9999", "-999.9", "-999"), is_sensor = TRUE, sampling_type = "I", 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    d <- qc_hdetlim_and_uncert(d, prodname_ms = prodname_ms)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'czo'
+domain = 'catalina_jemez'
+prodname_ms = 'precipitation__2475'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): data_30min_met1_2010.csv, data_30min_met1_2011.csv, data_30min_met1_2012.csv, data_30min_met1_2013.csv, data_30min_met1_2014.csv, data_30min_met1_2015.csv, data_30min_met1_2016.csv, data_30min_met1_2017.csv, data_30min_met1_2018.csv, data_30min_met1_2019.csv, data_30min_met1_2020.csv, data_30min_met1_2021.csv, Jemez_Methods.csv, Jemez_Sites.csv
+
+This is the "munge kernel" function for precipitation__2543:
+
+process_1_2543 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    if (grepl("Winter", component)) {
+        d <- read.csv(rawfile, colClasses = "character") %>% 
+            rename(precip = Schist_Winter) %>% mutate(sites = "MG_Schist_Winter") %>% 
+            filter(DateTime != "[MST]")
+    }
+    else {
+        d <- read.csv(rawfile, colClasses = "character")
+        names(d) <- str_replace(names(d), "\\.", "")
+        pivot_names <- names(d)
+        if (pivot_names[1] != "DateTime") {
+            names(d)[1] <- "DateTime"
+            pivot_names <- names(d)
+        }
+        pivot_names <- pivot_names[!pivot_names == "DateTime"]
+        d <- d %>% pivot_longer(cols = pivot_names, names_to = "sites", 
+            values_to = "precip") %>% filter(DateTime != "[MST]")
+    }
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(DateTime = "%m/%e/%Y %H:%M"), 
+        datetime_tz = "Etc/GMT+7", alt_site_code = list(MG_PC1 = "Schist", 
+            MG_PC2 = "FernValley", MG_Outlet = "Outlet", MG_BurntMeadow = "BurntMeadow", 
+            MG_DoubleRock = "DoubleRock", MG_PC3 = "Granite", 
+            MG_Weir = "Weir", MG_Lemmon = "MtLemmon"), site_code_col = "sites", 
+        data_cols = c(precip = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-9999.000", "-9999", "-999.9", "-999"), 
+        is_sensor = TRUE, sampling_type = "I", keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    d <- qc_hdetlim_and_uncert(d, prodname_ms = prodname_ms)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'czo'
+domain = 'catalina_jemez'
+prodname_ms = 'precipitation__2543'
+site_code = <separately, each of: 'MG_Precip', 'MG_WinterPrecip', with corresponding component>
+component(s) = 
+	for site: MG_Precip
+		comp(s): MG_Precip_2007.csv, MG_Precip_2008.csv, MG_Precip_2009.csv, MG_Precip_2010.csv, MG_Precip_2011.csv, MG_Precip_2012.csv, MG_Precip_2013.csv, MG_Precip_2014.csv, MG_Precip_2015.csv, MG_Precip_2016.csv, MG_Precip_2017.csv, MG_Precip_2018.csv, MG_Precip_2019.csv
+	for site: MG_WinterPrecip
+		comp(s): MG_WinterPrecip_2012_13.csv, MG_WinterPrecip_2013_14.csv, MG_WinterPrecip_2014_15.csv, MG_WinterPrecip_2015_16.csv, MG_WinterPrecip_2016_17.csv, MG_WinterPrecip_2017_18.csv, MG_WinterPrecip_2018_19.csv
+
+This is the "munge kernel" function for precipitation__2415:
+
+process_1_2415 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site = "MC_flux_tower")
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(DateTime = "%m/%e/%Y %H:%M"), 
+        datetime_tz = "Etc/GMT+7", site_code_col = "site", data_cols = c(PRECIP = "precipitation"), 
+        data_col_pattern = "#V#", set_to_NA = c("-9999.000", 
+            "-9999", "-999.9", "-999", "mm"), is_sensor = TRUE, 
+        sampling_type = "I", keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    d <- qc_hdetlim_and_uncert(d, prodname_ms = prodname_ms)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'czo'
+domain = 'catalina_jemez'
+prodname_ms = 'precipitation__2415'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Tower_Vcm_2007.csv, Tower_Vcm_2008.csv, Tower_Vcm_2009.csv, Tower_Vcm_2010.csv, Tower_Vcm_2011.csv, Tower_Vcm_2012.csv
+
+This is the "munge kernel" function for precipitation__2425:
+
+process_1_2425 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site = "Ponderosa_flux_tower")
+    precip_col <- names(d)[grepl("PREC|PRECIP", names(d))]
+    precip_cat <- c("precipitation")
+    names(precip_cat) <- precip_col
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(DateTime = "%m/%e/%Y %H:%M"), 
+        datetime_tz = "Etc/GMT+7", site_code_col = "site", data_cols = precip_cat, 
+        data_col_pattern = "#V#", set_to_NA = c("-9999.000", 
+            "-9999", "-999.9", "-999", "mm"), is_sensor = TRUE, 
+        sampling_type = "I", keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    d <- qc_hdetlim_and_uncert(d, prodname_ms = prodname_ms)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'czo'
+domain = 'catalina_jemez'
+prodname_ms = 'precipitation__2425'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Tower_Vcp_2007.csv, Tower_Vcp_2008.csv, Tower_Vcp_2009.csv, Tower_Vcp_2010.csv, Tower_Vcp_2011.csv, Tower_Vcp_2012.csv
+
+---
+
+Functions from external packages called inside the kernel function are either
+referenced with `<package name>::<function>`, or are called from their aliases, defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/function_aliases.R
+
+For definitions of most MacroSheds functions called, see:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/global_helpers.R
+
+Definitions not found there will be found in src/<network>/network_helpers.R or
+src/<network>/<domain>/domain_helpers.R, where network is e.g. lter and domain
+is e.g. hbef (Hubbard Brook Experimental Forest). For a catalogue of networks
+and domains, download our site data table from the Data tab at macrosheds.org.
+
+After all the kernels have completed their jobs, there is a whole suite of
+post-processing steps, some of which further modify derived data. See
+postprocess_entire_dataset() in global_helpers.R for a list of these.
+
+Note that most MacroSheds functions are wrapped in a decorator function (handle_errors,
+defined in global_helpers.R; see tinsel package for details). This decorator is not needed
+to run the functions it wraps. To circumvent it, just make sure you don't load
+function definitions using tinsel::source_decoratees. This would only happen if you
+were to execute MacroSheds code line-by-line, starting from:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/acquisition_master.R
+
+Also note that the return value of a munge kernel function may be additionally modified by
+a munge engine function. Inside the body of the engine function, you can see where the
+munge kernel is retrieved with get() and called via do.call(). Usually, the only additional munging
+done by the munge engine (versus the munge kernel) would be to separate
+a data file that contains many sites into individual data files of only one site each.
+Munge engines are defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/munge_engines.R
+
+Finally, consider that you may clone our entire project from Github and get it running
+on your own machine. Getting every component to run will require a file called config.json
+at the top level of each project repository (data_processing/ and portal/) with your own
+values instead of <...> for each of the following fields:
+
+}
+    "gmail_pw": "< >",
+    "report_emails": ["<email1>", "<email2 etc>"],
+    "variables_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "site_data_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "delineation_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "univ_prods_gsheet:": "https://docs.google.com/spreadsheets/< >",
+    "name_variant_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "gee_login_<yourname>": "< >",
+    "orcid_login_<yourname>": "< >",
+    "orcid_pass_<yourname>": "< >",
+}
+
+Of course, you won't need connections to the ORCID database or google sheets in order to make headway.
+For example, just set config_storage_location = 'local' in your call to ms_init in data_processing/src/acquisition_master.R
+and gsheets becomes irrelevant. Our system is not fully set up to bypass the errors that would result from omitting
+some of this config information, but workarounds (like commenting lines or inserting tryCatch blocks) should be
+possible. This is something we'll be working on in later phases of the project.

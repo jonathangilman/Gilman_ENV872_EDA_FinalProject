@@ -1,0 +1,914 @@
+
+This MacroSheds data product (precipitation__ms003) was generated from the following munged MacroSheds product(s):
+
+precipitation__68
+precipitation__69
+precipitation__70
+precipitation__140
+precipitation__141
+precipitation__142
+precipitation__143
+precipitation__162
+precipitation__67
+precipitation__179
+precipitation__180
+precipitation__181
+precipitation__239
+precipitation__343
+precipitation__359
+precipitation__385
+precipitation__417
+precipitation__423
+precipitation__496
+precipitation__542
+
+Source data were retrieved from the following web page(s), static file(s), or web-API endpoint(s)
+on the datetime in parentheses:
+
+precipitation__68:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=68&revision=7 (retrieved 2024-01-15 21:50:23.130831)
+
+precipitation__69:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=69&revision=7 (retrieved 2024-01-15 21:50:39.511382)
+
+precipitation__70:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=70&revision=7 (retrieved 2024-01-15 21:50:55.482186)
+
+precipitation__140:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=140&revision=6 (retrieved 2024-01-15 21:51:11.763672)
+
+precipitation__141:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=141&revision=5 (retrieved 2024-01-15 21:51:28.14753)
+
+precipitation__142:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=142&revision=5 (retrieved 2024-01-15 21:51:44.429955)
+
+precipitation__143:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=143&revision=5 (retrieved 2024-01-15 21:52:00.104103)
+
+precipitation__162:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=162&revision=4 (retrieved 2024-01-15 21:52:16.280684)
+
+precipitation__67:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=67&revision=6 (retrieved 2024-01-15 21:52:32.351315)
+
+precipitation__179:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=179&revision=3 (retrieved 2024-01-15 21:52:48.739227)
+
+precipitation__180:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=180&revision=3 (retrieved 2024-01-15 21:53:04.798934)
+
+precipitation__181:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=181&revision=3 (retrieved 2024-01-15 21:53:20.898247)
+
+precipitation__239:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=239&revision=1 (retrieved 2024-01-15 21:53:37.379936)
+
+precipitation__343:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=343&revision=2 (retrieved 2024-01-15 21:53:53.45434)
+
+precipitation__359:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=359&revision=1 (retrieved 2024-01-15 21:54:09.715008)
+
+precipitation__385:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=385&revision=1 (retrieved 2024-01-15 21:54:26.018616)
+
+precipitation__417:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=417&revision=1 (retrieved 2024-01-15 21:54:42.468032)
+
+precipitation__423:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=423&revision=1 (retrieved 2024-01-15 21:55:00.335856)
+
+precipitation__496:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=496&revision=1 (retrieved 2024-01-15 21:55:17.018262)
+
+precipitation__542:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-pie&identifier=542&revision=1 (retrieved 2024-01-15 21:55:34.014853)
+
+To rebuild all or part of the MacroSheds dataset yourself, use our code on GitHub (and these notes). If you want to
+rebuild only this product, or if you want to modify the code used to generate this product, you
+will almost certainly have an easier time using these notes. That said, automatic documentation like this may
+have some errors and missing details. Please contact us at mail@macrosheds.org if you're having trouble
+navigating our docs.
+
+Below you will find the "derive kernel" function(s) by which precipitation__ms003 was generated.
+Note that MacroSheds products may have precursors that are themselves derived products. In some
+cases, these derived precursors are named above and have their own separate documentation. In other
+cases, derived precursors are generated from stand-alone derive kernels whose entire definition and
+history can be displayed here. A stand-alone kernel might, for example, pull supplemental data
+from a source other than its own network/domain. Here is the code for precipitation__ms003's derive kernel function,
+and for any stand-alone precursor derive kernel function(s):
+
+process_2_ms003 <- function (network, domain, prodname_ms) 
+{
+    precip_prodname_ms <- get_derive_ingredient(network = network, 
+        domain = domain, prodname = "precipitation", ignore_derprod = TRUE, 
+        accept_multiple = TRUE)
+    files <- ms_list_files(network = network, domain = domain, 
+        prodname_ms = precip_prodname_ms)
+    site_feather <- str_split_fixed(files, "/", n = Inf)[, 6]
+    sites <- unique(str_split_fixed(site_feather, "[.]", n = Inf)[, 
+        1])
+    d <- tibble()
+    for (i in 1:length(sites)) {
+        site_files <- grep(paste0("/", sites[i], ".feather"), 
+            files, value = TRUE)
+        site_full <- map_dfr(site_files, read_feather)
+        d <- rbind(d, site_full)
+    }
+    d <- qc_hdetlim_and_uncert(d, prodname_ms = prodname_ms)
+    d <- synchronize_timestep(d, admit_NAs = TRUE, allow_pre_interp = TRUE)
+    dir <- glue("data/{n}/{d}/derived/{p}", n = network, d = domain, 
+        p = prodname_ms)
+    dir.create(dir, showWarnings = FALSE)
+    for (i in 1:length(sites)) {
+        site_full <- filter(d, site_code == !!sites[i])
+        write_ms_file(d = site_full, network = network, domain = domain, 
+            prodname_ms = prodname_ms, site_code = sites[i], 
+            level = "derived", shapefile = FALSE)
+    }
+    return()
+}
+
+These were the arguments to that/those function(s):
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__ms003'
+
+Zero or more function definitions follow, depending on the number of munged products that
+are precursors to precipitation__ms003:
+
+This is the "munge kernel" function for precipitation__68:
+
+process_1_68 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        mutate(hour = str_split_fixed(Time, ":", n = Inf)[, 1]) %>% 
+        mutate(minute = str_split_fixed(Time, ":", n = Inf)[, 
+            2]) %>% mutate(day = str_split_fixed(Date, "-", n = Inf)[, 
+        1]) %>% mutate(month = str_split_fixed(Date, "-", n = Inf)[, 
+        2]) %>% mutate(year = str_split_fixed(Date, "-", n = Inf)[, 
+        3]) %>% mutate(hour = ifelse(nchar(hour) == 1, paste0(0, 
+        hour), hour)) %>% mutate(day = ifelse(nchar(day) == 1, 
+        paste0(0, day), day)) %>% mutate(Date = paste(day, month, 
+        year, sep = "-"), Time = paste(hour, minute, sep = ":"))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%d-%b-%Y", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__68'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): MON-PR-Met15min2000.csv
+
+This is the "munge kernel" function for precipitation__69:
+
+process_1_69 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        mutate(hour = str_split_fixed(Time, ":", n = Inf)[, 1]) %>% 
+        mutate(minute = str_split_fixed(Time, ":", n = Inf)[, 
+            2]) %>% mutate(day = str_split_fixed(Date, "-", n = Inf)[, 
+        1]) %>% mutate(month = str_split_fixed(Date, "-", n = Inf)[, 
+        2]) %>% mutate(year = str_split_fixed(Date, "-", n = Inf)[, 
+        3]) %>% mutate(hour = ifelse(nchar(hour) == 1, paste0(0, 
+        hour), hour)) %>% mutate(day = ifelse(nchar(day) == 1, 
+        paste0(0, day), day)) %>% mutate(Date = paste(day, month, 
+        year, sep = "-"), Time = paste(hour, minute, sep = ":"))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%d-%b-%Y", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__69'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): MON-PR-Met15min2001.csv
+
+This is the "munge kernel" function for precipitation__70:
+
+process_1_70 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        mutate(hour = str_split_fixed(Time, ":", n = Inf)[, 1]) %>% 
+        mutate(minute = str_split_fixed(Time, ":", n = Inf)[, 
+            2]) %>% mutate(day = str_split_fixed(Date, "-", n = Inf)[, 
+        1]) %>% mutate(month = str_split_fixed(Date, "-", n = Inf)[, 
+        2]) %>% mutate(year = str_split_fixed(Date, "-", n = Inf)[, 
+        3]) %>% mutate(hour = ifelse(nchar(hour) == 1, paste0(0, 
+        hour), hour)) %>% mutate(day = ifelse(nchar(day) == 1, 
+        paste0(0, day), day)) %>% mutate(Date = paste(day, month, 
+        year, sep = "-"), Time = paste(hour, minute, sep = ":"))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%d-%b-%Y", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__70'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): MON-PR-Met15min2002.csv
+
+This is the "munge kernel" function for precipitation__140:
+
+process_1_140 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        mutate(hour = str_split_fixed(Time, ":", n = Inf)[, 1]) %>% 
+        mutate(minute = str_split_fixed(Time, ":", n = Inf)[, 
+            2]) %>% mutate(day = str_split_fixed(Date, "-", n = Inf)[, 
+        1]) %>% mutate(month = str_split_fixed(Date, "-", n = Inf)[, 
+        2]) %>% mutate(year = str_split_fixed(Date, "-", n = Inf)[, 
+        3]) %>% mutate(hour = ifelse(nchar(hour) == 1, paste0(0, 
+        hour), hour)) %>% mutate(day = ifelse(nchar(day) == 1, 
+        paste0(0, day), day)) %>% mutate(Date = paste(day, month, 
+        year, sep = "-"), Time = paste(hour, minute, sep = ":"))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%d-%b-%Y", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__140'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): MON-PR-Met15min2003a.csv
+
+This is the "munge kernel" function for precipitation__141:
+
+process_1_141 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        mutate(hour = str_split_fixed(Time, ":", n = Inf)[, 1]) %>% 
+        mutate(minute = str_split_fixed(Time, ":", n = Inf)[, 
+            2]) %>% mutate(day = str_split_fixed(Date, "-", n = Inf)[, 
+        1]) %>% mutate(month = str_split_fixed(Date, "-", n = Inf)[, 
+        2]) %>% mutate(year = str_split_fixed(Date, "-", n = Inf)[, 
+        3]) %>% mutate(hour = ifelse(nchar(hour) == 1, paste0(0, 
+        hour), hour)) %>% mutate(day = ifelse(nchar(day) == 1, 
+        paste0(0, day), day)) %>% mutate(Date = paste(day, month, 
+        year, sep = "-"), Time = paste(hour, minute, sep = ":"))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%d-%b-%Y", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__141'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): MON-PR-Met15min2004.csv
+
+This is the "munge kernel" function for precipitation__142:
+
+process_1_142 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        mutate(hour = str_split_fixed(Time, ":", n = Inf)[, 1]) %>% 
+        mutate(minute = str_split_fixed(Time, ":", n = Inf)[, 
+            2]) %>% mutate(day = str_split_fixed(Date, "-", n = Inf)[, 
+        1]) %>% mutate(month = str_split_fixed(Date, "-", n = Inf)[, 
+        2]) %>% mutate(year = str_split_fixed(Date, "-", n = Inf)[, 
+        3]) %>% mutate(hour = ifelse(nchar(hour) == 1, paste0(0, 
+        hour), hour)) %>% mutate(day = ifelse(nchar(day) == 1, 
+        paste0(0, day), day)) %>% mutate(Date = paste(day, month, 
+        year, sep = "-"), Time = paste(hour, minute, sep = ":"))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%d-%b-%Y", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__142'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): MON-PR-Met15min2005.csv
+
+This is the "munge kernel" function for precipitation__143:
+
+process_1_143 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        mutate(hour = str_split_fixed(Time, ":", n = Inf)[, 1]) %>% 
+        mutate(minute = str_split_fixed(Time, ":", n = Inf)[, 
+            2]) %>% mutate(day = str_split_fixed(Date, "-", n = Inf)[, 
+        1]) %>% mutate(month = str_split_fixed(Date, "-", n = Inf)[, 
+        2]) %>% mutate(year = str_split_fixed(Date, "-", n = Inf)[, 
+        3]) %>% mutate(hour = ifelse(nchar(hour) == 1, paste0(0, 
+        hour), hour)) %>% mutate(day = ifelse(nchar(day) == 1, 
+        paste0(0, day), day)) %>% mutate(Date = paste(day, month, 
+        year, sep = "-"), Time = paste(hour, minute, sep = ":"))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%d-%b-%Y", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__143'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): MON-PR-Met15min2006.csv
+
+This is the "munge kernel" function for precipitation__162:
+
+process_1_162 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        mutate(hour = str_split_fixed(Time, ":", n = Inf)[, 1]) %>% 
+        mutate(minute = str_split_fixed(Time, ":", n = Inf)[, 
+            2]) %>% mutate(day = str_split_fixed(Date, "-", n = Inf)[, 
+        1]) %>% mutate(month = str_split_fixed(Date, "-", n = Inf)[, 
+        2]) %>% mutate(year = str_split_fixed(Date, "-", n = Inf)[, 
+        3]) %>% mutate(hour = ifelse(nchar(hour) == 1, paste0(0, 
+        hour), hour)) %>% mutate(day = ifelse(nchar(day) == 1, 
+        paste0(0, day), day)) %>% mutate(Date = paste(day, month, 
+        year, sep = "-"), Time = paste(hour, minute, sep = ":"))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%d-%b-%Y", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__162'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): MON-PR-Met15min2008.csv
+
+This is the "munge kernel" function for precipitation__67:
+
+process_1_67 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        mutate(hour = str_split_fixed(Time, ":", n = Inf)[, 1]) %>% 
+        mutate(minute = str_split_fixed(Time, ":", n = Inf)[, 
+            2]) %>% mutate(day = str_split_fixed(Date, "-", n = Inf)[, 
+        1]) %>% mutate(month = str_split_fixed(Date, "-", n = Inf)[, 
+        2]) %>% mutate(year = str_split_fixed(Date, "-", n = Inf)[, 
+        3]) %>% mutate(hour = ifelse(nchar(hour) == 1, paste0(0, 
+        hour), hour)) %>% mutate(day = ifelse(nchar(day) == 1, 
+        paste0(0, day), day)) %>% mutate(Date = paste(day, month, 
+        year, sep = "-"), Time = paste(hour, minute, sep = ":"))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%d-%b-%Y", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__67'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): MON-PR-Met15min2007.csv
+
+This is the "munge kernel" function for precipitation__179:
+
+process_1_179 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        mutate(hour = str_split_fixed(Time, ":", n = Inf)[, 1]) %>% 
+        mutate(minute = str_split_fixed(Time, ":", n = Inf)[, 
+            2]) %>% mutate(day = str_split_fixed(Date, "-", n = Inf)[, 
+        1]) %>% mutate(month = str_split_fixed(Date, "-", n = Inf)[, 
+        2]) %>% mutate(year = str_split_fixed(Date, "-", n = Inf)[, 
+        3]) %>% mutate(hour = ifelse(nchar(hour) == 1, paste0(0, 
+        hour), hour)) %>% mutate(day = ifelse(nchar(day) == 1, 
+        paste0(0, day), day)) %>% mutate(Date = paste(day, month, 
+        year, sep = "-"), Time = paste(hour, minute, sep = ":"))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%d-%b-%Y", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__179'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): MON-PR-Met15min2009.csv
+
+This is the "munge kernel" function for precipitation__180:
+
+process_1_180 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        mutate(hour = str_split_fixed(Time, ":", n = Inf)[, 1]) %>% 
+        mutate(minute = str_split_fixed(Time, ":", n = Inf)[, 
+            2]) %>% mutate(day = str_split_fixed(Date, "-", n = Inf)[, 
+        1]) %>% mutate(month = str_split_fixed(Date, "-", n = Inf)[, 
+        2]) %>% mutate(year = str_split_fixed(Date, "-", n = Inf)[, 
+        3]) %>% mutate(hour = ifelse(nchar(hour) == 1, paste0(0, 
+        hour), hour)) %>% mutate(day = ifelse(nchar(day) == 1, 
+        paste0(0, day), day)) %>% mutate(Date = paste(day, month, 
+        year, sep = "-"), Time = paste(hour, minute, sep = ":"))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%d-%b-%Y", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__180'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): MON-PR-Met15min2010.csv
+
+This is the "munge kernel" function for precipitation__181:
+
+process_1_181 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        mutate(hour = str_split_fixed(Time, ":", n = Inf)[, 1]) %>% 
+        mutate(minute = str_split_fixed(Time, ":", n = Inf)[, 
+            2]) %>% mutate(day = str_split_fixed(Date, "-", n = Inf)[, 
+        1]) %>% mutate(month = str_split_fixed(Date, "-", n = Inf)[, 
+        2]) %>% mutate(year = str_split_fixed(Date, "-", n = Inf)[, 
+        3]) %>% mutate(hour = ifelse(nchar(hour) == 1, paste0(0, 
+        hour), hour)) %>% mutate(day = ifelse(nchar(day) == 1, 
+        paste0(0, day), day)) %>% mutate(Date = paste(day, month, 
+        year, sep = "-"), Time = paste(hour, minute, sep = ":"))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%d-%b-%Y", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__181'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): MON-PR-Met15min2011.csv
+
+This is the "munge kernel" function for precipitation__239:
+
+process_1_239 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        mutate(hour = str_split_fixed(Time, ":", n = Inf)[, 1]) %>% 
+        mutate(minute = str_split_fixed(Time, ":", n = Inf)[, 
+            2]) %>% mutate(day = str_split_fixed(Date, "-", n = Inf)[, 
+        1]) %>% mutate(month = str_split_fixed(Date, "-", n = Inf)[, 
+        2]) %>% mutate(year = str_split_fixed(Date, "-", n = Inf)[, 
+        3]) %>% mutate(hour = ifelse(nchar(hour) == 1, paste0(0, 
+        hour), hour)) %>% mutate(day = ifelse(nchar(day) == 1, 
+        paste0(0, day), day)) %>% mutate(Date = paste(day, month, 
+        year, sep = "-"), Time = paste(hour, minute, sep = ":"))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%d-%b-%Y", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__239'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): MON-PR-Met15min2012.csv
+
+This is the "munge kernel" function for precipitation__343:
+
+process_1_343 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        mutate(hour = str_split_fixed(Time, ":", n = Inf)[, 1]) %>% 
+        mutate(minute = str_split_fixed(Time, ":", n = Inf)[, 
+            2]) %>% mutate(day = str_split_fixed(Date, "-", n = Inf)[, 
+        1]) %>% mutate(month = str_split_fixed(Date, "-", n = Inf)[, 
+        2]) %>% mutate(year = str_split_fixed(Date, "-", n = Inf)[, 
+        3]) %>% mutate(hour = ifelse(nchar(hour) == 1, paste0(0, 
+        hour), hour)) %>% mutate(day = ifelse(nchar(day) == 1, 
+        paste0(0, day), day)) %>% mutate(Date = paste(day, month, 
+        year, sep = "-"), Time = paste(hour, minute, sep = ":"))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%d-%b-%Y", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__343'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): MON-PR-Met15min2013.csv
+
+This is the "munge kernel" function for precipitation__359:
+
+process_1_359 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        mutate(hour = str_split_fixed(Time, ":", n = Inf)[, 1]) %>% 
+        mutate(minute = str_split_fixed(Time, ":", n = Inf)[, 
+            2]) %>% mutate(day = str_split_fixed(Date, "-", n = Inf)[, 
+        1]) %>% mutate(month = str_split_fixed(Date, "-", n = Inf)[, 
+        2]) %>% mutate(year = str_split_fixed(Date, "-", n = Inf)[, 
+        3]) %>% mutate(hour = ifelse(nchar(hour) == 1, paste0(0, 
+        hour), hour)) %>% mutate(day = ifelse(nchar(day) == 1, 
+        paste0(0, day), day)) %>% mutate(Date = paste(day, month, 
+        year, sep = "-"), Time = paste(hour, minute, sep = ":"))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%d-%b-%Y", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__359'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): MON-PR-Met15min2014.csv
+
+This is the "munge kernel" function for precipitation__385:
+
+process_1_385 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        mutate(hour = str_split_fixed(Time, ":", n = Inf)[, 1]) %>% 
+        mutate(minute = str_split_fixed(Time, ":", n = Inf)[, 
+            2]) %>% mutate(day = str_split_fixed(Date, "-", n = Inf)[, 
+        1]) %>% mutate(month = str_split_fixed(Date, "-", n = Inf)[, 
+        2]) %>% mutate(year = str_split_fixed(Date, "-", n = Inf)[, 
+        3]) %>% mutate(hour = ifelse(nchar(hour) == 1, paste0(0, 
+        hour), hour)) %>% mutate(day = ifelse(nchar(day) == 1, 
+        paste0(0, day), day)) %>% mutate(Date = paste(day, month, 
+        year, sep = "-"), Time = paste(hour, minute, sep = ":"))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%d-%b-%Y", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__385'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): MON-PR-Met15min2015.csv
+
+This is the "munge kernel" function for precipitation__417:
+
+process_1_417 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        mutate(hour = str_split_fixed(Time, ":", n = Inf)[, 1]) %>% 
+        mutate(minute = str_split_fixed(Time, ":", n = Inf)[, 
+            2]) %>% mutate(day = str_split_fixed(Date, "-", n = Inf)[, 
+        1]) %>% mutate(month = str_split_fixed(Date, "-", n = Inf)[, 
+        2]) %>% mutate(year = str_split_fixed(Date, "-", n = Inf)[, 
+        3]) %>% mutate(hour = ifelse(nchar(hour) == 1, paste0(0, 
+        hour), hour)) %>% mutate(day = ifelse(nchar(day) == 1, 
+        paste0(0, day), day)) %>% mutate(Date = paste(day, month, 
+        year, sep = "-"), Time = paste(hour, minute, sep = ":"))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%d-%b-%Y", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__417'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): MON-PR-Met15min2016.csv
+
+This is the "munge kernel" function for precipitation__423:
+
+process_1_423 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__423'
+site_code = <separately, each of: 'MON-PR-Met15min2017', with corresponding component>
+component(s) = 
+	for site: MON-PR-Met15min2017
+		comp(s): MON-PR-Met15min2017_csv
+
+This is the "munge kernel" function for precipitation__496:
+
+process_1_496 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__496'
+site_code = <separately, each of: 'MON-PR-Met15min2018', with corresponding component>
+component(s) = 
+	for site: MON-PR-Met15min2018
+		comp(s): MON-PR-Met15min2018_csv
+
+This is the "munge kernel" function for precipitation__542:
+
+process_1_542 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile = glue("data/{n}/{d}/raw/{p}/{s}/{c}", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    code <- prodcode_from_prodname_ms(prodname_ms)
+    site <- case_when(code %in% governors_academy ~ "governors_academy", 
+        code %in% mbl_marshview ~ "mbl_marshview")
+    d <- read.csv(rawfile, colClasses = "character") %>% mutate(site_code = !!site)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%Y-%m-%d", 
+        Time = "%H:%M"), datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'plum'
+prodname_ms = 'precipitation__542'
+site_code = <separately, each of: 'MON-PR-Met15min2019', with corresponding component>
+component(s) = 
+	for site: MON-PR-Met15min2019
+		comp(s): MON-PR-Met15min2019_csv
+
+---
+
+Functions from external packages called inside the kernel function are either
+referenced with `<package name>::<function>`, or are called from their aliases, defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/function_aliases.R
+
+For definitions of most MacroSheds functions called, see:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/global_helpers.R
+
+Definitions not found there will be found in src/<network>/network_helpers.R or
+src/<network>/<domain>/domain_helpers.R, where network is e.g. lter and domain
+is e.g. hbef (Hubbard Brook Experimental Forest). For a catalogue of networks
+and domains, download our site data table from the Data tab at macrosheds.org.
+
+After all the kernels have completed their jobs, there is a whole suite of
+post-processing steps, some of which further modify derived data. See
+postprocess_entire_dataset() in global_helpers.R for a list of these.
+
+Note that most MacroSheds functions are wrapped in a decorator function (handle_errors,
+defined in global_helpers.R; see tinsel package for details). This decorator is not needed
+to run the functions it wraps. To circumvent it, just make sure you don't load
+function definitions using tinsel::source_decoratees. This would only happen if you
+were to execute MacroSheds code line-by-line, starting from:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/acquisition_master.R
+
+Also note that the return value of a munge kernel function may be additionally modified by
+a munge engine function. Inside the body of the engine function, you can see where the
+munge kernel is retrieved with get() and called via do.call(). Usually, the only additional munging
+done by the munge engine (versus the munge kernel) would be to separate
+a data file that contains many sites into individual data files of only one site each.
+Munge engines are defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/munge_engines.R
+
+Finally, consider that you may clone our entire project from Github and get it running
+on your own machine. Getting every component to run will require a file called config.json
+at the top level of each project repository (data_processing/ and portal/) with your own
+values instead of <...> for each of the following fields:
+
+}
+    "gmail_pw": "< >",
+    "report_emails": ["<email1>", "<email2 etc>"],
+    "variables_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "site_data_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "delineation_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "univ_prods_gsheet:": "https://docs.google.com/spreadsheets/< >",
+    "name_variant_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "gee_login_<yourname>": "< >",
+    "orcid_login_<yourname>": "< >",
+    "orcid_pass_<yourname>": "< >",
+}
+
+Of course, you won't need connections to the ORCID database or google sheets in order to make headway.
+For example, just set config_storage_location = 'local' in your call to ms_init in data_processing/src/acquisition_master.R
+and gsheets becomes irrelevant. Our system is not fully set up to bypass the errors that would result from omitting
+some of this config information, but workarounds (like commenting lines or inserting tryCatch blocks) should be
+possible. This is something we'll be working on in later phases of the project.

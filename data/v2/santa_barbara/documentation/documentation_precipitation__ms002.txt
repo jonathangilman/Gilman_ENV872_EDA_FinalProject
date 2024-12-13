@@ -1,0 +1,2070 @@
+
+This MacroSheds data product (precipitation__ms002) was generated from the following munged MacroSheds product(s):
+
+precipitation__5010
+precipitation__5016
+precipitation__5026
+precipitation__4004
+precipitation__5001
+precipitation__5004
+precipitation__5005
+precipitation__5006
+precipitation__5007
+precipitation__5008
+precipitation__5011
+precipitation__5014
+precipitation__5015
+precipitation__5017
+precipitation__5018
+precipitation__5019
+precipitation__5020
+precipitation__5021
+precipitation__5022
+precipitation__5024
+precipitation__5027
+precipitation__5028
+precipitation__4003
+precipitation__5002
+precipitation__5003
+precipitation__5009
+precipitation__5012
+precipitation__5023
+precipitation__5025
+precipitation__5013
+precipitation__4001
+precipitation__4002
+precipitation__4006
+precipitation__4009
+precipitation__4010
+precipitation__4011
+precipitation__4012
+precipitation__4007
+precipitation__4008
+precipitation__4005
+
+Source data were retrieved from the following web page(s), static file(s), or web-API endpoint(s)
+on the datetime in parentheses:
+
+precipitation__5010:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5010&revision=8 (retrieved 2024-01-16 00:53:55.336684)
+
+precipitation__5016:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=6&revision=17 (retrieved 2024-01-16 00:54:12.376937)
+
+precipitation__5026:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=6&revision=17 (retrieved 2024-01-16 00:54:29.276579)
+
+precipitation__4004:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=4004&revision=10 (retrieved 2024-01-16 00:54:45.756434)
+
+precipitation__5001:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5001&revision=8 (retrieved 2024-01-16 00:55:02.037236)
+
+precipitation__5004:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5004&revision=8 (retrieved 2024-01-16 00:55:19.346407)
+
+precipitation__5005:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5005&revision=8 (retrieved 2024-01-16 00:55:35.826215)
+
+precipitation__5006:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=6&revision=17 (retrieved 2024-01-16 00:55:52.424575)
+
+precipitation__5007:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5007&revision=8 (retrieved 2024-01-16 00:56:08.906822)
+
+precipitation__5008:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5008&revision=8 (retrieved 2024-01-16 00:56:25.190468)
+
+precipitation__5011:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5011&revision=8 (retrieved 2024-01-16 00:56:41.691294)
+
+precipitation__5014:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5014&revision=8 (retrieved 2024-01-16 00:56:57.750381)
+
+precipitation__5015:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5015&revision=8 (retrieved 2024-01-16 00:57:14.248766)
+
+precipitation__5017:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5017&revision=8 (retrieved 2024-01-16 00:57:30.863228)
+
+precipitation__5018:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5018&revision=8 (retrieved 2024-01-16 00:57:47.109113)
+
+precipitation__5019:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5019&revision=8 (retrieved 2024-01-16 00:58:03.29114)
+
+precipitation__5020:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5020&revision=8 (retrieved 2024-01-16 00:58:19.727034)
+
+precipitation__5021:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5021&revision=8 (retrieved 2024-01-16 00:58:36.158367)
+
+precipitation__5022:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5022&revision=8 (retrieved 2024-01-16 00:58:52.546888)
+
+precipitation__5024:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5024&revision=8 (retrieved 2024-01-16 00:59:08.727268)
+
+precipitation__5027:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5027&revision=8 (retrieved 2024-01-16 00:59:25.414072)
+
+precipitation__5028:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5028&revision=8 (retrieved 2024-01-16 00:59:41.604474)
+
+precipitation__4003:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=4003&revision=11 (retrieved 2024-01-16 00:59:57.757318)
+
+precipitation__5002:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5002&revision=8 (retrieved 2024-01-16 01:00:13.911375)
+
+precipitation__5003:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5003&revision=8 (retrieved 2024-01-16 01:00:30.402484)
+
+precipitation__5009:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5009&revision=8 (retrieved 2024-01-16 01:01:10.105335)
+
+precipitation__5012:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5012&revision=8 (retrieved 2024-01-16 01:01:26.043224)
+
+precipitation__5023:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5023&revision=8 (retrieved 2024-01-16 01:01:42.439395)
+
+precipitation__5025:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5025&revision=8 (retrieved 2024-01-16 16:36:25.279222)
+
+precipitation__5013:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=5013&revision=8 (retrieved 2024-01-16 16:36:32.701365)
+
+precipitation__4001:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=4001&revision=10 (retrieved 2024-01-16 16:36:49.230829)
+
+precipitation__4002:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=4002&revision=11 (retrieved 2024-01-16 16:37:05.224336)
+
+precipitation__4006:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=6&revision=17 (retrieved 2024-01-16 16:37:21.446572)
+
+precipitation__4009:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=4009&revision=11 (retrieved 2024-01-16 16:37:37.92783)
+
+precipitation__4010:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=4010&revision=11 (retrieved 2024-01-16 16:37:56.385821)
+
+precipitation__4011:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=4011&revision=11 (retrieved 2024-01-16 16:38:12.542994)
+
+precipitation__4012:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=4012&revision=10 (retrieved 2024-01-16 16:38:29.155774)
+
+precipitation__4007:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=4007&revision=11 (retrieved 2024-01-16 16:38:45.722164)
+
+precipitation__4008:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=4008&revision=10 (retrieved 2024-01-16 16:39:02.002047)
+
+precipitation__4005:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&identifier=4005&revision=7 (retrieved 2024-01-16 16:39:29.486485)
+
+To rebuild all or part of the MacroSheds dataset yourself, use our code on GitHub (and these notes). If you want to
+rebuild only this product, or if you want to modify the code used to generate this product, you
+will almost certainly have an easier time using these notes. That said, automatic documentation like this may
+have some errors and missing details. Please contact us at mail@macrosheds.org if you're having trouble
+navigating our docs.
+
+Below you will find the "derive kernel" function(s) by which precipitation__ms002 was generated.
+Note that MacroSheds products may have precursors that are themselves derived products. In some
+cases, these derived precursors are named above and have their own separate documentation. In other
+cases, derived precursors are generated from stand-alone derive kernels whose entire definition and
+history can be displayed here. A stand-alone kernel might, for example, pull supplemental data
+from a source other than its own network/domain. Here is the code for precipitation__ms002's derive kernel function,
+and for any stand-alone precursor derive kernel function(s):
+
+process_2_ms002 <- function (network, domain, prodname_ms) 
+{
+    combine_products(network = network, domain = domain, prodname_ms = prodname_ms, 
+        input_prodname_ms = c("precipitation__5010", "precipitation__5016", 
+            "precipitation__5026", "precipitation__4004", "precipitation__5001", 
+            "precipitation__5004", "precipitation__5005", "precipitation__5006", 
+            "precipitation__5007", "precipitation__5008", "precipitation__5011", 
+            "precipitation__5014", "precipitation__5015", "precipitation__5017", 
+            "precipitation__5018", "precipitation__5019", "precipitation__5020", 
+            "precipitation__5021", "precipitation__5022", "precipitation__5024", 
+            "precipitation__5027", "precipitation__5028", "precipitation__4003", 
+            "precipitation__5002", "precipitation__5003", "precipitation__5009", 
+            "precipitation__5012", "precipitation__5023", "precipitation__5025", 
+            "precipitation__5013", "precipitation__4001", "precipitation__4002", 
+            "precipitation__4006", "precipitation__4009", "precipitation__4010", 
+            "precipitation__4011", "precipitation__4012", "precipitation__4007", 
+            "precipitation__4008", "precipitation__4005"))
+    return()
+}
+
+These were the arguments to that/those function(s):
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__ms002'
+
+Zero or more function definitions follow, depending on the number of munged products that
+are precursors to precipitation__ms002:
+
+This is the "munge kernel" function for precipitation__5010:
+
+process_1_5010 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5010'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC KTYD 227, all years
+
+This is the "munge kernel" function for precipitation__5016:
+
+process_1_5016 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5016'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC UCSB 200, all years
+
+This is the "munge kernel" function for precipitation__5026:
+
+process_1_5026 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5026'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Montecito 325, all years
+
+This is the "munge kernel" function for precipitation__4004:
+
+process_1_4004 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__4004'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBC GB201, all years
+
+This is the "munge kernel" function for precipitation__5001:
+
+process_1_5001 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5001'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Baron Ranch 262, all years
+
+This is the "munge kernel" function for precipitation__5004:
+
+process_1_5004 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5004'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Cold Springs 210, all years
+
+This is the "munge kernel" function for precipitation__5005:
+
+process_1_5005 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5005'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Dos Pueblos 226, all years
+
+This is the "munge kernel" function for precipitation__5006:
+
+process_1_5006 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5006'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Doulton Tunnel 231, all years
+
+This is the "munge kernel" function for precipitation__5007:
+
+process_1_5007 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5007'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Edison Trail 252, all years
+
+This is the "munge kernel" function for precipitation__5008:
+
+process_1_5008 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5008'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC El Deseo 255, all years
+
+This is the "munge kernel" function for precipitation__5011:
+
+process_1_5011 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5011'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Nojoqui 236, all years
+
+This is the "munge kernel" function for precipitation__5014:
+
+process_1_5014 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5014'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Stanwood FS 228, all years
+
+This is the "munge kernel" function for precipitation__5015:
+
+process_1_5015 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5015'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Trout Club 242, all years
+
+This is the "munge kernel" function for precipitation__5017:
+
+process_1_5017 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5017'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC GaviotaSP 301, all years
+
+This is the "munge kernel" function for precipitation__5018:
+
+process_1_5018 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5018'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC RefugioPass 429, all years
+
+This is the "munge kernel" function for precipitation__5019:
+
+process_1_5019 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5019'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Tecolote Canyon 280, all years
+
+This is the "munge kernel" function for precipitation__5020:
+
+process_1_5020 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5020'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Glen Annie Canyon 309, all years
+
+This is the "munge kernel" function for precipitation__5021:
+
+process_1_5021 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5021'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Goleta Fire Station 440, all years
+
+This is the "munge kernel" function for precipitation__5022:
+
+process_1_5022 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5022'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Goleta Water District 334, all years
+
+This is the "munge kernel" function for precipitation__5024:
+
+process_1_5024 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5024'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Botanic Garden 321, all years
+
+This is the "munge kernel" function for precipitation__5027:
+
+process_1_5027 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5027'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Rancho SJ 389, all years
+
+This is the "munge kernel" function for precipitation__5028:
+
+process_1_5028 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5028'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Buellton Fire Station 233, all years
+
+This is the "munge kernel" function for precipitation__4003:
+
+process_1_4003 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__4003'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBC EL202, all years
+
+This is the "munge kernel" function for precipitation__5002:
+
+process_1_5002 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5002'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Carpinteria 208, all years
+
+This is the "munge kernel" function for precipitation__5003:
+
+process_1_5003 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5003'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Cater WTP 229, all years
+
+This is the "munge kernel" function for precipitation__5009:
+
+process_1_5009 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5009'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Goleta Rd Yard 211, all years
+
+This is the "munge kernel" function for precipitation__5012:
+
+process_1_5012 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5012'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC San Marcos Pass 212, all years
+
+This is the "munge kernel" function for precipitation__5023:
+
+process_1_5023 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5023'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC SB Caltrans 335, all years
+
+This is the "munge kernel" function for precipitation__5025:
+
+process_1_5025 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5025'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC Carpinteria USFS 383, all years
+
+This is the "munge kernel" function for precipitation__5013:
+
+process_1_5013 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__5013'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBCoFC SB Eng Bldg 234, all years
+
+This is the "munge kernel" function for precipitation__4001:
+
+process_1_4001 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__4001'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBC CP201, all years
+
+This is the "munge kernel" function for precipitation__4002:
+
+process_1_4002 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__4002'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBC EL201, all years
+
+This is the "munge kernel" function for precipitation__4006:
+
+process_1_4006 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__4006'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBC GV202, all years
+
+This is the "munge kernel" function for precipitation__4009:
+
+process_1_4009 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__4009'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBC RG201, all years
+
+This is the "munge kernel" function for precipitation__4010:
+
+process_1_4010 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__4010'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBC RG202, all years
+
+This is the "munge kernel" function for precipitation__4011:
+
+process_1_4011 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__4011'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBC RG203, all years
+
+This is the "munge kernel" function for precipitation__4012:
+
+process_1_4012 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__4012'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBC RG204, all years
+
+This is the "munge kernel" function for precipitation__4007:
+
+process_1_4007 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__4007'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBC HO201, all years
+
+This is the "munge kernel" function for precipitation__4008:
+
+process_1_4008 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__4008'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBC HO202, all years
+
+This is the "munge kernel" function for precipitation__4005:
+
+process_1_4005 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    sbc_gauge <- grepl("SBC ", component, fixed = T)
+    fc_gauge <- grepl("SBCoFC ", component, fixed = T)
+    if (sbc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBC", 
+            n = Inf)
+    }
+    if (fc_gauge) {
+        site <- str_split_fixed(component, "Precipitation SBCoFC", 
+            n = Inf)
+    }
+    if (component == "UCSB 200 daily precipitation, 1951-ongoing") {
+        site <- "UCSB200"
+    }
+    else {
+        site <- str_split_fixed(site[, 2], ",", n = Inf)
+        site <- str_split_fixed(site[1, 1], " ", n = Inf)
+        site <- paste(site[1, ], collapse = "")
+    }
+    d <- read.csv(rawfile1, colClasses = "character") %>% mutate(site_code = !!site) %>% 
+        rename_with(~sub("timestamp_UTC", "timestamp_utc", .))
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(timestamp_utc = "%Y-%m-%dT%H:%M"), 
+        datetime_tz = "UTC", site_code_col = "site_code", alt_site_code = list(BuelltonFS233 = "BuelltonFireStation233"), 
+        data_cols = c(precipitation_mm = "precipitation"), data_col_pattern = "#V#", 
+        set_to_NA = c("-999", "-999.00", "-999.0"), is_sensor = TRUE, 
+        keep_empty_rows = TRUE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, keep_empty_rows = TRUE)
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'santa_barbara'
+prodname_ms = 'precipitation__4005'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): Precipitation SBC GV201, all years
+
+---
+
+Functions from external packages called inside the kernel function are either
+referenced with `<package name>::<function>`, or are called from their aliases, defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/function_aliases.R
+
+For definitions of most MacroSheds functions called, see:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/global_helpers.R
+
+Definitions not found there will be found in src/<network>/network_helpers.R or
+src/<network>/<domain>/domain_helpers.R, where network is e.g. lter and domain
+is e.g. hbef (Hubbard Brook Experimental Forest). For a catalogue of networks
+and domains, download our site data table from the Data tab at macrosheds.org.
+
+After all the kernels have completed their jobs, there is a whole suite of
+post-processing steps, some of which further modify derived data. See
+postprocess_entire_dataset() in global_helpers.R for a list of these.
+
+Note that most MacroSheds functions are wrapped in a decorator function (handle_errors,
+defined in global_helpers.R; see tinsel package for details). This decorator is not needed
+to run the functions it wraps. To circumvent it, just make sure you don't load
+function definitions using tinsel::source_decoratees. This would only happen if you
+were to execute MacroSheds code line-by-line, starting from:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/acquisition_master.R
+
+Also note that the return value of a munge kernel function may be additionally modified by
+a munge engine function. Inside the body of the engine function, you can see where the
+munge kernel is retrieved with get() and called via do.call(). Usually, the only additional munging
+done by the munge engine (versus the munge kernel) would be to separate
+a data file that contains many sites into individual data files of only one site each.
+Munge engines are defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/munge_engines.R
+
+Finally, consider that you may clone our entire project from Github and get it running
+on your own machine. Getting every component to run will require a file called config.json
+at the top level of each project repository (data_processing/ and portal/) with your own
+values instead of <...> for each of the following fields:
+
+}
+    "gmail_pw": "< >",
+    "report_emails": ["<email1>", "<email2 etc>"],
+    "variables_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "site_data_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "delineation_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "univ_prods_gsheet:": "https://docs.google.com/spreadsheets/< >",
+    "name_variant_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "gee_login_<yourname>": "< >",
+    "orcid_login_<yourname>": "< >",
+    "orcid_pass_<yourname>": "< >",
+}
+
+Of course, you won't need connections to the ORCID database or google sheets in order to make headway.
+For example, just set config_storage_location = 'local' in your call to ms_init in data_processing/src/acquisition_master.R
+and gsheets becomes irrelevant. Our system is not fully set up to bypass the errors that would result from omitting
+some of this config information, but workarounds (like commenting lines or inserting tryCatch blocks) should be
+possible. This is something we'll be working on in later phases of the project.

@@ -1,0 +1,127 @@
+
+Special note for versionless products:
+Some of the datasets we retrieve are hosted as static files by their original data providers,
+rather than as formally versioned and archived data entities. These products are given product
+codes of the form "VERSIONLESSXXX", where X is an integer. This changes the way we check for
+newly uploaded editions of those datasets, but it doesn't change much for you. Just note that
+in some cases it may make the original provenance of the dataset a bit less clear. In a few
+cases, we have received datasets from providers through personal correspondence, in which case they
+are housed on a remote MacroSheds drive. Raw/retrieved datasets of this type will be made public
+in a future MacroSheds data release.
+
+
+This MacroSheds data product (CUSTOMprecipitation__ms008) is a "linked product", meaning it was complete after munging and
+did not require additional "derived-level" processing. As such, the munged product
+was simply linked to our derived product directory and given a standard MacroSheds derived product code.
+
+Source data were retrieved from the following web page(s), static file(s), or web-API endpoint(s)
+on the datetime in parentheses:
+
+https://www.sciencebase.gov/catalog/file/get/5b2aa9bae4b040769c0ed87b?f=__disk__bb%2Fa6%2Ff5%2Fbba6f5d74604694c194512bee1ee0e0cb095cd63 (retrieved 2024-04-09 23:46:55.282928)
+
+To rebuild all or part of the MacroSheds dataset yourself, use our code on GitHub (and these notes). If you want to
+rebuild only this product, or if you want to modify the code used to generate this product, you
+will almost certainly have an easier time using these notes. That said, automatic documentation like this may
+have some errors and missing details. Please contact us at mail@macrosheds.org if you're having trouble
+navigating our docs.
+
+This is the "munge kernel" function for CUSTOMprecipitation__VERSIONLESS001:
+
+process_1_VERSIONLESS001 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawfile <- glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- read.csv(rawfile)
+    d <- d %>% mutate(site_code = "R-29") %>% filter(!is.na(Precip..mm), 
+        !is.na(Date)) %>% select(Date, site_code, Precip..mm)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(Date = "%m/%d/%y"), 
+        datetime_tz = "Etc/GMT+5", site_code_col = "site_code", 
+        data_cols = c(Precip..mm = "precipitation"), data_col_pattern = "#V#", 
+        is_sensor = FALSE)
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA)
+    d <- ms_check_range(d)
+    errors(d$val) <- get_hdetlim_or_uncert(d, detlims = domain_detection_limits, 
+        prodname_ms = prodname_ms, which_ = "uncertainty")
+    d <- synchronize_timestep(d)
+    sites <- unique(d$site_code)
+    for (s in 1:length(sites)) {
+        d_site <- d %>% filter(site_code == !!sites[s])
+        write_ms_file(d = d_site, network = network, domain = domain, 
+            prodname_ms = prodname_ms, site_code = sites[s], 
+            level = "munged", shapefile = FALSE)
+    }
+    return()
+}
+
+These were the arguments to that function:
+
+network = 'webb'
+domain = 'sleepers'
+prodname_ms = 'CUSTOMprecipitation__VERSIONLESS001'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): sleepers_ppt
+
+
+
+---
+
+Functions from external packages called inside the kernel function are either
+referenced with `<package name>::<function>`, or are called from their aliases, defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/function_aliases.R
+
+For definitions of most MacroSheds functions called, see:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/global_helpers.R
+
+Definitions not found there will be found in src/<network>/network_helpers.R or
+src/<network>/<domain>/domain_helpers.R, where network is e.g. lter and domain
+is e.g. hbef (Hubbard Brook Experimental Forest). For a catalogue of networks
+and domains, download our site data table from the Data tab at macrosheds.org.
+
+After all the kernels have completed their jobs, there is a whole suite of
+post-processing steps, some of which further modify derived data. See
+postprocess_entire_dataset() in global_helpers.R for a list of these.
+
+Note that most MacroSheds functions are wrapped in a decorator function (handle_errors,
+defined in global_helpers.R; see tinsel package for details). This decorator is not needed
+to run the functions it wraps. To circumvent it, just make sure you don't load
+function definitions using tinsel::source_decoratees. This would only happen if you
+were to execute MacroSheds code line-by-line, starting from:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/acquisition_master.R
+
+Also note that the return value of a munge kernel function may be additionally modified by
+a munge engine function. Inside the body of the engine function, you can see where the
+munge kernel is retrieved with get() and called via do.call(). Usually, the only additional munging
+done by the munge engine (versus the munge kernel) would be to separate
+a data file that contains many sites into individual data files of only one site each.
+Munge engines are defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/munge_engines.R
+
+Finally, consider that you may clone our entire project from Github and get it running
+on your own machine. Getting every component to run will require a file called config.json
+at the top level of each project repository (data_processing/ and portal/) with your own
+values instead of <...> for each of the following fields:
+
+}
+    "gmail_pw": "< >",
+    "report_emails": ["<email1>", "<email2 etc>"],
+    "variables_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "site_data_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "delineation_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "univ_prods_gsheet:": "https://docs.google.com/spreadsheets/< >",
+    "name_variant_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "gee_login_<yourname>": "< >",
+    "orcid_login_<yourname>": "< >",
+    "orcid_pass_<yourname>": "< >",
+}
+
+Of course, you won't need connections to the ORCID database or google sheets in order to make headway.
+For example, just set config_storage_location = 'local' in your call to ms_init in data_processing/src/acquisition_master.R
+and gsheets becomes irrelevant. Our system is not fully set up to bypass the errors that would result from omitting
+some of this config information, but workarounds (like commenting lines or inserting tryCatch blocks) should be
+possible. This is something we'll be working on in later phases of the project.

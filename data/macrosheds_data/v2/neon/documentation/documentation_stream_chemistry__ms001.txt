@@ -1,0 +1,916 @@
+
+This MacroSheds data product (stream_chemistry__ms001) was generated from the following munged MacroSheds product(s):
+
+stream_chemistry__DP1.20093.001
+stream_quality__DP1.20288.001
+stream_nitrate__DP1.20033.001
+stream_gases__DP1.20097.001
+stream_temperature__DP1.20053.001
+stream_PAR__DP1.20042.001
+isotopes__DP1.20206.001
+
+Source data were retrieved from the following web page(s), static file(s), or web-API endpoint(s)
+on the datetime in parentheses:
+
+stream_chemistry__DP1.20093.001:
+data.neonscience.org (downloaded via neonUtilities) (retrieved 2024-04-05 20:45:03.271563)
+
+stream_quality__DP1.20288.001:
+data.neonscience.org (downloaded via neonUtilities) (retrieved 2024-03-16 00:14:21.982575)
+
+stream_nitrate__DP1.20033.001:
+data.neonscience.org (downloaded via neonUtilities) (retrieved 2024-03-14 19:02:29.187895)
+
+stream_gases__DP1.20097.001:
+data.neonscience.org (downloaded via neonUtilities) (retrieved 2024-03-15 20:43:52.409282)
+
+stream_temperature__DP1.20053.001:
+data.neonscience.org (downloaded via neonUtilities) (retrieved 2024-03-14 21:27:44.336963)
+
+stream_PAR__DP1.20042.001:
+data.neonscience.org (downloaded via neonUtilities) (retrieved 2024-03-14 20:06:22.304529)
+
+isotopes__DP1.20206.001:
+data.neonscience.org (downloaded via neonUtilities) (retrieved 2024-04-05 20:49:35.492263)
+
+To rebuild all or part of the MacroSheds dataset yourself, use our code on GitHub (and these notes). If you want to
+rebuild only this product, or if you want to modify the code used to generate this product, you
+will almost certainly have an easier time using these notes. That said, automatic documentation like this may
+have some errors and missing details. Please contact us at mail@macrosheds.org if you're having trouble
+navigating our docs.
+
+Below you will find the "derive kernel" function(s) by which stream_chemistry__ms001 was generated.
+Note that MacroSheds products may have precursors that are themselves derived products. In some
+cases, these derived precursors are named above and have their own separate documentation. In other
+cases, derived precursors are generated from stand-alone derive kernels whose entire definition and
+history can be displayed here. A stand-alone kernel might, for example, pull supplemental data
+from a source other than its own network/domain. Here is the code for stream_chemistry__ms001's derive kernel function,
+and for any stand-alone precursor derive kernel function(s):
+
+process_2_ms001 <- function (network, domain, prodname_ms) 
+{
+    combine_products(network = network, domain = domain, prodname_ms = prodname_ms, 
+        input_prodname_ms = c("stream_chemistry__DP1.20093.001", 
+            "stream_quality__DP1.20288.001", "stream_nitrate__DP1.20033.001", 
+            "stream_gases__DP1.20097.001", "stream_temperature__DP1.20053.001", 
+            "stream_PAR__DP1.20042.001", "isotopes__DP1.20206.001"))
+    return()
+}
+
+These were the arguments to that/those function(s):
+
+network = 'neon'
+domain = 'neon'
+prodname_ms = 'stream_chemistry__ms001'
+
+Zero or more function definitions follow, depending on the number of munged products that
+are precursors to stream_chemistry__ms001:
+
+This is the "munge kernel" function for stream_chemistry__DP1.20093.001:
+
+process_1_DP1.20093.001 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawdir <- glue("data/{n}/{d}/raw/{p}/{s}", n = network, d = domain, 
+        p = prodname_ms, s = site_code)
+    neonprodcode <- prodcode_from_prodname_ms(prodname_ms) %>% 
+        str_split_i("\\.", i = 2)
+    rawd <- try({
+        stackByTable_keep_zips(glue("{rawdir}/filesToStack{neonprodcode}"))
+    })
+    if (inherits(rawd, "try-error")) 
+        return(generate_ms_exception("No data for site"))
+    relevant_tbl1 <- "swc_domainLabData"
+    relevant_tbl2 <- "swc_externalLabDataByAnalyte"
+    if (relevant_tbl1 %in% names(rawd)) {
+        d <- tibble(rawd[[relevant_tbl1]])
+        d$actual_quality_flag <- as.numeric(!is.na(d$release) & 
+            !grepl("replicate|SOP|protocol|cartridge", d$remarks, 
+                ignore.case = TRUE))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(collectDate = "%Y-%m-%d %H:%M:%S"), 
+            datetime_tz = "UTC", site_code_col = "siteID", data_cols = c(alkMgPerL = "alk", 
+                ancMeqPerL = "ANC"), data_col_pattern = "#V#", 
+            summary_flagcols = "actual_quality_flag", is_sensor = FALSE, 
+            sampling_type = "G")
+        d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, 
+            summary_flags_clean = list(actual_quality_flag = "0"), 
+            summary_flags_dirty = list(actual_quality_flag = "1"))
+        out_dom <- ms_conversions(d, convert_units_from = c(ANC = "meq"), 
+            convert_units_to = c(ANC = "eq"))
+    }
+    if (relevant_tbl2 %in% names(rawd)) {
+        d <- tibble(rawd[[relevant_tbl2]]) %>% mutate(analyteConcentration = as.character(analyteConcentration), 
+            analyteConcentration = if_else(!is.na(belowDetectionQF) & 
+                belowDetectionQF == "ND", "BDL", analyteConcentration)) %>% 
+            select(-uid, -domainID, -namedLocation, -sampleID, 
+                -sampleCode, -startDate, -laboratoryName, -analysisDate, 
+                -coolerTemp, -publicationDate, -release)
+        missing_unit <- filter(d, is.na(analyteUnits) & !grepl("UV Abs|pH", 
+            analyte))
+        message(paste("dropping", nrow(missing_unit), "records with unspecified units (total", 
+            nrow(d), ")"))
+        d <- filter(d, !is.na(analyteUnits) | grepl("UV Abs|pH", 
+            analyte))
+        var_unit_pairs <- d %>% distinct(analyte, analyteUnits) %>% 
+            filter(!is.na(analyteUnits)) %>% arrange(analyte)
+        if (any(duplicated(var_unit_pairs))) {
+            warning("we need to address this: analyte-analyteUnits mapping not 1:1")
+            browser()
+        }
+        weird_unit <- d$analyte %in% c("TPN", "TPC") & d$analyteUnits != 
+            "microgramsPerLiter"
+        nweird_unit <- sum(weird_unit)
+        if (nweird_unit > 0) {
+            message(nweird_unit, " TPN/TPC observations reported in \"", 
+                paste(unique(d[weird_unit, "analyteUnits"]), 
+                  collapse = ", "), "\". these will be dropped.")
+            d <- d[!weird_unit, ]
+        }
+        if (any(is.na(d$sampleCondition))) 
+            stop("handle NA sampleCondition")
+        d <- d %>% mutate(sampleCondition = if_else(belowDetectionQF %in% 
+            c("BDL", "ND"), "OK", sampleCondition), sampleCondition = if_else(shipmentWarmQF == 
+            1, "OK", sampleCondition))
+        d <- d %>% select(-analyteUnits, -belowDetectionQF, -remarks, 
+            -shipmentWarmQF, -externalLabDataQF) %>% filter(!is.na(analyteConcentration)) %>% 
+            group_by(collectDate, analyte) %>% filter(!(sampleCondition != 
+            "GOOD" & "GOOD" %in% sampleCondition)) %>% filter(!(sampleCondition == 
+            "Other" & "OK" %in% sampleCondition & !"GOOD" %in% 
+            sampleCondition)) %>% summarize(analyteConcentration = mean(suppressWarnings(as.numeric(analyteConcentration)), 
+            na.rm = TRUE), sampleCondition = if_else(any(sampleCondition %in% 
+            c("OK", "Other")), "OK", "GOOD"), siteID = first(siteID)) %>% 
+            ungroup() %>% mutate(analyteConcentration = as.character(analyteConcentration), 
+            analyteConcentration = if_else(analyteConcentration == 
+                "NaN", "BDL", analyteConcentration)) %>% rename(val = analyteConcentration, 
+            flag = sampleCondition) %>% pivot_wider(names_from = "analyte", 
+            values_from = c("val", "flag"))
+        d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(collectDate = "%Y-%m-%d %H:%M:%S"), 
+            datetime_tz = "UTC", site_code_col = "siteID", data_cols = c(`Ortho - P` = "orthophosphate_P", 
+                `NO3+NO2 - N` = "NO3_NO2_N", `NO2 - N` = "NO2_N", 
+                `NH4 - N` = "NH4_N", specificConductance = "spCond", 
+                `UV Absorbance (280 nm)` = "abs280", `UV Absorbance (254 nm)` = "abs254", 
+                "SO4", "TDN", "Ca", "TDP", "DOC", "TN", "Mg", 
+                "Mn", "TPN", "DIC", "TOC", "Na", "TSS", "Cl", 
+                "Fe", "HCO3", "F", "Br", "TPC", "pH", "Si", "K", 
+                "TP", "TDS", "CO3", "ANC"), data_col_pattern = "val_#V#", 
+            var_flagcol_pattern = "flag_#V#", convert_to_BDL_flag = "BDL", 
+            is_sensor = FALSE, sampling_type = "G")
+        d <- ms_cast_and_reflag(d, variable_flags_clean = "GOOD", 
+            variable_flags_dirty = "OK", variable_flags_bdl = "BDL")
+        conv_vars <- neon_chem_vars %>% filter(tolower(neon_unit) != 
+            tolower(unit))
+        out_lab <- ms_conversions(d, convert_units_from = deframe(select(conv_vars, 
+            ms_var, neon_unit)), convert_units_to = deframe(select(conv_vars, 
+            ms_var, unit)))
+    }
+    if (!exists("out_lab") && !exists("out_dom")) {
+        print(paste0("swc_externalLabDataByAnalyte and swc_domainLabData are missing for ", 
+            site_code))
+        out_sub <- tibble()
+    }
+    else {
+        if (!exists("out_lab")) {
+            print(paste0("swc_externalLabDataByAnalyte is missing for ", 
+                site_code, ". proceeding with swc_domainLabData"))
+            out_sub <- out_dom
+        }
+        if (!exists("out_dom")) {
+            print(paste0("swc_domainLabData is missing for ", 
+                site_code, ". proceeding with swc_externalLabDataByAnalyte"))
+            out_sub <- out_lab
+        }
+        if (exists("out_dom") && exists("out_lab")) {
+            out_sub <- rbind(out_lab, out_dom)
+        }
+        out_sub <- out_sub %>% group_by(datetime, site_code, 
+            var) %>% summarize(ms_status = min(ms_status), val = mean(val[ms_status == 
+            min(ms_status)], na.rm = TRUE)) %>% ungroup() %>% 
+            filter(!is.na(val))
+    }
+    return(out_sub)
+}
+
+These were the arguments to that function:
+
+network = 'neon'
+domain = 'neon'
+prodname_ms = 'stream_chemistry__DP1.20093.001'
+site_code = <separately, each of: 'ARIK', 'BIGC', 'BLDE', 'BLUE', 'BLWA', 'CARI', 'COMO', 'CUPE', 'FLNT', 'GUIL', 'HOPB', 'KING', 'LECO', 'LEWI', 'MART', 'MAYF', 'MCDI', 'MCRA', 'OKSR', 'POSE', 'PRIN', 'REDB', 'SYCA', 'TECR', 'TOMB', 'WALK', 'WLOU', with corresponding component>
+component(s) = 
+	for site: ARIK
+		comp(s): placeholder
+	for site: BIGC
+		comp(s): placeholder
+	for site: BLDE
+		comp(s): placeholder
+	for site: BLUE
+		comp(s): placeholder
+	for site: BLWA
+		comp(s): placeholder
+	for site: CARI
+		comp(s): placeholder
+	for site: COMO
+		comp(s): placeholder
+	for site: CUPE
+		comp(s): placeholder
+	for site: FLNT
+		comp(s): placeholder
+	for site: GUIL
+		comp(s): placeholder
+	for site: HOPB
+		comp(s): placeholder
+	for site: KING
+		comp(s): placeholder
+	for site: LECO
+		comp(s): placeholder
+	for site: LEWI
+		comp(s): placeholder
+	for site: MART
+		comp(s): placeholder
+	for site: MAYF
+		comp(s): placeholder
+	for site: MCDI
+		comp(s): placeholder
+	for site: MCRA
+		comp(s): placeholder
+	for site: OKSR
+		comp(s): placeholder
+	for site: POSE
+		comp(s): placeholder
+	for site: PRIN
+		comp(s): placeholder
+	for site: REDB
+		comp(s): placeholder
+	for site: SYCA
+		comp(s): placeholder
+	for site: TECR
+		comp(s): placeholder
+	for site: TOMB
+		comp(s): placeholder
+	for site: WALK
+		comp(s): placeholder
+	for site: WLOU
+		comp(s): placeholder
+
+This is the "munge kernel" function for stream_quality__DP1.20288.001:
+
+process_1_DP1.20288.001 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawdir <- glue("data/{n}/{d}/raw/{p}/{s}", n = network, d = domain, 
+        p = prodname_ms, s = site_code)
+    neonprodcode <- prodcode_from_prodname_ms(prodname_ms) %>% 
+        str_split_i("\\.", i = 2)
+    rawd <- try({
+        stackByTable_keep_zips(glue("{rawdir}/filesToStack{neonprodcode}"))
+    })
+    if (inherits(rawd, "try-error")) 
+        return(generate_ms_exception("No data for site"))
+    relevant_tbl1 <- "waq_instantaneous"
+    if (relevant_tbl1 %in% names(rawd)) {
+        rawd <- tibble(rawd[[relevant_tbl1]])
+    }
+    else {
+        return(generate_ms_exception("Relevant file missing"))
+    }
+    na_test <- rawd %>% select(specificConductance, dissolvedOxygen, 
+        pH, chlorophyll, turbidity, fDOM) %>% is.na() %>% all()
+    if (na_test) {
+        return(generate_ms_exception(paste("No data for", site_code)))
+    }
+    rawd <- rename_with(rawd, ~sub("specificConductance", "specificCond", 
+        .))
+    rawd <- rename_with(rawd, ~sub("localDissolvedOxygen", "localDO", 
+        .))
+    rawd <- neon_average_start_end_times(rawd)
+    rawd <- neon_borrow_from_upstream(rawd, relevant_cols = c("specificCond", 
+        "dissolvedOxygen", "localDOSat", "pH", "chlorophyll", 
+        "turbidity", "fDOM"))
+    d <- ms_read_raw_csv(preprocessed_tibble = rawd, datetime_cols = c(date = "%Y-%m-%d"), 
+        datetime_tz = "UTC", site_code_col = "siteID", data_cols = c(specificCond = "spCond", 
+            dissolvedOxygen = "DO", localDOSat = "DO_sat", pH = "pH", 
+            chlorophyll = "Chla", turbidity = "turbid_FNU", fDOM = "FDOM"), 
+        data_col_pattern = "#V#", var_flagcol_pattern = "#V#FinalQF", 
+        is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, variable_flags_clean = "0", variable_flags_to_drop = "sentinel")
+    d <- ms_conversions(d, convert_units_from = c(Chla = "ug/L"), 
+        convert_units_to = c(Chla = "mg/L"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'neon'
+domain = 'neon'
+prodname_ms = 'stream_quality__DP1.20288.001'
+site_code = <separately, each of: 'ARIK', 'BIGC', 'BLDE', 'BLUE', 'BLWA', 'CARI', 'COMO', 'CUPE', 'FLNT', 'GUIL', 'HOPB', 'KING', 'LECO', 'LEWI', 'MART', 'MAYF', 'MCDI', 'MCRA', 'OKSR', 'POSE', 'PRIN', 'REDB', 'SYCA', 'TECR', 'TOMB', 'WALK', 'WLOU', with corresponding component>
+component(s) = 
+	for site: ARIK
+		comp(s): placeholder
+	for site: BIGC
+		comp(s): placeholder
+	for site: BLDE
+		comp(s): placeholder
+	for site: BLUE
+		comp(s): placeholder
+	for site: BLWA
+		comp(s): placeholder
+	for site: CARI
+		comp(s): placeholder
+	for site: COMO
+		comp(s): placeholder
+	for site: CUPE
+		comp(s): placeholder
+	for site: FLNT
+		comp(s): placeholder
+	for site: GUIL
+		comp(s): placeholder
+	for site: HOPB
+		comp(s): placeholder
+	for site: KING
+		comp(s): placeholder
+	for site: LECO
+		comp(s): placeholder
+	for site: LEWI
+		comp(s): placeholder
+	for site: MART
+		comp(s): placeholder
+	for site: MAYF
+		comp(s): placeholder
+	for site: MCDI
+		comp(s): placeholder
+	for site: MCRA
+		comp(s): placeholder
+	for site: OKSR
+		comp(s): placeholder
+	for site: POSE
+		comp(s): placeholder
+	for site: PRIN
+		comp(s): placeholder
+	for site: REDB
+		comp(s): placeholder
+	for site: SYCA
+		comp(s): placeholder
+	for site: TECR
+		comp(s): placeholder
+	for site: TOMB
+		comp(s): placeholder
+	for site: WALK
+		comp(s): placeholder
+	for site: WLOU
+		comp(s): placeholder
+
+This is the "munge kernel" function for stream_nitrate__DP1.20033.001:
+
+process_1_DP1.20033.001 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawdir <- glue("data/{n}/{d}/raw/{p}/{s}", n = network, d = domain, 
+        p = prodname_ms, s = site_code)
+    neonprodcode <- prodcode_from_prodname_ms(prodname_ms) %>% 
+        str_split_i("\\.", i = 2)
+    rawd <- try({
+        stackByTable_keep_zips(glue("{rawdir}/filesToStack{neonprodcode}"))
+    })
+    if (inherits(rawd, "try-error")) 
+        return(generate_ms_exception("No data for site"))
+    relevant_tbl1 <- "NSW_15_minute"
+    if (relevant_tbl1 %in% names(rawd)) {
+        rawd <- tibble(rawd[[relevant_tbl1]])
+    }
+    else {
+        return(generate_ms_exception("Relevant file missing"))
+    }
+    if (all(is.na(rawd$surfWaterNitrateMean))) {
+        return(generate_ms_exception(paste("No data for", site_code)))
+    }
+    updown <- determine_upstream_downstream(rawd)
+    rawd <- neon_average_start_end_times(rawd)
+    d <- ms_read_raw_csv(preprocessed_tibble = rawd, datetime_cols = c(datetime = "%Y-%m-%d %H:%M:%S"), 
+        datetime_tz = "UTC", site_code_col = "siteID", data_cols = c(surfWaterNitrateMean = "NO3"), 
+        data_col_pattern = "#V#", summary_flagcols = "finalQF", 
+        is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, summary_flags_clean = list(finalQF = "0"), 
+        summary_flags_to_drop = list(finalQF = "sentinel"))
+    d <- ms_conversions(d, convert_units_from = c(NO3 = "umol/L"), 
+        convert_units_to = c(NO3 = "mg/L"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'neon'
+domain = 'neon'
+prodname_ms = 'stream_nitrate__DP1.20033.001'
+site_code = <separately, each of: 'ARIK', 'BIGC', 'BLDE', 'BLUE', 'BLWA', 'CARI', 'COMO', 'CUPE', 'FLNT', 'GUIL', 'HOPB', 'KING', 'LECO', 'LEWI', 'MART', 'MAYF', 'MCDI', 'MCRA', 'OKSR', 'POSE', 'PRIN', 'REDB', 'SYCA', 'TECR', 'TOMB', 'WALK', 'WLOU', with corresponding component>
+component(s) = 
+	for site: ARIK
+		comp(s): placeholder
+	for site: BIGC
+		comp(s): placeholder
+	for site: BLDE
+		comp(s): placeholder
+	for site: BLUE
+		comp(s): placeholder
+	for site: BLWA
+		comp(s): placeholder
+	for site: CARI
+		comp(s): placeholder
+	for site: COMO
+		comp(s): placeholder
+	for site: CUPE
+		comp(s): placeholder
+	for site: FLNT
+		comp(s): placeholder
+	for site: GUIL
+		comp(s): placeholder
+	for site: HOPB
+		comp(s): placeholder
+	for site: KING
+		comp(s): placeholder
+	for site: LECO
+		comp(s): placeholder
+	for site: LEWI
+		comp(s): placeholder
+	for site: MART
+		comp(s): placeholder
+	for site: MAYF
+		comp(s): placeholder
+	for site: MCDI
+		comp(s): placeholder
+	for site: MCRA
+		comp(s): placeholder
+	for site: OKSR
+		comp(s): placeholder
+	for site: POSE
+		comp(s): placeholder
+	for site: PRIN
+		comp(s): placeholder
+	for site: REDB
+		comp(s): placeholder
+	for site: SYCA
+		comp(s): placeholder
+	for site: TECR
+		comp(s): placeholder
+	for site: TOMB
+		comp(s): placeholder
+	for site: WALK
+		comp(s): placeholder
+	for site: WLOU
+		comp(s): placeholder
+
+This is the "munge kernel" function for stream_gases__DP1.20097.001:
+
+process_1_DP1.20097.001 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawdir <- glue("data/{n}/{d}/raw/{p}/{s}", n = network, d = domain, 
+        p = prodname_ms, s = site_code)
+    neonprodcode <- prodcode_from_prodname_ms(prodname_ms) %>% 
+        str_split_i("\\.", i = 2)
+    rawd <- try({
+        stackByTable_keep_zips(glue("{rawdir}/filesToStack{neonprodcode}"))
+    })
+    if (inherits(rawd, "try-error")) 
+        return(generate_ms_exception("No data for site"))
+    relevant_tbl1 <- "sdg_externalLabData"
+    if (relevant_tbl1 %in% names(rawd)) {
+        d <- rawd$sdg_externalLabData
+        sdgFormatted <- suppressWarnings(neonDissGas::def.format.sdg(externalLabData = d, 
+            fieldDataProc = rawd$sdg_fieldDataProc, fieldSuperParent = rawd$sdg_fieldSuperParent))
+        sdgConcentrations <- neonDissGas::def.calc.sdg.conc(inputFile = sdgFormatted)
+        d <- d %>% as_tibble() %>% filter(grepl("WAT", sampleID)) %>% 
+            mutate(sampleID = sub("\\.WAT", "", sampleID)) %>% 
+            left_join(select(sdgConcentrations, waterSampleID, 
+                contains("dissolved")), by = c(sampleID = "waterSampleID")) %>% 
+            filter(!if_any(contains("dissolved"), is.na))
+        d <- d %>% mutate(stts = if_else(!is.na(sampleCondition) & 
+            sampleCondition == "OK", 0, 1), stts = if_else(grepl("inventor", 
+            externalRemarks), 1, stts), N2OCheckStandardQF = if_else(!is.na(N2OCheckStandardQF) & 
+            N2OCheckStandardQF == 0, 0, 1), CO2CheckStandardQF = if_else(!is.na(CO2CheckStandardQF) & 
+            CO2CheckStandardQF == 0, 0, 1), CH4CheckStandardQF = if_else(!is.na(CH4CheckStandardQF) & 
+            CH4CheckStandardQF == 0, 0, 1), CH4CheckStandardQF = if_else(!is.na(concentrationCH4) & 
+            concentrationCH4 <= runDetectionLimitCH4, 1, CH4CheckStandardQF), 
+            N2OCheckStandardQF = if_else(!is.na(concentrationN2O) & 
+                concentrationN2O <= runDetectionLimitN2O, 1, 
+                N2OCheckStandardQF), CO2CheckStandardQF = if_else(!is.na(concentrationCO2) & 
+                concentrationCO2 <= runDetectionLimitCO2, 1, 
+                CO2CheckStandardQF))
+    }
+    else {
+        return(generate_ms_exception("Relevant file missing"))
+    }
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(collectDate = "%Y-%m-%d %H:%M:%S"), 
+        datetime_tz = "UTC", site_code_col = "siteID", data_cols = c("CO2", 
+            "N2O", "CH4"), data_col_pattern = "dissolved#V#", 
+        var_flagcol_pattern = "#V#CheckStandardQF", summary_flagcols = "stts", 
+        is_sensor = FALSE, sampling_type = "G")
+    d <- ms_cast_and_reflag(d, variable_flags_clean = "0", variable_flags_to_drop = "sentinel", 
+        summary_flags_clean = list(finalQF = "0"), summary_flags_to_drop = list(finalQF = "sentinel"))
+    d <- ms_conversions(d, convert_units_from = c(CO2 = "mol/L", 
+        CH4 = "mol/L", N2O = "mol/L"), convert_units_to = c(CO2 = "mg/L", 
+        CH4 = "mg/L", N2O = "mg/L"))
+}
+
+These were the arguments to that function:
+
+network = 'neon'
+domain = 'neon'
+prodname_ms = 'stream_gases__DP1.20097.001'
+site_code = <separately, each of: 'ARIK', 'BIGC', 'BLDE', 'BLUE', 'BLWA', 'CARI', 'COMO', 'CUPE', 'FLNT', 'GUIL', 'HOPB', 'KING', 'LECO', 'LEWI', 'MART', 'MAYF', 'MCDI', 'MCRA', 'OKSR', 'POSE', 'PRIN', 'REDB', 'SYCA', 'TECR', 'TOMB', 'WALK', 'WLOU', with corresponding component>
+component(s) = 
+	for site: ARIK
+		comp(s): placeholder
+	for site: BIGC
+		comp(s): placeholder
+	for site: BLDE
+		comp(s): placeholder
+	for site: BLUE
+		comp(s): placeholder
+	for site: BLWA
+		comp(s): placeholder
+	for site: CARI
+		comp(s): placeholder
+	for site: COMO
+		comp(s): placeholder
+	for site: CUPE
+		comp(s): placeholder
+	for site: FLNT
+		comp(s): placeholder
+	for site: GUIL
+		comp(s): placeholder
+	for site: HOPB
+		comp(s): placeholder
+	for site: KING
+		comp(s): placeholder
+	for site: LECO
+		comp(s): placeholder
+	for site: LEWI
+		comp(s): placeholder
+	for site: MART
+		comp(s): placeholder
+	for site: MAYF
+		comp(s): placeholder
+	for site: MCDI
+		comp(s): placeholder
+	for site: MCRA
+		comp(s): placeholder
+	for site: OKSR
+		comp(s): placeholder
+	for site: POSE
+		comp(s): placeholder
+	for site: PRIN
+		comp(s): placeholder
+	for site: REDB
+		comp(s): placeholder
+	for site: SYCA
+		comp(s): placeholder
+	for site: TECR
+		comp(s): placeholder
+	for site: TOMB
+		comp(s): placeholder
+	for site: WALK
+		comp(s): placeholder
+	for site: WLOU
+		comp(s): placeholder
+
+This is the "munge kernel" function for stream_temperature__DP1.20053.001:
+
+process_1_DP1.20053.001 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawdir <- glue("data/{n}/{d}/raw/{p}/{s}", n = network, d = domain, 
+        p = prodname_ms, s = site_code)
+    neonprodcode <- prodcode_from_prodname_ms(prodname_ms) %>% 
+        str_split_i("\\.", i = 2)
+    rawd <- try({
+        stackByTable_keep_zips(glue("{rawdir}/filesToStack{neonprodcode}"))
+    })
+    if (inherits(rawd, "try-error")) 
+        return(generate_ms_exception("No data for site"))
+    relevant_tbl1 <- "TSW_30min"
+    if (relevant_tbl1 %in% names(rawd)) {
+        rawd <- tibble(rawd[[relevant_tbl1]])
+    }
+    else {
+        return(generate_ms_exception("Relevant file missing"))
+    }
+    if (all(is.na(rawd$surfWaterTempMean))) {
+        return(generate_ms_exception(paste("No data for", site_code)))
+    }
+    rawd <- neon_average_start_end_times(rawd)
+    rawd <- neon_borrow_from_upstream(rawd, relevant_cols = "surfWaterTempMean")
+    d <- ms_read_raw_csv(preprocessed_tibble = rawd, datetime_cols = c(date = "%Y-%m-%d"), 
+        datetime_tz = "UTC", site_code_col = "siteID", data_cols = c(surfWaterTempMean = "temp"), 
+        data_col_pattern = "#V#", summary_flagcols = "finalQF", 
+        is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, summary_flags_clean = list(finalQF = "0"), 
+        summary_flags_to_drop = list(finalQF = "sentinel"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'neon'
+domain = 'neon'
+prodname_ms = 'stream_temperature__DP1.20053.001'
+site_code = <separately, each of: 'ARIK', 'BIGC', 'BLDE', 'BLUE', 'CARI', 'COMO', 'CUPE', 'GUIL', 'HOPB', 'KING', 'LECO', 'LEWI', 'MART', 'MAYF', 'MCDI', 'MCRA', 'OKSR', 'POSE', 'PRIN', 'REDB', 'SYCA', 'TECR', 'WALK', 'WLOU', with corresponding component>
+component(s) = 
+	for site: ARIK
+		comp(s): placeholder
+	for site: BIGC
+		comp(s): placeholder
+	for site: BLDE
+		comp(s): placeholder
+	for site: BLUE
+		comp(s): placeholder
+	for site: CARI
+		comp(s): placeholder
+	for site: COMO
+		comp(s): placeholder
+	for site: CUPE
+		comp(s): placeholder
+	for site: GUIL
+		comp(s): placeholder
+	for site: HOPB
+		comp(s): placeholder
+	for site: KING
+		comp(s): placeholder
+	for site: LECO
+		comp(s): placeholder
+	for site: LEWI
+		comp(s): placeholder
+	for site: MART
+		comp(s): placeholder
+	for site: MAYF
+		comp(s): placeholder
+	for site: MCDI
+		comp(s): placeholder
+	for site: MCRA
+		comp(s): placeholder
+	for site: OKSR
+		comp(s): placeholder
+	for site: POSE
+		comp(s): placeholder
+	for site: PRIN
+		comp(s): placeholder
+	for site: REDB
+		comp(s): placeholder
+	for site: SYCA
+		comp(s): placeholder
+	for site: TECR
+		comp(s): placeholder
+	for site: WALK
+		comp(s): placeholder
+	for site: WLOU
+		comp(s): placeholder
+
+This is the "munge kernel" function for stream_PAR__DP1.20042.001:
+
+process_1_DP1.20042.001 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawdir <- glue("data/{n}/{d}/raw/{p}/{s}", n = network, d = domain, 
+        p = prodname_ms, s = site_code)
+    neonprodcode <- prodcode_from_prodname_ms(prodname_ms) %>% 
+        str_split_i("\\.", i = 2)
+    rawd <- try({
+        stackByTable_keep_zips(glue("{rawdir}/filesToStack{neonprodcode}"))
+    })
+    if (inherits(rawd, "try-error")) 
+        return(generate_ms_exception("No data for site"))
+    relevant_tbl1 <- "PARWS_30min"
+    if (relevant_tbl1 %in% names(rawd)) {
+        rawd <- tibble(rawd[[relevant_tbl1]])
+    }
+    else {
+        return(generate_ms_exception("Relevant file missing"))
+    }
+    if (all(is.na(rawd$PARMean))) {
+        return(generate_ms_exception(paste("No data for", site_code)))
+    }
+    rawd <- rename(rawd, finalQF = PARFinalQF)
+    rawd <- neon_average_start_end_times(rawd)
+    rawd <- neon_borrow_from_upstream(rawd, relevant_cols = "PARMean")
+    d <- ms_read_raw_csv(preprocessed_tibble = rawd, datetime_cols = c(date = "%Y-%m-%d"), 
+        datetime_tz = "UTC", site_code_col = "siteID", data_cols = c(PARMean = "PAR"), 
+        data_col_pattern = "#V#", summary_flagcols = "finalQF", 
+        is_sensor = TRUE, sampling_type = "I")
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, summary_flags_clean = list(finalQF = "0"), 
+        summary_flags_to_drop = list(finalQF = "sentinel"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'neon'
+domain = 'neon'
+prodname_ms = 'stream_PAR__DP1.20042.001'
+site_code = <separately, each of: 'ARIK', 'BIGC', 'BLDE', 'BLUE', 'BLWA', 'CARI', 'COMO', 'CUPE', 'FLNT', 'GUIL', 'HOPB', 'KING', 'LECO', 'LEWI', 'MART', 'MAYF', 'MCDI', 'MCRA', 'OKSR', 'POSE', 'PRIN', 'REDB', 'SYCA', 'TECR', 'TOMB', 'WALK', 'WLOU', with corresponding component>
+component(s) = 
+	for site: ARIK
+		comp(s): placeholder
+	for site: BIGC
+		comp(s): placeholder
+	for site: BLDE
+		comp(s): placeholder
+	for site: BLUE
+		comp(s): placeholder
+	for site: BLWA
+		comp(s): placeholder
+	for site: CARI
+		comp(s): placeholder
+	for site: COMO
+		comp(s): placeholder
+	for site: CUPE
+		comp(s): placeholder
+	for site: FLNT
+		comp(s): placeholder
+	for site: GUIL
+		comp(s): placeholder
+	for site: HOPB
+		comp(s): placeholder
+	for site: KING
+		comp(s): placeholder
+	for site: LECO
+		comp(s): placeholder
+	for site: LEWI
+		comp(s): placeholder
+	for site: MART
+		comp(s): placeholder
+	for site: MAYF
+		comp(s): placeholder
+	for site: MCDI
+		comp(s): placeholder
+	for site: MCRA
+		comp(s): placeholder
+	for site: OKSR
+		comp(s): placeholder
+	for site: POSE
+		comp(s): placeholder
+	for site: PRIN
+		comp(s): placeholder
+	for site: REDB
+		comp(s): placeholder
+	for site: SYCA
+		comp(s): placeholder
+	for site: TECR
+		comp(s): placeholder
+	for site: TOMB
+		comp(s): placeholder
+	for site: WALK
+		comp(s): placeholder
+	for site: WLOU
+		comp(s): placeholder
+
+This is the "munge kernel" function for isotopes__DP1.20206.001:
+
+process_1_DP1.20206.001 <- function (network, domain, prodname_ms, site_code, component) 
+{
+    rawdir <- glue("data/{n}/{d}/raw/{p}/{s}", n = network, d = domain, 
+        p = prodname_ms, s = site_code)
+    neonprodcode <- prodcode_from_prodname_ms(prodname_ms) %>% 
+        str_split_i("\\.", i = 2)
+    rawd <- try({
+        stackByTable_keep_zips(glue("{rawdir}/filesToStack{neonprodcode}"))
+    })
+    if (inherits(rawd, "try-error")) 
+        return(generate_ms_exception("No data for site"))
+    relevant_tbl1 <- "asi_externalLabH2OIsotopes"
+    if (relevant_tbl1 %in% names(rawd)) {
+        rawd <- tibble(rawd[[relevant_tbl1]])
+    }
+    else {
+        return(generate_ms_exception("Relevant file missing"))
+    }
+    if (all(is.na(rawd$d2HWater))) {
+        return(generate_ms_exception(paste("No data for", site_code)))
+    }
+    rawd$remark_summary <- as.numeric(!is.na(rawd$externalRemarks) & 
+        grepl("vial|volume| id", rawd$externalRemarks, ignore.case = TRUE))
+    d <- ms_read_raw_csv(preprocessed_tibble = rawd, datetime_cols = c(collectDate = "%Y-%m-%d %H:%M:%S"), 
+        datetime_tz = "UTC", site_code_col = "siteID", data_cols = c(d2HWater = "dD", 
+            d18OWater = "d18O"), data_col_pattern = "#V#", summary_flagcols = c("remark_summary", 
+            "sampleCondition"), is_sensor = FALSE, sampling_type = "G")
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, summary_flags_clean = list(remark_summary = "0", 
+        sampleCondition = "OK"), summary_flags_to_drop = list(remark_summary = "sentinel", 
+        sampleCondition = "sentinel"))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'neon'
+domain = 'neon'
+prodname_ms = 'isotopes__DP1.20206.001'
+site_code = <separately, each of: 'ARIK', 'BIGC', 'BLDE', 'BLUE', 'BLWA', 'CARI', 'COMO', 'CUPE', 'FLNT', 'GUIL', 'HOPB', 'KING', 'LECO', 'LEWI', 'MART', 'MAYF', 'MCDI', 'MCRA', 'OKSR', 'POSE', 'PRIN', 'REDB', 'SYCA', 'TECR', 'TOMB', 'WALK', 'WLOU', with corresponding component>
+component(s) = 
+	for site: ARIK
+		comp(s): placeholder
+	for site: BIGC
+		comp(s): placeholder
+	for site: BLDE
+		comp(s): placeholder
+	for site: BLUE
+		comp(s): placeholder
+	for site: BLWA
+		comp(s): placeholder
+	for site: CARI
+		comp(s): placeholder
+	for site: COMO
+		comp(s): placeholder
+	for site: CUPE
+		comp(s): placeholder
+	for site: FLNT
+		comp(s): placeholder
+	for site: GUIL
+		comp(s): placeholder
+	for site: HOPB
+		comp(s): placeholder
+	for site: KING
+		comp(s): placeholder
+	for site: LECO
+		comp(s): placeholder
+	for site: LEWI
+		comp(s): placeholder
+	for site: MART
+		comp(s): placeholder
+	for site: MAYF
+		comp(s): placeholder
+	for site: MCDI
+		comp(s): placeholder
+	for site: MCRA
+		comp(s): placeholder
+	for site: OKSR
+		comp(s): placeholder
+	for site: POSE
+		comp(s): placeholder
+	for site: PRIN
+		comp(s): placeholder
+	for site: REDB
+		comp(s): placeholder
+	for site: SYCA
+		comp(s): placeholder
+	for site: TECR
+		comp(s): placeholder
+	for site: TOMB
+		comp(s): placeholder
+	for site: WALK
+		comp(s): placeholder
+	for site: WLOU
+		comp(s): placeholder
+
+---
+
+Functions from external packages called inside the kernel function are either
+referenced with `<package name>::<function>`, or are called from their aliases, defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/function_aliases.R
+
+For definitions of most MacroSheds functions called, see:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/global_helpers.R
+
+Definitions not found there will be found in src/<network>/network_helpers.R or
+src/<network>/<domain>/domain_helpers.R, where network is e.g. lter and domain
+is e.g. hbef (Hubbard Brook Experimental Forest). For a catalogue of networks
+and domains, download our site data table from the Data tab at macrosheds.org.
+
+After all the kernels have completed their jobs, there is a whole suite of
+post-processing steps, some of which further modify derived data. See
+postprocess_entire_dataset() in global_helpers.R for a list of these.
+
+Note that most MacroSheds functions are wrapped in a decorator function (handle_errors,
+defined in global_helpers.R; see tinsel package for details). This decorator is not needed
+to run the functions it wraps. To circumvent it, just make sure you don't load
+function definitions using tinsel::source_decoratees. This would only happen if you
+were to execute MacroSheds code line-by-line, starting from:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/acquisition_master.R
+
+Also note that the return value of a munge kernel function may be additionally modified by
+a munge engine function. Inside the body of the engine function, you can see where the
+munge kernel is retrieved with get() and called via do.call(). Usually, the only additional munging
+done by the munge engine (versus the munge kernel) would be to separate
+a data file that contains many sites into individual data files of only one site each.
+Munge engines are defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/munge_engines.R
+
+Finally, consider that you may clone our entire project from Github and get it running
+on your own machine. Getting every component to run will require a file called config.json
+at the top level of each project repository (data_processing/ and portal/) with your own
+values instead of <...> for each of the following fields:
+
+}
+    "gmail_pw": "< >",
+    "report_emails": ["<email1>", "<email2 etc>"],
+    "variables_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "site_data_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "delineation_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "univ_prods_gsheet:": "https://docs.google.com/spreadsheets/< >",
+    "name_variant_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "gee_login_<yourname>": "< >",
+    "orcid_login_<yourname>": "< >",
+    "orcid_pass_<yourname>": "< >",
+}
+
+Of course, you won't need connections to the ORCID database or google sheets in order to make headway.
+For example, just set config_storage_location = 'local' in your call to ms_init in data_processing/src/acquisition_master.R
+and gsheets becomes irrelevant. Our system is not fully set up to bypass the errors that would result from omitting
+some of this config information, but workarounds (like commenting lines or inserting tryCatch blocks) should be
+possible. This is something we'll be working on in later phases of the project.

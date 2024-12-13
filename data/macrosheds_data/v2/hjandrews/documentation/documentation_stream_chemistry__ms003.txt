@@ -1,0 +1,192 @@
+
+This MacroSheds data product (stream_chemistry__ms003) was generated from the following munged MacroSheds product(s):
+
+stream_chemistry__4021
+stream_chemistry__4020
+
+Source data were retrieved from the following web page(s), static file(s), or web-API endpoint(s)
+on the datetime in parentheses:
+
+stream_chemistry__4021:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-and&identifier=4021&revision=23 (retrieved 2024-01-11 18:41:17.972464)
+
+stream_chemistry__4020:
+https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-and&identifier=4020 (retrieved 2024-01-11 19:58:50.340784)
+
+To rebuild all or part of the MacroSheds dataset yourself, use our code on GitHub (and these notes). If you want to
+rebuild only this product, or if you want to modify the code used to generate this product, you
+will almost certainly have an easier time using these notes. That said, automatic documentation like this may
+have some errors and missing details. Please contact us at mail@macrosheds.org if you're having trouble
+navigating our docs.
+
+Below you will find the "derive kernel" function(s) by which stream_chemistry__ms003 was generated.
+Note that MacroSheds products may have precursors that are themselves derived products. In some
+cases, these derived precursors are named above and have their own separate documentation. In other
+cases, derived precursors are generated from stand-alone derive kernels whose entire definition and
+history can be displayed here. A stand-alone kernel might, for example, pull supplemental data
+from a source other than its own network/domain. Here is the code for stream_chemistry__ms003's derive kernel function,
+and for any stand-alone precursor derive kernel function(s):
+
+process_2_ms003 <- function (network, domain, prodname_ms) 
+{
+    combine_products(network = network, domain = domain, prodname_ms = prodname_ms, 
+        input_prodname_ms = c("stream_chemistry__4020", "stream_chemistry__4021"))
+    return()
+}
+
+These were the arguments to that/those function(s):
+
+network = 'lter'
+domain = 'hjandrews'
+prodname_ms = 'stream_chemistry__ms003'
+
+Zero or more function definitions follow, depending on the number of munged products that
+are precursors to stream_chemistry__ms003:
+
+This is the "munge kernel" function for stream_chemistry__4021:
+
+process_1_4021 <- function (network, domain, prodname_ms, site_code, components) 
+{
+    if (grepl("chemistry", prodname_ms)) {
+        component <- "CF00201"
+    }
+    else {
+        logwarn("Blacklisting stream flux product CF00204 (for now)")
+        return(generate_blocklist_indicator())
+    }
+    rawfile1 <- glue("data/{n}/{d}/raw/{p}/{s}/{c}.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code, c = component)
+    d <- read.csv(rawfile1, colClasses = "character") %>% rename(NA.CODE = NACODE)
+    d <- ms_read_raw_csv(preprocessed_tibble = d, datetime_cols = c(DATE_TIME = "%Y-%m-%d %H:%M:%S"), 
+        datetime_tz = "Etc/GMT+8", site_code_col = "SITECODE", 
+        data_cols = c(PH = "pH", COND = "spCond", ALK = "alk", 
+            SSED = "suspSed", SI = "Si", PARTP = "TPP", PO4P = "PO4_P", 
+            PARTN = "TPN", NH3N = "NH3_N", NO3N = "NO3_N", CA = "Ca", 
+            MG = "Mg", SO4S = "SO4_S", CL = "Cl", ANCA = "AnCaR", 
+            NA. = "Na", UTP = "TP", "TDP", UTN = "TN", "TDN", 
+            "DON", UTKN = "TKN", TKN = "TDKN", "K", "DOC"), data_col_pattern = "#V#", 
+        is_sensor = FALSE, set_to_NA = "", var_flagcol_pattern = "#V#CODE", 
+        summary_flagcols = c("TYPE"))
+    d <- ms_cast_and_reflag(d, variable_flags_bdl = "*", variable_flags_to_drop = "N", 
+        variable_flags_dirty = c("Q", "D*", "C", "D", "DE", "DQ", 
+            "DC"), variable_flags_clean = c("A", "E"), summary_flags_to_drop = list(TYPE = c("N", 
+            "YE")), summary_flags_dirty = list(TYPE = c("C", 
+            "S", "A", "P", "B")), summary_flags_clean = list(TYPE = c("QB", 
+            "QS", "QL", "QA", "F", "G")))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'hjandrews'
+prodname_ms = 'stream_chemistry__4021'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): CF00201, CF00202, CF00203, CF00204, CF00205, CF00206
+
+This is the "munge kernel" function for stream_chemistry__4020:
+
+process_1_4020 <- function (network, domain, prodname_ms, site_code, components) 
+{
+    rawfile1 = glue("data/{n}/{d}/raw/{p}/{s}/HT00441.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code)
+    d <- ms_read_raw_csv(filepath = rawfile1, datetime_cols = c(DATE = "%Y-%m-%d"), 
+        datetime_tz = "Etc/GMT+8", site_code_col = "SITECODE", 
+        data_cols = c(WATERTEMP_MEAN_DAY = "temp"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, set_to_NA = "", summary_flagcols = c("WATERTEMP_MEAN_FLAG"))
+    d <- ms_cast_and_reflag(d, varflag_col_pattern = NA, summary_flags_clean = list(WATERTEMP_MEAN_FLAG = c("A", 
+        "E")), summary_flags_dirty = list(WATERTEMP_MEAN_FLAG = c("B", 
+        "M", "S", "Q")))
+    rawfile2 = glue("data/{n}/{d}/raw/{p}/{s}/HT00451.csv", n = network, 
+        d = domain, p = prodname_ms, s = site_code)
+    d_ <- ms_read_raw_csv(filepath = rawfile2, datetime_cols = c(DATE_TIME = "%Y-%m-%d %H:%M:%S"), 
+        datetime_tz = "Etc/GMT+8", site_code_col = "SITECODE", 
+        data_cols = c(WATERTEMP_MEAN = "temp"), data_col_pattern = "#V#", 
+        is_sensor = TRUE, summary_flagcols = c("WATERTEMP_MEAN_FLAG"))
+    d_ <- ms_cast_and_reflag(d_, varflag_col_pattern = NA, summary_flags_clean = list(WATERTEMP_MEAN_FLAG = c("A", 
+        "E")), summary_flags_dirty = list(WATERTEMP_MEAN_FLAG = c("B", 
+        "M", "S", "Q")))
+    d__ <- d_ %>% mutate(day = day(datetime), month = month(datetime), 
+        year = year(datetime)) %>% group_by(site_code, day, month, 
+        year, var) %>% summarize(val = mean(val, na.rm = T), 
+        ms_status = max(ms_status)) %>% ungroup() %>% mutate(datetime = ymd(paste(year, 
+        month, day, sep = "-"))) %>% select(site_code, datetime, 
+        var, val, ms_status)
+    d <- rbind(d, d__)
+    d <- d %>% group_by(datetime, site_code, var) %>% summarise(val = mean(val, 
+        na.rm = T), ms_status = max(ms_status, na.rm = T))
+    return(d)
+}
+
+These were the arguments to that function:
+
+network = 'lter'
+domain = 'hjandrews'
+prodname_ms = 'stream_chemistry__4020'
+site_code = <separately, each of: 'sitename_NA', with corresponding component>
+component(s) = 
+	for site: sitename_NA
+		comp(s): HT00401, HT00411, HT00441, HT00451
+
+---
+
+Functions from external packages called inside the kernel function are either
+referenced with `<package name>::<function>`, or are called from their aliases, defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/function_aliases.R
+
+For definitions of most MacroSheds functions called, see:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/global_helpers.R
+
+Definitions not found there will be found in src/<network>/network_helpers.R or
+src/<network>/<domain>/domain_helpers.R, where network is e.g. lter and domain
+is e.g. hbef (Hubbard Brook Experimental Forest). For a catalogue of networks
+and domains, download our site data table from the Data tab at macrosheds.org.
+
+After all the kernels have completed their jobs, there is a whole suite of
+post-processing steps, some of which further modify derived data. See
+postprocess_entire_dataset() in global_helpers.R for a list of these.
+
+Note that most MacroSheds functions are wrapped in a decorator function (handle_errors,
+defined in global_helpers.R; see tinsel package for details). This decorator is not needed
+to run the functions it wraps. To circumvent it, just make sure you don't load
+function definitions using tinsel::source_decoratees. This would only happen if you
+were to execute MacroSheds code line-by-line, starting from:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/acquisition_master.R
+
+Also note that the return value of a munge kernel function may be additionally modified by
+a munge engine function. Inside the body of the engine function, you can see where the
+munge kernel is retrieved with get() and called via do.call(). Usually, the only additional munging
+done by the munge engine (versus the munge kernel) would be to separate
+a data file that contains many sites into individual data files of only one site each.
+Munge engines are defined in:
+
+https://github.com/MacroSHEDS/data_processing/blob/master/src/munge_engines.R
+
+Finally, consider that you may clone our entire project from Github and get it running
+on your own machine. Getting every component to run will require a file called config.json
+at the top level of each project repository (data_processing/ and portal/) with your own
+values instead of <...> for each of the following fields:
+
+}
+    "gmail_pw": "< >",
+    "report_emails": ["<email1>", "<email2 etc>"],
+    "variables_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "site_data_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "delineation_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "univ_prods_gsheet:": "https://docs.google.com/spreadsheets/< >",
+    "name_variant_gsheet": "https://docs.google.com/spreadsheets/< >",
+    "gee_login_<yourname>": "< >",
+    "orcid_login_<yourname>": "< >",
+    "orcid_pass_<yourname>": "< >",
+}
+
+Of course, you won't need connections to the ORCID database or google sheets in order to make headway.
+For example, just set config_storage_location = 'local' in your call to ms_init in data_processing/src/acquisition_master.R
+and gsheets becomes irrelevant. Our system is not fully set up to bypass the errors that would result from omitting
+some of this config information, but workarounds (like commenting lines or inserting tryCatch blocks) should be
+possible. This is something we'll be working on in later phases of the project.
